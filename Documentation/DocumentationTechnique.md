@@ -12,7 +12,35 @@ Dans le cadre de ce travail de fin de formation, j'ai du réaliser une applicati
 
 C'est une application Windows Forms réalisée entièrement en C# orienté objet. Elle permet de créer un logo de A à Z en utilisant des formes géométriques ainsi que du texte que l'utilisateur peut modifier. Un certain nombre de propriétés est modifiable pour chaque forme et ces formes se trouvent sur des calques. Les calques servent évidemment à gérer, dans le cas présent, trois plans différents. L'une des fonctionnalités clé de ce projet est bien entendu la possibilité d'exporter le logo en image. Le logo peut également être enregistré dans le but de, par exemple, modifier le logo plus tard.
 
+# Méthodologie
 
+Pour tout projet conséquent, il faut avoir une méthodologie de travail qui nous aide à raisonner et à organiser le travail. J'ai donc choisi d'appliquer une méthodologie qui nous a été enseignée en cours au CFPT : la Méthode en 6 Étapes.
+
+Comme son nom laisse imaginer, elle contient, en tout, 6 étapes :
+
+1. S'informe
+
+   Ici, la source principale d'information étant l'énoncé, une lecture complète et détaillée du document est nécessaire pour pouvoir cerner le travail à réaliser et savoir où aller.
+
+2. Planifier
+
+   Puisque le planning prévisionnel m'a été fourni, j'ai décidé de garder la structure de ce dernier et de la remplir avec l'avancement réel du projet pour obtenir un planning effectif.
+
+3. Décider
+
+   Il faut souvent choisir une méthode à une autre au cours d'un projet. Figurent dans le journal de bord les décisions importantes que j'ai décidé de prendre.
+
+4. Réaliser
+
+   Faisant suite à la phase de décision, la réalisation est là pour que les décisions prises soient appliquées.
+
+5. Contrôler
+
+   Afin d'éviter toute régression, il est important de contrôler les fonctionnalités qui sont ajoutées à l'application.
+
+6. Évaluer
+
+   L'évaluation est une sorte d'auto-critique qui permet de savoir ce qui aurait pu être amélioré. La conclusion de **ce document** sert d'évaluation.
 
 # Résumé du cahier des charges
 
@@ -84,21 +112,20 @@ Voici les points techniques obligatoires à ce projet :
 
 # Analyse fonctionnelle
 
-
+Une application se doit d'avoir un certain nombre de fonctionnalités que l'utilisateur peut exploiter pour, ici, créer ce qu'il désire. Ce chapitre de la documentation explique les fonctionnalités disponibles ainsi que les détails graphiques de LogoGo.
 
 ## Liste des fonctionnalités
 
-## Interfaces
 
-### Le logo
+
+## Interfaces
 
 ### Les fiches
 
-<style>
-    h1 {
-  color: green;
-}
-</style>
+## Le logo
+
+
+
 # Analyse organique
 
 # Réalisation
