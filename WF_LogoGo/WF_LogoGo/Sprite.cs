@@ -18,16 +18,11 @@ namespace WF_LogoGo
         private string _nom;
         private int _numeroCalque;
         private Form _parent;
-        private float _angle;
-        private PointF _centreDeRotation;
 
 
-        private int _idType;
-        private bool _aSupprimer;
 
         private bool _dragging;
         private Point _posSouris;
-        private Bitmap _dessin;
         #endregion
 
         #region Constantes
@@ -62,29 +57,11 @@ namespace WF_LogoGo
         public int ProfondeurParCalque { get => _profondeurParCalque; set => _profondeurParCalque = value; }
 
         /// <summary>
-        /// Identdifiant permettant de savoir quel type de sprite nous avons
-        /// </summary>
-        public int IdType { get => _idType; set => _idType = value; }
-
-        /// <summary>
-        /// Bool permettant de savoir s'il faut supprimer ou non un sprite
-        /// </summary>
-        public bool ASupprimer { get => _aSupprimer; set => _aSupprimer = value; }
-
-        /// <summary>
         /// Calque sur lequel est se trouve le sprite
         /// </summary>
         public int NumeroCalque { get => _numeroCalque; set => _numeroCalque = value; }
 
-        /// <summary>
-        /// Angle de rotation du sprite
-        /// </summary>
-        public float Angle { get => _angle; set => _angle = value; }
 
-        /// <summary>
-        /// Centre du Sprite
-        /// </summary>
-        private PointF CentreDeRotation { get => new PointF((float)Width / 2, (float)Height / 2); }
 
         #endregion
 
@@ -96,7 +73,6 @@ namespace WF_LogoGo
             ProfondeurParCalque = 1;
             NumeroCalque = calque;
             Remplir = false;
-            ASupprimer = false;
             _parent = parent;
 
 
@@ -108,27 +84,6 @@ namespace WF_LogoGo
             base.MouseUp += SpriteMouseUp;
             base.MouseMove += SpriteMouseMove;
         }
-
-        //public Sprite(SpriteSerializable s, Form parent)
-        //{
-        //    //Devrait récupérer la bonne couleur
-        //    Couleur = Color.FromArgb(s.Couleur);
-        //    NumeroCalque = s.NumeroCalque;
-        //    EpaisseurPen = s.EpaisseurPen;
-        //    ProfondeurParCalque = s.ProfondeurParCalque;
-        //    Remplir = s.Remplir;
-        //    ASupprimer = false;
-        //    _parent = parent;
-
-        //    Nom = s.Nom;
-        //    Location = s.Location;
-        //    Size = s.Size;
-        //    BackColor = Color.Transparent;
-
-        //    MouseDown += new MouseEventHandler(SpriteMouseDown);
-        //    MouseUp += new MouseEventHandler(SpriteMouseUp);
-        //    base.MouseMove += new MouseEventHandler(SpriteMouseMove);
-        //}
 
         #endregion
 
@@ -144,13 +99,6 @@ namespace WF_LogoGo
 
         public abstract void Draw(Graphics g);
 
-        //Convertir en spriteSerializable
-        //public SpriteSerializable EnSpriteSerializable()
-        //{
-        //    SpriteSerializable s = new SpriteSerializable();
-        //    s.AttribuerValeursProprietes(this);
-        //    return s;
-        //}
 
         /// <summary>
         /// Déplace la picturebox du sprite en fonction de la souris
