@@ -36,13 +36,64 @@
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnRond = new System.Windows.Forms.Button();
             this.btnCarre = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.nudFontSize = new System.Windows.Forms.NumericUpDown();
+            this.tbxPosYTexte = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.nudProfondeurTexte = new System.Windows.Forms.NumericUpDown();
+            this.tbxPosXTexte = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cmbCalqueTexte = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnCouleurTexte = new System.Windows.Forms.Button();
+            this.btnSupprimerTexte = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbxTexte = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudEpaisseur = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.chkRemplir = new System.Windows.Forms.CheckBox();
+            this.nudProfondeur = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCalque = new System.Windows.Forms.ComboBox();
+            this.btnCouleur = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbxPosY = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbxPosX = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbxLargeur = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxHauteur = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.msFichier = new System.Windows.Forms.ToolStripMenuItem();
             this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msEnregistrer = new System.Windows.Forms.ToolStripMenuItem();
+            this.msOuvrir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).BeginInit();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,9 +102,9 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.lsbElementsLogo);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(514, 27);
+            this.panel1.Location = new System.Drawing.Point(532, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 506);
+            this.panel1.Size = new System.Drawing.Size(272, 589);
             this.panel1.TabIndex = 0;
             // 
             // lsbElementsLogo
@@ -66,10 +117,10 @@
             "Calque 1",
             "Calque 2",
             "Calque 3"});
-            this.lsbElementsLogo.Location = new System.Drawing.Point(31, 314);
+            this.lsbElementsLogo.Location = new System.Drawing.Point(17, 314);
             this.lsbElementsLogo.Name = "lsbElementsLogo";
             this.lsbElementsLogo.ScrollAlwaysVisible = true;
-            this.lsbElementsLogo.Size = new System.Drawing.Size(213, 136);
+            this.lsbElementsLogo.Size = new System.Drawing.Size(217, 136);
             this.lsbElementsLogo.TabIndex = 18;
             // 
             // label2
@@ -88,7 +139,7 @@
             this.groupBox1.Controls.Add(this.btnTriangle);
             this.groupBox1.Controls.Add(this.btnRond);
             this.groupBox1.Controls.Add(this.btnCarre);
-            this.groupBox1.Location = new System.Drawing.Point(27, 41);
+            this.groupBox1.Location = new System.Drawing.Point(17, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 213);
             this.groupBox1.TabIndex = 19;
@@ -131,24 +182,498 @@
             this.btnCarre.Text = "Carré";
             this.btnCarre.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // panel2
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.cmbCalqueTexte);
+            this.panel2.Controls.Add(this.label26);
+            this.panel2.Controls.Add(this.btnSupprimerTexte);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Controls.Add(this.nudFontSize);
+            this.panel2.Controls.Add(this.btnCouleurTexte);
+            this.panel2.Controls.Add(this.tbxTexte);
+            this.panel2.Controls.Add(this.tbxPosXTexte);
+            this.panel2.Controls.Add(this.tbxPosYTexte);
+            this.panel2.Controls.Add(this.nudProfondeurTexte);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Location = new System.Drawing.Point(0, 384);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(530, 236);
+            this.panel2.TabIndex = 2;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Enabled = false;
+            this.label23.Location = new System.Drawing.Point(402, 118);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(22, 17);
+            this.label23.TabIndex = 66;
+            this.label23.Text = "px";
+            // 
+            // nudFontSize
+            // 
+            this.nudFontSize.Enabled = false;
+            this.nudFontSize.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudFontSize.Location = new System.Drawing.Point(128, 152);
+            this.nudFontSize.Maximum = new decimal(new int[] {
+            46,
+            0,
+            0,
+            0});
+            this.nudFontSize.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudFontSize.Name = "nudFontSize";
+            this.nudFontSize.Size = new System.Drawing.Size(57, 22);
+            this.nudFontSize.TabIndex = 63;
+            this.nudFontSize.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // tbxPosYTexte
+            // 
+            this.tbxPosYTexte.Enabled = false;
+            this.tbxPosYTexte.Location = new System.Drawing.Point(343, 118);
+            this.tbxPosYTexte.Name = "tbxPosYTexte";
+            this.tbxPosYTexte.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosYTexte.TabIndex = 53;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Enabled = false;
+            this.label22.Location = new System.Drawing.Point(32, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 17);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "FontSize :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Enabled = false;
+            this.label24.Location = new System.Drawing.Point(267, 118);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(63, 17);
+            this.label24.TabIndex = 64;
+            this.label24.Text = "CoordY :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Enabled = false;
+            this.label25.Location = new System.Drawing.Point(402, 85);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(22, 17);
+            this.label25.TabIndex = 62;
+            this.label25.Text = "px";
+            // 
+            // nudProfondeurTexte
+            // 
+            this.nudProfondeurTexte.Enabled = false;
+            this.nudProfondeurTexte.Location = new System.Drawing.Point(128, 121);
+            this.nudProfondeurTexte.Name = "nudProfondeurTexte";
+            this.nudProfondeurTexte.Size = new System.Drawing.Size(57, 22);
+            this.nudProfondeurTexte.TabIndex = 58;
+            // 
+            // tbxPosXTexte
+            // 
+            this.tbxPosXTexte.Enabled = false;
+            this.tbxPosXTexte.Location = new System.Drawing.Point(343, 85);
+            this.tbxPosXTexte.Name = "tbxPosXTexte";
+            this.tbxPosXTexte.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosXTexte.TabIndex = 50;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Enabled = false;
+            this.label21.Location = new System.Drawing.Point(32, 121);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(87, 17);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "Profondeur :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Enabled = false;
+            this.label26.Location = new System.Drawing.Point(267, 85);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(63, 17);
+            this.label26.TabIndex = 61;
+            this.label26.Text = "CoordX :";
+            // 
+            // cmbCalqueTexte
+            // 
+            this.cmbCalqueTexte.Enabled = false;
+            this.cmbCalqueTexte.FormattingEnabled = true;
+            this.cmbCalqueTexte.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbCalqueTexte.Location = new System.Drawing.Point(128, 88);
+            this.cmbCalqueTexte.Name = "cmbCalqueTexte";
+            this.cmbCalqueTexte.Size = new System.Drawing.Size(90, 24);
+            this.cmbCalqueTexte.TabIndex = 54;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Enabled = false;
+            this.label20.Location = new System.Drawing.Point(32, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 17);
+            this.label20.TabIndex = 57;
+            this.label20.Text = "Calque :";
+            // 
+            // btnCouleurTexte
+            // 
+            this.btnCouleurTexte.BackColor = System.Drawing.Color.Red;
+            this.btnCouleurTexte.Enabled = false;
+            this.btnCouleurTexte.Location = new System.Drawing.Point(344, 51);
+            this.btnCouleurTexte.Name = "btnCouleurTexte";
+            this.btnCouleurTexte.Size = new System.Drawing.Size(43, 25);
+            this.btnCouleurTexte.TabIndex = 49;
+            this.btnCouleurTexte.UseVisualStyleBackColor = false;
+            // 
+            // btnSupprimerTexte
+            // 
+            this.btnSupprimerTexte.Enabled = false;
+            this.btnSupprimerTexte.Location = new System.Drawing.Point(422, 178);
+            this.btnSupprimerTexte.Name = "btnSupprimerTexte";
+            this.btnSupprimerTexte.Size = new System.Drawing.Size(104, 35);
+            this.btnSupprimerTexte.TabIndex = 48;
+            this.btnSupprimerTexte.Text = "Supprimer";
+            this.btnSupprimerTexte.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Enabled = false;
+            this.label18.Location = new System.Drawing.Point(267, 51);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(65, 17);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Couleur :";
+            // 
+            // tbxTexte
+            // 
+            this.tbxTexte.Enabled = false;
+            this.tbxTexte.Location = new System.Drawing.Point(128, 54);
+            this.tbxTexte.Name = "tbxTexte";
+            this.tbxTexte.Size = new System.Drawing.Size(98, 22);
+            this.tbxTexte.TabIndex = 47;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(12, 4);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(96, 18);
+            this.label32.TabIndex = 46;
+            this.label32.Text = "Propriétés :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Enabled = false;
+            this.label19.Location = new System.Drawing.Point(32, 54);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 17);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Texte :";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.nudEpaisseur);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.chkRemplir);
+            this.panel3.Controls.Add(this.nudProfondeur);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.cmbCalque);
+            this.panel3.Controls.Add(this.btnCouleur);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.tbxPosY);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.tbxPosX);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.tbxLargeur);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.tbxHauteur);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(530, 231);
+            this.panel3.TabIndex = 67;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Propriétés :";
+            // 
+            // nudEpaisseur
+            // 
+            this.nudEpaisseur.Enabled = false;
+            this.nudEpaisseur.Location = new System.Drawing.Point(378, 138);
+            this.nudEpaisseur.Name = "nudEpaisseur";
+            this.nudEpaisseur.Size = new System.Drawing.Size(57, 22);
+            this.nudEpaisseur.TabIndex = 57;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Location = new System.Drawing.Point(301, 143);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 17);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Épaisseur :";
+            // 
+            // chkRemplir
+            // 
+            this.chkRemplir.AutoSize = true;
+            this.chkRemplir.Enabled = false;
+            this.chkRemplir.Location = new System.Drawing.Point(36, 185);
+            this.chkRemplir.Name = "chkRemplir";
+            this.chkRemplir.Size = new System.Drawing.Size(78, 21);
+            this.chkRemplir.TabIndex = 51;
+            this.chkRemplir.Text = "Remplir";
+            this.chkRemplir.UseVisualStyleBackColor = true;
+            // 
+            // nudProfondeur
+            // 
+            this.nudProfondeur.Enabled = false;
+            this.nudProfondeur.Location = new System.Drawing.Point(129, 145);
+            this.nudProfondeur.Name = "nudProfondeur";
+            this.nudProfondeur.Size = new System.Drawing.Size(57, 22);
+            this.nudProfondeur.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Location = new System.Drawing.Point(33, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "Profondeur :";
+            // 
+            // cmbCalque
+            // 
+            this.cmbCalque.Enabled = false;
+            this.cmbCalque.FormattingEnabled = true;
+            this.cmbCalque.Location = new System.Drawing.Point(129, 113);
+            this.cmbCalque.Name = "cmbCalque";
+            this.cmbCalque.Size = new System.Drawing.Size(90, 24);
+            this.cmbCalque.TabIndex = 49;
+            // 
+            // btnCouleur
+            // 
+            this.btnCouleur.BackColor = System.Drawing.Color.Red;
+            this.btnCouleur.Enabled = false;
+            this.btnCouleur.Location = new System.Drawing.Point(372, 38);
+            this.btnCouleur.Name = "btnCouleur";
+            this.btnCouleur.Size = new System.Drawing.Size(43, 25);
+            this.btnCouleur.TabIndex = 52;
+            this.btnCouleur.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Enabled = false;
+            this.label12.Location = new System.Drawing.Point(33, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 67;
+            this.label12.Text = "Calque :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Enabled = false;
+            this.label13.Location = new System.Drawing.Point(431, 105);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(22, 17);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "px";
+            // 
+            // tbxPosY
+            // 
+            this.tbxPosY.Enabled = false;
+            this.tbxPosY.Location = new System.Drawing.Point(372, 104);
+            this.tbxPosY.Name = "tbxPosY";
+            this.tbxPosY.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosY.TabIndex = 54;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Enabled = false;
+            this.label14.Location = new System.Drawing.Point(296, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 17);
+            this.label14.TabIndex = 65;
+            this.label14.Text = "CoordY :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Enabled = false;
+            this.label15.Location = new System.Drawing.Point(431, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(22, 17);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "px";
+            // 
+            // tbxPosX
+            // 
+            this.tbxPosX.Enabled = false;
+            this.tbxPosX.Location = new System.Drawing.Point(372, 74);
+            this.tbxPosX.Name = "tbxPosX";
+            this.tbxPosX.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosX.TabIndex = 53;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Enabled = false;
+            this.label16.Location = new System.Drawing.Point(296, 73);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 17);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "CoordX :";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Enabled = false;
+            this.label17.Location = new System.Drawing.Point(296, 40);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 17);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "Couleur :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Enabled = false;
+            this.label7.Location = new System.Drawing.Point(193, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(22, 17);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "px";
+            // 
+            // tbxLargeur
+            // 
+            this.tbxLargeur.Enabled = false;
+            this.tbxLargeur.Location = new System.Drawing.Point(129, 80);
+            this.tbxLargeur.Name = "tbxLargeur";
+            this.tbxLargeur.Size = new System.Drawing.Size(57, 22);
+            this.tbxLargeur.TabIndex = 48;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Enabled = false;
+            this.label8.Location = new System.Drawing.Point(33, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 17);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "Largeur :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Enabled = false;
+            this.label6.Location = new System.Drawing.Point(193, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(22, 17);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "px";
+            // 
+            // tbxHauteur
+            // 
+            this.tbxHauteur.Enabled = false;
+            this.tbxHauteur.Location = new System.Drawing.Point(129, 49);
+            this.tbxHauteur.Name = "tbxHauteur";
+            this.tbxHauteur.Size = new System.Drawing.Size(57, 22);
+            this.tbxHauteur.TabIndex = 47;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.Location = new System.Drawing.Point(33, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Hauteur :";
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(422, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 35);
+            this.button2.TabIndex = 71;
+            this.button2.Text = "Supprimer";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msFichier,
             this.affichageToolStripMenuItem,
             this.aideToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(804, 28);
+            this.menuStrip.TabIndex = 68;
+            this.menuStrip.Text = "menuStrip1";
             // 
-            // fichierToolStripMenuItem
+            // msFichier
             // 
-            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.fichierToolStripMenuItem.Text = "Fichier";
+            this.msFichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msEnregistrer,
+            this.msOuvrir});
+            this.msFichier.Name = "msFichier";
+            this.msFichier.Size = new System.Drawing.Size(64, 24);
+            this.msFichier.Text = "Fichier";
             // 
             // affichageToolStripMenuItem
             // 
@@ -162,21 +687,42 @@
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
             // 
+            // msEnregistrer
+            // 
+            this.msEnregistrer.Name = "msEnregistrer";
+            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
+            this.msEnregistrer.Text = "Enregistrer";
+            // 
+            // msOuvrir
+            // 
+            this.msOuvrir.Name = "msOuvrir";
+            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
+            this.msOuvrir.Text = "Ouvrir";
+            // 
             // frmLogoGo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 520);
+            this.ClientSize = new System.Drawing.Size(804, 611);
+            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmLogoGo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoGo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).EndInit();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,10 +738,55 @@
         private System.Windows.Forms.Button btnCarre;
         private System.Windows.Forms.ListBox lsbElementsLogo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cmbCalqueTexte;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btnSupprimerTexte;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.NumericUpDown nudFontSize;
+        private System.Windows.Forms.Button btnCouleurTexte;
+        private System.Windows.Forms.TextBox tbxTexte;
+        private System.Windows.Forms.TextBox tbxPosXTexte;
+        private System.Windows.Forms.TextBox tbxPosYTexte;
+        private System.Windows.Forms.NumericUpDown nudProfondeurTexte;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown nudEpaisseur;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox chkRemplir;
+        private System.Windows.Forms.NumericUpDown nudProfondeur;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCalque;
+        private System.Windows.Forms.Button btnCouleur;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbxPosY;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbxPosX;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbxLargeur;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbxHauteur;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem msFichier;
         private System.Windows.Forms.ToolStripMenuItem affichageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msEnregistrer;
+        private System.Windows.Forms.ToolStripMenuItem msOuvrir;
     }
 }
 
