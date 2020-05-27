@@ -54,6 +54,7 @@
     <Compile Include="frmLogoGo.Designer.cs">
       <DependentUpon>frmLogoGo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rond.cs">
@@ -62,6 +63,7 @@
     <Compile Include="Sprite.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Sprites.cs" />
     <EmbeddedResource Include="frmLogoGo.resx">
       <DependentUpon>frmLogoGo.cs</DependentUpon>
     </EmbeddedResource>

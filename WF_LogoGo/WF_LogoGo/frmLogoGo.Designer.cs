@@ -29,34 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lsbElementsLogo = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTexte = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnRond = new System.Windows.Forms.Button();
             this.btnCarre = new System.Windows.Forms.Button();
+            this.lsbCalques = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.nudFontSize = new System.Windows.Forms.NumericUpDown();
-            this.tbxPosYTexte = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.nudProfondeurTexte = new System.Windows.Forms.NumericUpDown();
-            this.tbxPosXTexte = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cmbCalqueTexte = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.btnCouleurTexte = new System.Windows.Forms.Button();
-            this.btnSupprimerTexte = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tbxTexte = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.nudEpaisseur = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.chkRemplir = new System.Windows.Forms.CheckBox();
@@ -78,21 +61,38 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbxHauteur = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cmbCalqueTexte = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnSupprimerTexte = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.nudFontSize = new System.Windows.Forms.NumericUpDown();
+            this.btnCouleurTexte = new System.Windows.Forms.Button();
+            this.tbxTexte = new System.Windows.Forms.TextBox();
+            this.tbxPosXTexte = new System.Windows.Forms.TextBox();
+            this.tbxPosYTexte = new System.Windows.Forms.TextBox();
+            this.nudProfondeurTexte = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.msFichier = new System.Windows.Forms.ToolStripMenuItem();
-            this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msEnregistrer = new System.Windows.Forms.ToolStripMenuItem();
             this.msOuvrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,38 +100,12 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.lsbElementsLogo);
+            this.panel1.Controls.Add(this.lsbCalques);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(532, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 589);
             this.panel1.TabIndex = 0;
-            // 
-            // lsbElementsLogo
-            // 
-            this.lsbElementsLogo.Enabled = false;
-            this.lsbElementsLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsbElementsLogo.FormattingEnabled = true;
-            this.lsbElementsLogo.ItemHeight = 22;
-            this.lsbElementsLogo.Items.AddRange(new object[] {
-            "Calque 1",
-            "Calque 2",
-            "Calque 3"});
-            this.lsbElementsLogo.Location = new System.Drawing.Point(17, 314);
-            this.lsbElementsLogo.Name = "lsbElementsLogo";
-            this.lsbElementsLogo.ScrollAlwaysVisible = true;
-            this.lsbElementsLogo.Size = new System.Drawing.Size(217, 136);
-            this.lsbElementsLogo.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Calques :";
             // 
             // groupBox1
             // 
@@ -141,46 +115,72 @@
             this.groupBox1.Controls.Add(this.btnCarre);
             this.groupBox1.Location = new System.Drawing.Point(17, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(207, 213);
+            this.groupBox1.Size = new System.Drawing.Size(232, 220);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formes";
             // 
             // btnTexte
             // 
-            this.btnTexte.Location = new System.Drawing.Point(121, 77);
+            this.btnTexte.Location = new System.Drawing.Point(126, 77);
             this.btnTexte.Name = "btnTexte";
-            this.btnTexte.Size = new System.Drawing.Size(79, 32);
+            this.btnTexte.Size = new System.Drawing.Size(92, 32);
             this.btnTexte.TabIndex = 25;
             this.btnTexte.Text = "Texte";
             this.btnTexte.UseVisualStyleBackColor = true;
             // 
             // btnTriangle
             // 
-            this.btnTriangle.Location = new System.Drawing.Point(10, 77);
+            this.btnTriangle.Location = new System.Drawing.Point(15, 77);
             this.btnTriangle.Name = "btnTriangle";
-            this.btnTriangle.Size = new System.Drawing.Size(79, 32);
+            this.btnTriangle.Size = new System.Drawing.Size(92, 32);
             this.btnTriangle.TabIndex = 23;
             this.btnTriangle.Text = "Triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
             // 
             // btnRond
             // 
-            this.btnRond.Location = new System.Drawing.Point(121, 37);
+            this.btnRond.Location = new System.Drawing.Point(126, 37);
             this.btnRond.Name = "btnRond";
-            this.btnRond.Size = new System.Drawing.Size(79, 32);
+            this.btnRond.Size = new System.Drawing.Size(92, 32);
             this.btnRond.TabIndex = 22;
             this.btnRond.Text = "Rond";
             this.btnRond.UseVisualStyleBackColor = true;
+            this.btnRond.Click += new System.EventHandler(this.btnRond_Click);
             // 
             // btnCarre
             // 
-            this.btnCarre.Location = new System.Drawing.Point(10, 37);
+            this.btnCarre.Location = new System.Drawing.Point(15, 37);
             this.btnCarre.Name = "btnCarre";
-            this.btnCarre.Size = new System.Drawing.Size(79, 32);
+            this.btnCarre.Size = new System.Drawing.Size(92, 32);
             this.btnCarre.TabIndex = 21;
             this.btnCarre.Text = "Carré";
             this.btnCarre.UseVisualStyleBackColor = true;
+            this.btnCarre.Click += new System.EventHandler(this.btnCarre_Click);
+            // 
+            // lsbCalques
+            // 
+            this.lsbCalques.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbCalques.FormattingEnabled = true;
+            this.lsbCalques.ItemHeight = 22;
+            this.lsbCalques.Items.AddRange(new object[] {
+            "Calque 1",
+            "Calque 2",
+            "Calque 3"});
+            this.lsbCalques.Location = new System.Drawing.Point(17, 380);
+            this.lsbCalques.Name = "lsbCalques";
+            this.lsbCalques.Size = new System.Drawing.Size(243, 180);
+            this.lsbCalques.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 344);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Calques :";
             // 
             // panel2
             // 
@@ -209,181 +209,6 @@
             this.panel2.Size = new System.Drawing.Size(530, 236);
             this.panel2.TabIndex = 2;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Enabled = false;
-            this.label23.Location = new System.Drawing.Point(402, 118);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(22, 17);
-            this.label23.TabIndex = 66;
-            this.label23.Text = "px";
-            // 
-            // nudFontSize
-            // 
-            this.nudFontSize.Enabled = false;
-            this.nudFontSize.Increment = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudFontSize.Location = new System.Drawing.Point(128, 152);
-            this.nudFontSize.Maximum = new decimal(new int[] {
-            46,
-            0,
-            0,
-            0});
-            this.nudFontSize.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudFontSize.Name = "nudFontSize";
-            this.nudFontSize.Size = new System.Drawing.Size(57, 22);
-            this.nudFontSize.TabIndex = 63;
-            this.nudFontSize.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // tbxPosYTexte
-            // 
-            this.tbxPosYTexte.Enabled = false;
-            this.tbxPosYTexte.Location = new System.Drawing.Point(343, 118);
-            this.tbxPosYTexte.Name = "tbxPosYTexte";
-            this.tbxPosYTexte.Size = new System.Drawing.Size(57, 22);
-            this.tbxPosYTexte.TabIndex = 53;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Enabled = false;
-            this.label22.Location = new System.Drawing.Point(32, 152);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 17);
-            this.label22.TabIndex = 65;
-            this.label22.Text = "FontSize :";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Enabled = false;
-            this.label24.Location = new System.Drawing.Point(267, 118);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(63, 17);
-            this.label24.TabIndex = 64;
-            this.label24.Text = "CoordY :";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Enabled = false;
-            this.label25.Location = new System.Drawing.Point(402, 85);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(22, 17);
-            this.label25.TabIndex = 62;
-            this.label25.Text = "px";
-            // 
-            // nudProfondeurTexte
-            // 
-            this.nudProfondeurTexte.Enabled = false;
-            this.nudProfondeurTexte.Location = new System.Drawing.Point(128, 121);
-            this.nudProfondeurTexte.Name = "nudProfondeurTexte";
-            this.nudProfondeurTexte.Size = new System.Drawing.Size(57, 22);
-            this.nudProfondeurTexte.TabIndex = 58;
-            // 
-            // tbxPosXTexte
-            // 
-            this.tbxPosXTexte.Enabled = false;
-            this.tbxPosXTexte.Location = new System.Drawing.Point(343, 85);
-            this.tbxPosXTexte.Name = "tbxPosXTexte";
-            this.tbxPosXTexte.Size = new System.Drawing.Size(57, 22);
-            this.tbxPosXTexte.TabIndex = 50;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Enabled = false;
-            this.label21.Location = new System.Drawing.Point(32, 121);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 17);
-            this.label21.TabIndex = 60;
-            this.label21.Text = "Profondeur :";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Enabled = false;
-            this.label26.Location = new System.Drawing.Point(267, 85);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 17);
-            this.label26.TabIndex = 61;
-            this.label26.Text = "CoordX :";
-            // 
-            // cmbCalqueTexte
-            // 
-            this.cmbCalqueTexte.Enabled = false;
-            this.cmbCalqueTexte.FormattingEnabled = true;
-            this.cmbCalqueTexte.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbCalqueTexte.Location = new System.Drawing.Point(128, 88);
-            this.cmbCalqueTexte.Name = "cmbCalqueTexte";
-            this.cmbCalqueTexte.Size = new System.Drawing.Size(90, 24);
-            this.cmbCalqueTexte.TabIndex = 54;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Enabled = false;
-            this.label20.Location = new System.Drawing.Point(32, 88);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 17);
-            this.label20.TabIndex = 57;
-            this.label20.Text = "Calque :";
-            // 
-            // btnCouleurTexte
-            // 
-            this.btnCouleurTexte.BackColor = System.Drawing.Color.Red;
-            this.btnCouleurTexte.Enabled = false;
-            this.btnCouleurTexte.Location = new System.Drawing.Point(344, 51);
-            this.btnCouleurTexte.Name = "btnCouleurTexte";
-            this.btnCouleurTexte.Size = new System.Drawing.Size(43, 25);
-            this.btnCouleurTexte.TabIndex = 49;
-            this.btnCouleurTexte.UseVisualStyleBackColor = false;
-            // 
-            // btnSupprimerTexte
-            // 
-            this.btnSupprimerTexte.Enabled = false;
-            this.btnSupprimerTexte.Location = new System.Drawing.Point(422, 178);
-            this.btnSupprimerTexte.Name = "btnSupprimerTexte";
-            this.btnSupprimerTexte.Size = new System.Drawing.Size(104, 35);
-            this.btnSupprimerTexte.TabIndex = 48;
-            this.btnSupprimerTexte.Text = "Supprimer";
-            this.btnSupprimerTexte.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Enabled = false;
-            this.label18.Location = new System.Drawing.Point(267, 51);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 17);
-            this.label18.TabIndex = 52;
-            this.label18.Text = "Couleur :";
-            // 
-            // tbxTexte
-            // 
-            this.tbxTexte.Enabled = false;
-            this.tbxTexte.Location = new System.Drawing.Point(128, 54);
-            this.tbxTexte.Name = "tbxTexte";
-            this.tbxTexte.Size = new System.Drawing.Size(98, 22);
-            this.tbxTexte.TabIndex = 47;
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -393,16 +218,6 @@
             this.label32.Size = new System.Drawing.Size(96, 18);
             this.label32.TabIndex = 46;
             this.label32.Text = "Propriétés :";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Enabled = false;
-            this.label19.Location = new System.Drawing.Point(32, 54);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 17);
-            this.label19.TabIndex = 51;
-            this.label19.Text = "Texte :";
             // 
             // panel3
             // 
@@ -435,15 +250,15 @@
             this.panel3.Size = new System.Drawing.Size(530, 231);
             this.panel3.TabIndex = 67;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 18);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Propriétés :";
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(422, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 35);
+            this.button2.TabIndex = 71;
+            this.button2.Text = "Supprimer";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // nudEpaisseur
             // 
@@ -643,15 +458,200 @@
             this.label5.TabIndex = 55;
             this.label5.Text = "Hauteur :";
             // 
-            // button2
+            // label1
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(422, 177);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 35);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "Supprimer";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Propriétés :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Enabled = false;
+            this.label23.Location = new System.Drawing.Point(402, 118);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(22, 17);
+            this.label23.TabIndex = 66;
+            this.label23.Text = "px";
+            // 
+            // cmbCalqueTexte
+            // 
+            this.cmbCalqueTexte.Enabled = false;
+            this.cmbCalqueTexte.FormattingEnabled = true;
+            this.cmbCalqueTexte.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbCalqueTexte.Location = new System.Drawing.Point(128, 88);
+            this.cmbCalqueTexte.Name = "cmbCalqueTexte";
+            this.cmbCalqueTexte.Size = new System.Drawing.Size(90, 24);
+            this.cmbCalqueTexte.TabIndex = 54;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Enabled = false;
+            this.label26.Location = new System.Drawing.Point(267, 85);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(63, 17);
+            this.label26.TabIndex = 61;
+            this.label26.Text = "CoordX :";
+            // 
+            // btnSupprimerTexte
+            // 
+            this.btnSupprimerTexte.Enabled = false;
+            this.btnSupprimerTexte.Location = new System.Drawing.Point(422, 178);
+            this.btnSupprimerTexte.Name = "btnSupprimerTexte";
+            this.btnSupprimerTexte.Size = new System.Drawing.Size(104, 35);
+            this.btnSupprimerTexte.TabIndex = 48;
+            this.btnSupprimerTexte.Text = "Supprimer";
+            this.btnSupprimerTexte.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Enabled = false;
+            this.label20.Location = new System.Drawing.Point(32, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 17);
+            this.label20.TabIndex = 57;
+            this.label20.Text = "Calque :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Enabled = false;
+            this.label21.Location = new System.Drawing.Point(32, 121);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(87, 17);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "Profondeur :";
+            // 
+            // nudFontSize
+            // 
+            this.nudFontSize.Enabled = false;
+            this.nudFontSize.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudFontSize.Location = new System.Drawing.Point(128, 152);
+            this.nudFontSize.Maximum = new decimal(new int[] {
+            46,
+            0,
+            0,
+            0});
+            this.nudFontSize.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudFontSize.Name = "nudFontSize";
+            this.nudFontSize.Size = new System.Drawing.Size(57, 22);
+            this.nudFontSize.TabIndex = 63;
+            this.nudFontSize.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // btnCouleurTexte
+            // 
+            this.btnCouleurTexte.BackColor = System.Drawing.Color.Red;
+            this.btnCouleurTexte.Enabled = false;
+            this.btnCouleurTexte.Location = new System.Drawing.Point(344, 51);
+            this.btnCouleurTexte.Name = "btnCouleurTexte";
+            this.btnCouleurTexte.Size = new System.Drawing.Size(43, 25);
+            this.btnCouleurTexte.TabIndex = 49;
+            this.btnCouleurTexte.UseVisualStyleBackColor = false;
+            // 
+            // tbxTexte
+            // 
+            this.tbxTexte.Enabled = false;
+            this.tbxTexte.Location = new System.Drawing.Point(128, 54);
+            this.tbxTexte.Name = "tbxTexte";
+            this.tbxTexte.Size = new System.Drawing.Size(98, 22);
+            this.tbxTexte.TabIndex = 47;
+            // 
+            // tbxPosXTexte
+            // 
+            this.tbxPosXTexte.Enabled = false;
+            this.tbxPosXTexte.Location = new System.Drawing.Point(343, 85);
+            this.tbxPosXTexte.Name = "tbxPosXTexte";
+            this.tbxPosXTexte.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosXTexte.TabIndex = 50;
+            // 
+            // tbxPosYTexte
+            // 
+            this.tbxPosYTexte.Enabled = false;
+            this.tbxPosYTexte.Location = new System.Drawing.Point(343, 118);
+            this.tbxPosYTexte.Name = "tbxPosYTexte";
+            this.tbxPosYTexte.Size = new System.Drawing.Size(57, 22);
+            this.tbxPosYTexte.TabIndex = 53;
+            // 
+            // nudProfondeurTexte
+            // 
+            this.nudProfondeurTexte.Enabled = false;
+            this.nudProfondeurTexte.Location = new System.Drawing.Point(128, 121);
+            this.nudProfondeurTexte.Name = "nudProfondeurTexte";
+            this.nudProfondeurTexte.Size = new System.Drawing.Size(57, 22);
+            this.nudProfondeurTexte.TabIndex = 58;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Enabled = false;
+            this.label19.Location = new System.Drawing.Point(32, 54);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 17);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Texte :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Enabled = false;
+            this.label25.Location = new System.Drawing.Point(402, 85);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(22, 17);
+            this.label25.TabIndex = 62;
+            this.label25.Text = "px";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Enabled = false;
+            this.label22.Location = new System.Drawing.Point(32, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 17);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "FontSize :";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Enabled = false;
+            this.label18.Location = new System.Drawing.Point(267, 51);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(65, 17);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Couleur :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Enabled = false;
+            this.label24.Location = new System.Drawing.Point(267, 118);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(63, 17);
+            this.label24.TabIndex = 64;
+            this.label24.Text = "CoordY :";
             // 
             // menuStrip
             // 
@@ -675,6 +675,18 @@
             this.msFichier.Size = new System.Drawing.Size(64, 24);
             this.msFichier.Text = "Fichier";
             // 
+            // msEnregistrer
+            // 
+            this.msEnregistrer.Name = "msEnregistrer";
+            this.msEnregistrer.Size = new System.Drawing.Size(155, 26);
+            this.msEnregistrer.Text = "Enregistrer";
+            // 
+            // msOuvrir
+            // 
+            this.msOuvrir.Name = "msOuvrir";
+            this.msOuvrir.Size = new System.Drawing.Size(155, 26);
+            this.msOuvrir.Text = "Ouvrir";
+            // 
             // affichageToolStripMenuItem
             // 
             this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
@@ -687,18 +699,6 @@
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
             // 
-            // msEnregistrer
-            // 
-            this.msEnregistrer.Name = "msEnregistrer";
-            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
-            this.msEnregistrer.Text = "Enregistrer";
-            // 
-            // msOuvrir
-            // 
-            this.msOuvrir.Name = "msOuvrir";
-            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
-            this.msOuvrir.Text = "Ouvrir";
-            // 
             // frmLogoGo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -710,17 +710,18 @@
             this.Name = "frmLogoGo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoGo";
+            this.Load += new System.EventHandler(this.frmLogoGo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProfondeurTexte)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -736,7 +737,7 @@
         private System.Windows.Forms.Button btnTriangle;
         private System.Windows.Forms.Button btnRond;
         private System.Windows.Forms.Button btnCarre;
-        private System.Windows.Forms.ListBox lsbElementsLogo;
+        private System.Windows.Forms.ListBox lsbCalques;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label32;
