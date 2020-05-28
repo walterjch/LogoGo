@@ -8,20 +8,19 @@ using System.Windows.Forms;
 
 namespace WF_LogoGo
 {
-    class Carre : Sprite
+    class Triangle : Sprite
     {
         #region Variables d'instance
-        private static int _nombreCarres = 0;
+        private static int _nombreTriangles = 0;
         #endregion
 
         #region Constructeurs
-        public Carre(Form parent, int calque) : base(parent, calque)
+        public Triangle(Form parent, int calque) : base(parent, calque)
         {
-            _nombreCarres++;
-            Nom = "Carré_" + _nombreCarres.ToString();
+            _nombreTriangles++;
+            Nom = "Triangle_" + _nombreTriangles.ToString();
         }
 
-        
         #endregion
 
         #region Méthodes
@@ -38,21 +37,25 @@ namespace WF_LogoGo
 
         public override void Draw(Graphics g)
         {
-            
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            Point[] trace =
+            {
+                new Point(Location.X, Location.Y + Height),
+                new Point(Location.X + Width / 2, Location.Y),
+                new Point(Location.X + Width, Location.Y + Height),
+                new Point(Location.X, Location.Y + Height)
+            };
             if (Remplir)
             {
                 SolidBrush b = new SolidBrush(Couleur);
-                g.FillRectangle(b, new Rectangle(Location.X, Location.Y, Size.Width, Size.Height));
+                g.FillPolygon(b, trace);
             }
             else
             {
                 Pen p = new Pen(Couleur, EpaisseurPen);
-                g.DrawRectangle(p, new Rectangle(Location.X, Location.Y, Size.Width, Size.Height));
+                g.DrawPolygon(p, trace);
             }
-
         }
-
         #endregion
     }
 }

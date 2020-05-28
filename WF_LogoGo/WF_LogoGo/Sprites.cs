@@ -39,6 +39,14 @@ namespace WF_LogoGo
 
         }
 
+        /// <summary>
+        /// Supprime de la liste le sprite spécifié
+        /// </summary>
+        /// <param name="unSprite">le Sprite à supprimer</param>
+        public void Supprimer(Sprite unSprite)
+        {
+            ListeDeSprite.Remove(unSprite);
+        }
 
         /// <summary>
         /// Trie les Sprites selon leur profondeur

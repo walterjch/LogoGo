@@ -179,19 +179,21 @@ La fiche principale est la première fiche qu'on voit en arrivant sur l'applicat
 
 
 
-C'est à partir de cette fenêtre qu'on a accès à toutes les fonctionnalités de LogoGo. Elle contient plusieurs parties et chaque partie est documentée ci-dessous :
+C'est à partir de cette fenêtre qu'on a accès à toutes les fonctionnalités de LogoGo. Elle contient trois parties et chaque partie est documentée ci-dessous :
 
-**Formes**
+**1. Formes**
 
 Dans cette partie de la fenêtre, il y a le choix entre plusieurs types de formes. Chaque bouton correspond à une forme différente qui, à l'appui d'un bouton, apparaîtra sur le calque actif.
 
 
 
-**Calques**
+**2. Calques**
 
 Chaque calque est présent dans une ListBox (élément WindowsForm). Lorsqu'on sélectionne un calque, celui-ci devient actif. Le calque actif est  celui sur lequel les formes apparaissent.
 
-**Propriétés**
+**3. Propriétés**
+
+Ce sont les caractéristiques d'une forme (Sprite). Elles sont modifiable via les champs disponibles pour chacune d'elles.
 
 
 
@@ -203,13 +205,49 @@ Chaque calque est présent dans une ListBox (élément WindowsForm). Lorsqu'on s
 
 # Analyse organique
 
+
+
 # Réalisation
 
 # Tests unitaires
 
 # Plan de test
 
-# Rapports de test
+Afin de vérifier qu'aucune régression et aucune erreur ne survienne au cours du développement, il est pratique d'avoir un certain scénario qui, étant testé chaque jour, permet de s'assurer que tout fonctionne.
+
+Voilà le plan de test que j'ai utilisé :
+
+|  Id  |                         Description                          |                       Résultat attendu                       |
+| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   |                 Lancement de l'application.                  | Impossible de modifier les propriétés. Calque 1 choisi par défaut. |
+|  2   |             Création d'une forme de chaque type.             | Chaque forme se crée correctement et apparaît avec les propriétés par défaut. On peut modifier les propriétés. |
+|  3   |         Modification des propriétés de chaque forme.         | Chaque forme est modifiée comme prévu et les modifications sont bien visibles. |
+|  4   | Changement de la propriété "Calque" pour avoir au moins une forme sur chaque calque. | Les formes se mettent sur le bon calque et on voit les formes se mettre dans le bon ordre. |
+|  5   |                   Enregistrement du logo.                    | L'explorateur de fichier s'ouvre et on peut enregistrer le logo sans problème. |
+|  6   |              Suppression de toutes les formes.               | Les formes se suppriment les unes après les autres comme on le souhaite. La partie "Propriétés" se met à jour. |
+|  7   |                   Ouverture d'un fichier.                    | Charge le logo correctement. Les formes ont les bonnes propriétés et sont sur les bons calques. |
+|  8   |                   Modification des formes.                   | Les modifications fonctionnent et aucune erreur ne survient. |
+|  9   |                     Exportation du logo.                     | L'explorateur de fichier s'ouvre et nous permet de sauvegarder le logo en divers formats d'image. |
+|  10  |                   Vérification de l'image.                   | L'image enregistrée contient bien le logo et fait le bonne taille. |
+
+
+
+# Rapports de tests
+
+Rapport de tests du 28 Mai :
+
+|  Id  |    Date    | Réussi |                         Description                          |                           Résultat                           |
+| :--: | :--------: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   | 28.05.2020 |  OUI   |                 Lancement de l'application.                  | Impossible de modifier les propriétés. Calque 1 choisi par défaut. |
+|  2   | 28.05.2020 |  NON   |             Création d'une forme de chaque type.             |                       Manque le texte                        |
+|  3   | 28.05.2020 |  OUI   |         Modification des propriétés de chaque forme.         |                    Impossible pour texte.                    |
+|  4   | 28.05.2020 |  OUI   | Changement de la propriété "Calque" pour avoir au moins une forme sur chaque calque. |        Fonctionne pour toutes les formes disponibles.        |
+|  5   | 28.05.2020 |  NON   |                   Enregistrement du logo.                    |                        Pas implémenté                        |
+|  6   | 28.05.2020 |  NON   |              Suppression de toutes les formes.               |                       Pas implémenté.                        |
+|  7   | 28.05.2020 |  NON   |                   Ouverture d'un fichier.                    |                       Pas implémenté.                        |
+|  8   | 28.05.2020 |  NON   |                   Modification des formes.                   |                       Pas implémenté.                        |
+|  9   | 28.05.2020 |  NON   |                     Exportation du logo.                     |                       Pas implémenté.                        |
+|  10  | 28.05.2020 |  NON   |                   Vérification de l'image.                   |                Ne peut pas encore être crée.                 |
 
 # Conclusion
 

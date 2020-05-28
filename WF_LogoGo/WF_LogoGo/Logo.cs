@@ -70,6 +70,15 @@ namespace WF_LogoGo
         }
 
         /// <summary>
+        /// Supprime le Sprite spécifié
+        /// </summary>
+        /// <param name="s">Sprite à supprimer</param>
+        public void SupprimerSprite(Sprite s)
+        {
+            Sprites.Supprimer(s);
+        }
+
+        /// <summary>
         /// Trie les Sprites
         /// </summary>
         public void TrierSprites()
