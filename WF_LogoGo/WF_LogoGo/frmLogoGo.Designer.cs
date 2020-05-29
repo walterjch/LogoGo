@@ -86,6 +86,8 @@
             this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.btnPolygone = new System.Windows.Forms.Button();
+            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlProprietesTexte.SuspendLayout();
@@ -110,6 +112,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPolygone);
             this.groupBox1.Controls.Add(this.btnTexte);
             this.groupBox1.Controls.Add(this.btnTriangle);
             this.groupBox1.Controls.Add(this.btnRond);
@@ -129,6 +132,7 @@
             this.btnTexte.TabIndex = 25;
             this.btnTexte.Text = "Texte";
             this.btnTexte.UseVisualStyleBackColor = true;
+            this.btnTexte.Click += new System.EventHandler(this.btnTexte_Click);
             // 
             // btnTriangle
             // 
@@ -315,7 +319,7 @@
             // 
             // btnCouleurTexte
             // 
-            this.btnCouleurTexte.BackColor = System.Drawing.Color.Red;
+            this.btnCouleurTexte.BackColor = System.Drawing.Color.Black;
             this.btnCouleurTexte.Enabled = false;
             this.btnCouleurTexte.Location = new System.Drawing.Point(344, 51);
             this.btnCouleurTexte.Name = "btnCouleurTexte";
@@ -686,7 +690,8 @@
             // 
             this.msFichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msEnregistrer,
-            this.msOuvrir});
+            this.msOuvrir,
+            this.exporterToolStripMenuItem});
             this.msFichier.Name = "msFichier";
             this.msFichier.Size = new System.Drawing.Size(64, 24);
             this.msFichier.Text = "Fichier";
@@ -714,6 +719,21 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
+            // 
+            // btnPolygone
+            // 
+            this.btnPolygone.Location = new System.Drawing.Point(15, 115);
+            this.btnPolygone.Name = "btnPolygone";
+            this.btnPolygone.Size = new System.Drawing.Size(92, 32);
+            this.btnPolygone.TabIndex = 26;
+            this.btnPolygone.Text = "Polygone";
+            this.btnPolygone.UseVisualStyleBackColor = true;
+            // 
+            // exporterToolStripMenuItem
+            // 
+            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exporterToolStripMenuItem.Text = "Exporter";
             // 
             // frmLogoGo
             // 
@@ -806,6 +826,8 @@
         private System.Windows.Forms.ToolStripMenuItem msEnregistrer;
         private System.Windows.Forms.ToolStripMenuItem msOuvrir;
         private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button btnPolygone;
+        private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
     }
 }
 

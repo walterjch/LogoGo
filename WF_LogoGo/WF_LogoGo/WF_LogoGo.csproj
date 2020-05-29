@@ -64,6 +64,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Sprites.cs" />
+    <Compile Include="Texte.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Triangle.cs">
       <SubType>Component</SubType>
     </Compile>

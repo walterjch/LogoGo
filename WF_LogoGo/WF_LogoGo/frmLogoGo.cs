@@ -14,7 +14,7 @@ namespace WF_LogoGo
     {
         Logo MonLogo;
 
-        public int CalqueChoisi { get => Convert.ToInt32(lsbCalques.SelectedItem.ToString().Substring(lsbCalques.SelectedItem.ToString().Length - 1)); }
+        private int CalqueChoisi { get => Convert.ToInt32(lsbCalques.SelectedItem.ToString().Substring(lsbCalques.SelectedItem.ToString().Length - 1)); }
 
         #region Constructeur
         public frmLogoGo()
@@ -43,6 +43,14 @@ namespace WF_LogoGo
         private void btnTriangle_Click(object sender, EventArgs e)
         {
             MonLogo.SpriteChoisi = new Triangle(this, CalqueChoisi);
+            Dessine(MonLogo.SpriteChoisi);
+            Invalidate();
+        }
+
+
+        private void btnTexte_Click(object sender, EventArgs e)
+        {
+            MonLogo.SpriteChoisi = new Texte(this, CalqueChoisi);
             Dessine(MonLogo.SpriteChoisi);
             Invalidate();
         }
@@ -232,7 +240,52 @@ namespace WF_LogoGo
         /// </summary>
         public void AfficherProprietes()
         {
-            
+
+            if (MonLogo.SpriteChoisi is Texte)
+            {
+                pnlProprietesStandard.Visible = false;
+                pnlProprietesTexte.Visible = true;
+
+                //Affichage de la position du Sprite en question
+                tbxPosXTexte.Enabled = true;
+                tbxPosYTexte.Enabled = true;
+                tbxPosXTexte.Text = MonLogo.SpriteChoisi.Location.X.ToString();
+                tbxPosYTexte.Text = MonLogo.SpriteChoisi.Location.Y.ToString();
+
+                //Affichage du texte du Sprite en question
+                tbxTexte.Enabled = true;
+                tbxTexte.Text = MonLogo.SpriteChoisi.ToString();
+
+                //Affichage de sa couleur
+                btnCouleurTexte.BackColor = MonLogo.SpriteChoisi.Couleur;
+                btnCouleurTexte.Enabled = true;
+
+
+                //Affichage de la taille de police
+                Texte t = (Texte)MonLogo.SpriteChoisi;
+                nudFontSize.Enabled = true;
+                nudFontSize.Value = t.TaillePolice;
+
+                //Affichage de la profondeur
+                nudProfondeurTexte.Enabled = true;
+                nudProfondeurTexte.Value = MonLogo.SpriteChoisi.ProfondeurParCalque;
+
+
+                //Affichage du calques dans la combobox
+                cmbCalqueTexte.Enabled = true;
+                foreach (string calque in cmbCalque.Items)
+                {
+                    if (calque == "Calque " + MonLogo.SpriteChoisi.NumeroCalque)
+                    {
+                        cmbCalqueTexte.SelectedIndex = cmbCalqueTexte.FindStringExact(calque);
+                    }
+                }
+
+                btnSupprimerTexte.Enabled = true;
+
+            }
+            else
+            {
                 pnlProprietesTexte.Visible = false;
                 pnlProprietesStandard.Visible = true;
                 //Affichage de la position du Sprite en question
@@ -267,7 +320,6 @@ namespace WF_LogoGo
                 chkRemplir.Enabled = true;
                 chkRemplir.Checked = MonLogo.SpriteChoisi.Remplir;
 
-
                 //Affichage du calques dans la combobox
                 cmbCalque.Enabled = true;
                 foreach (string calque in cmbCalque.Items)
@@ -277,7 +329,10 @@ namespace WF_LogoGo
                         cmbCalque.SelectedIndex = cmbCalque.FindStringExact(calque);
                     }
                 }
+
                 btnSupprimerSprite.Enabled = true;
+
+            }
         }
 
         /// <summary>
@@ -321,6 +376,5 @@ namespace WF_LogoGo
             nudEpaisseur.Enabled = false;
 
         }
-
     }
 }
