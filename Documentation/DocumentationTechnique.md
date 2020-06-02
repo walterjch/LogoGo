@@ -168,6 +168,8 @@ L'utilisateur peut paramétrer une forme comme il le souhaite. Les propriétés 
 
 L'utilisateur peut aisément changer une forme de calque, même après la création de la forme. Il peut le faire en modifiant la propriété correspondante et en choisissant le calque souhaité. On voit alors la forme changer de calque. En passant du calque 1 au calque 3, par exemple, on voit la forme se placer au-dessus de toutes les formes du calque 1 et du calque 2. Étant donné qu'elle serait la dernière ajoutée au calque 3, elle serait également par-dessus des formes qui faisaient déjà partie de ce calque.
 
+
+
 #### Modification de profondeur
 
 Deux formes dans un même calques apparaissent dans un certain ordre (ordre de création). Cependant, l'utilisateur peut décider de cet ordre en modifiant la propriété correspondante. Tout comme pour les calques, on voit la forme se mettre au-dessus des formes ayant une profondeur moins élevée.
@@ -334,6 +336,14 @@ De cette façon, tous les sprites sont toujours dessinés dans le bon ordre.
 Dans l'énoncé, il était également question de transparence des plans. Pour menez à bien cette tâche, j'ai changé, pour être précis, la transparence de tous les sprites qui sont sur le calque concerné. En fait, un calque n'a pas vraiment de transparence, ce sont les formes sur ce calques qui doivent se dessiner d'une couleur plus ou moins transparente. Pour modifier la transparence d'un couleur est déterminée par la valeur de son alpha. Dans acronyme RGBA, le A correspond à la transparence (alpha) de la couleur. Il suffit donc de dessiner les sprites en utilisant une couleur avec la transparence du calque choisie par l'utilisateur.
 
 ## Exportation en image
+
+L'exportation d'image est, globalement, assez simple. Étant donné que nous pouvons facilement récupérer l'image d'une PictureBox, il est possible sauvegarder cette image de la méthode suivante :
+
+```
+maPictureBox.Image.Save(@"C:\Images\monImage",ImageFormat.Jpeg);
+```
+
+
 
 # Tests unitaires
 

@@ -353,6 +353,30 @@ namespace WF_LogoGo
         }
 
         /// <summary>
+        /// Ouvre une form montrant le logo qui sera exporté.
+        /// Lorsque l'utilisateur confirme sa volonter de sauver
+        /// le logo, un saveFileDialog s'affiche pour qui choisise
+        /// où le fichier sera enregistré.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void msExporter_Click(object sender, EventArgs e)
+        {
+            ExporterLogo frmExporter = new ExporterLogo(MonLogo);
+
+            if (frmExporter.ShowDialog() == DialogResult.OK)
+            {
+                saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
+                                        + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    frmExporter.LogoFinal.Save(saveFileDialog.FileName);
+                }
+            }
+        }
+
+        /// <summary>
         /// Ouvre une page web sur la documentation du projet
         /// </summary>
         /// <param name="sender"></param>

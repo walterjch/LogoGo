@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WF_LogoGo
 {
-    class Logo
+    public class Logo
     {
         #region Variables d'instance
 
@@ -45,8 +45,6 @@ namespace WF_LogoGo
             Sprites = new Sprites();
             this._parent = parent;
             NomFichier = NOM_PAR_DEFAUT;
-
-            //AjouterCalque();
         }
 
 

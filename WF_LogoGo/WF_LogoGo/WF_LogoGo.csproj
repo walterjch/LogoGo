@@ -85,6 +85,9 @@
     <Compile Include="Triangle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ExporterLogo.resx">
+      <DependentUpon>ExporterLogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCreerPolygone.resx">
       <DependentUpon>frmCreerPolygone.cs</DependentUpon>
     </EmbeddedResource>

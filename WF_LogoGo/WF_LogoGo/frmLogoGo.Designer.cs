@@ -86,9 +86,10 @@
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.btnPolygone = new System.Windows.Forms.Button();
-            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msExporter = new System.Windows.Forms.ToolStripMenuItem();
             this.nudTransparenceCalque = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlProprietesTexte.SuspendLayout();
@@ -714,7 +715,7 @@
             this.msFichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msEnregistrer,
             this.msOuvrir,
-            this.exporterToolStripMenuItem});
+            this.msExporter});
             this.msFichier.Name = "msFichier";
             this.msFichier.Size = new System.Drawing.Size(64, 24);
             this.msFichier.Text = "Fichier";
@@ -748,11 +749,12 @@
             this.btnPolygone.UseVisualStyleBackColor = true;
             this.btnPolygone.Click += new System.EventHandler(this.btnPolygone_Click);
             // 
-            // exporterToolStripMenuItem
+            // msExporter
             // 
-            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.exporterToolStripMenuItem.Text = "Exporter";
+            this.msExporter.Name = "msExporter";
+            this.msExporter.Size = new System.Drawing.Size(216, 26);
+            this.msExporter.Text = "Exporter";
+            this.msExporter.Click += new System.EventHandler(this.msExporter_Click);
             // 
             // nudTransparenceCalque
             // 
@@ -874,9 +876,10 @@
         private System.Windows.Forms.ToolStripMenuItem msOuvrir;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button btnPolygone;
-        private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msExporter;
         private System.Windows.Forms.NumericUpDown nudTransparenceCalque;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 

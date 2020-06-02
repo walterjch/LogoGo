@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WF_LogoGo
 {
-    class Sprites
+    public class Sprites
     {
         #region Variables d'instance
         private List<Sprite> _listeDeSprite;
