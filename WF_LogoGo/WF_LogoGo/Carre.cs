@@ -26,17 +26,7 @@ namespace WF_LogoGo
 
         #region Méthodes
 
-        /// <summary>
-        /// Dessine le carré remplis ou pas, selon la propriété Remplir
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public override void SpritePaint(object sender, PaintEventArgs e)
-        {
-            Draw(e.Graphics);
-        }
-
-        public override void Draw(Graphics g)
+        public override void SpritePaintAvecGraphics(Graphics g)
         {
             
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;

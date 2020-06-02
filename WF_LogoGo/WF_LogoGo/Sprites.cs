@@ -53,7 +53,7 @@ namespace WF_LogoGo
         /// </summary>
         public void Trier()
         {
-            ListeDeSprite = ListeDeSprite.OrderBy(s => s.NumeroCalque).ThenBy(s => s.ProfondeurParCalque).ToList<Sprite>();
+            ListeDeSprite = ListeDeSprite.OrderBy(s => s.NumeroCalque).ThenBy(s => s.Profondeur).ToList<Sprite>();
         }
         #endregion
     }

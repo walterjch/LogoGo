@@ -26,6 +26,12 @@ namespace WF_LogoGo
         #endregion
 
         #region Evenements
+
+        /// <summary>
+        /// Créé un nouveau objet de txpe Carre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCarre_Click(object sender, EventArgs e)
         {
             MonLogo.SpriteChoisi = new Carre(this, CalqueChoisi);
@@ -33,6 +39,11 @@ namespace WF_LogoGo
             Invalidate();
         }
 
+        /// <summary>
+        /// Créé un nouveau objet de txpe Rond
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRond_Click(object sender, EventArgs e)
         {
             MonLogo.SpriteChoisi = new Rond(this, CalqueChoisi);
@@ -40,6 +51,11 @@ namespace WF_LogoGo
             Invalidate();
         }
 
+        /// <summary>
+        /// Créé un nouveau objet de txpe Triangle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTriangle_Click(object sender, EventArgs e)
         {
             MonLogo.SpriteChoisi = new Triangle(this, CalqueChoisi);
@@ -47,12 +63,35 @@ namespace WF_LogoGo
             Invalidate();
         }
 
-
+        /// <summary>
+        /// Créé un nouveau objet de txpe Texte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTexte_Click(object sender, EventArgs e)
         {
             MonLogo.SpriteChoisi = new Texte(this, CalqueChoisi);
             Dessine(MonLogo.SpriteChoisi);
             Invalidate();
+        }
+
+        /// <summary>
+        /// Créé un nouveau polygone
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnPolygone_Click(object sender, EventArgs e)
+        {
+            Polygone p = new Polygone(this, 1);
+            frmCreerPolygone frmCreerPolygon = new frmCreerPolygone(p);
+
+            if (frmCreerPolygon.ShowDialog() == DialogResult.OK)
+            {
+                p.Trace = frmCreerPolygon.Trace;
+                MonLogo.SpriteChoisi = p;
+                Dessine(MonLogo.SpriteChoisi);
+                Invalidate();
+            }
         }
 
         /// <summary>
@@ -124,7 +163,7 @@ namespace WF_LogoGo
         private void nudProfondeur_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown nudProf = (sender as NumericUpDown);
-            MonLogo.SpriteChoisi.ProfondeurParCalque = (int)nudProf.Value;
+            MonLogo.SpriteChoisi.Profondeur = (int)nudProf.Value;
             MonLogo.TrierSprites();
             Dessine();
             Invalidate();
@@ -181,6 +220,19 @@ namespace WF_LogoGo
         }
 
         /// <summary>
+        /// Applique les modifications de position lorsque l'on quitte
+        /// la textbox au sprite choisi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbxPosTexte_Leave(object sender, EventArgs e)
+        {
+            Point nouvelleLocation = new Point(Convert.ToInt32(tbxPosXTexte.Text), Convert.ToInt32(tbxPosYTexte.Text));
+            MonLogo.SpriteChoisi.Location = nouvelleLocation;
+            Invalidate();
+        }
+
+        /// <summary>
         /// Applique le changement d'épaisseur au sprite choisi
         /// </summary>
         /// <param name="sender"></param>
@@ -206,6 +258,108 @@ namespace WF_LogoGo
             //Mise à jour des infos affichées
             ReinitialiserProprietes();
             Invalidate();
+        }
+
+
+        /// <summary>
+        /// Change le texte de l'objet Texte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbxTexte_Leave(object sender, EventArgs e)
+        {
+            Texte texteAChanger = (Texte)MonLogo.SpriteChoisi;
+            if (tbxTexte.Text != string.Empty)
+            {
+                texteAChanger.ChangerTexte(tbxTexte.Text);
+                Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Change la taille de la police du texte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nudFontSize_ValueChanged(object sender, EventArgs e)
+        {
+            Texte t = (Texte)MonLogo.SpriteChoisi;
+            t.TaillePolice = (int)nudFontSize.Value;
+            Invalidate();
+        }
+
+        /// <summary>
+        /// Valide les modifications des textbox si la touche enter
+        /// est appuyée
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Proprietes_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox t = (sender as TextBox);
+            if (e.KeyCode == Keys.Enter)
+            {
+                ProcessTabKey(true);
+            }
+        }
+
+        /// <summary>
+        /// Interdit les lettres dans les textbox en n'autorisant que
+        /// les chiffres et les contrôles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Proprietes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
+        /// Change la transaprence de tous les sprites d'un calque
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nudTransparenceCalque_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (Sprite unSprite in MonLogo.Sprites.ListeDeSprite)
+            {
+                if (unSprite.NumeroCalque == CalqueChoisi)
+                {
+                    unSprite.ChangerTransparence((int)(sender as NumericUpDown).Value);
+                }
+            }
+
+            Invalidate();
+        }
+
+        /// <summary>
+        /// Mets à jour la transparence
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lsbCalques_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Sprite unSprite in MonLogo.Sprites.ListeDeSprite)
+            {
+                if (unSprite.NumeroCalque == CalqueChoisi)
+                {
+                    nudTransparenceCalque.Value = unSprite.AlphaCouleur;
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Ouvre une page web sur la documentation du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void aideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/walterjch/LogoGo/tree/master/Documentation");
         }
         #endregion
 
@@ -268,7 +422,7 @@ namespace WF_LogoGo
 
                 //Affichage de la profondeur
                 nudProfondeurTexte.Enabled = true;
-                nudProfondeurTexte.Value = MonLogo.SpriteChoisi.ProfondeurParCalque;
+                nudProfondeurTexte.Value = MonLogo.SpriteChoisi.Profondeur;
 
 
                 //Affichage du calques dans la combobox
@@ -293,10 +447,19 @@ namespace WF_LogoGo
                 tbxPosY.Enabled = true;
                 tbxPosX.Text = MonLogo.SpriteChoisi.Location.X.ToString();
                 tbxPosY.Text = MonLogo.SpriteChoisi.Location.Y.ToString();
-
+                
+                
                 //Affichage de la taille
-                tbxHauteur.Enabled = true;
-                tbxLargeur.Enabled = true;
+                if(!(MonLogo.SpriteChoisi is Polygone))
+                {
+                    tbxHauteur.Enabled = true;
+                    tbxLargeur.Enabled = true;
+                }
+                else
+                {
+                    tbxHauteur.Enabled = false;
+                    tbxLargeur.Enabled = false;
+                }
                 tbxHauteur.Text = MonLogo.SpriteChoisi.Height.ToString();
                 tbxLargeur.Text = MonLogo.SpriteChoisi.Width.ToString();
 
@@ -306,7 +469,7 @@ namespace WF_LogoGo
 
                 //Affichage de la profondeur
                 nudProfondeur.Enabled = true;
-                nudProfondeur.Value = MonLogo.SpriteChoisi.ProfondeurParCalque;
+                nudProfondeur.Value = MonLogo.SpriteChoisi.Profondeur;
 
 
                 //Affichage de l'épaisseur
@@ -337,44 +500,52 @@ namespace WF_LogoGo
 
         /// <summary>
         /// Réinitialise les propriétés affichées
-        /// TODO : Reinitialiser propriétés de pnlTexte
         /// </summary>
         public void ReinitialiserProprietes()
         {
-            //Affichage de la position du carré en question
+
+            // Partie Sprite 
             tbxPosX.Enabled = false;
             tbxPosY.Enabled = false;
             tbxPosX.Text = string.Empty;
             tbxPosY.Text = string.Empty;
 
-            //Affichage de la taille
             tbxHauteur.Enabled = false;
             tbxLargeur.Enabled = false;
             tbxHauteur.Text = string.Empty;
             tbxLargeur.Text = string.Empty;
 
-            //Affichage de sa couleur
             btnCouleur.BackColor = default(Color);
             btnCouleur.Enabled = true;
 
-
-
-            //Affichage du remplissement
             chkRemplir.Enabled = false;
             chkRemplir.Checked = false;
 
-            //Affichage du calques
             cmbCalque.Enabled = false;
 
-            //Affichage du bouton de suppression
             btnSupprimerSprite.Enabled = false;
 
-            //Affichage du numericUpDown de profondeur
             nudProfondeur.Enabled = false;
 
-            //Affichage du numericUpDown d'épaisseur
             nudEpaisseur.Enabled = false;
 
+            //Partie Texte
+            tbxTexte.Enabled = false;
+            tbxTexte.Text = string.Empty;
+
+            tbxPosXTexte.Enabled = false;
+            tbxPosYTexte.Enabled = false;
+            tbxPosXTexte.Text = string.Empty;
+            tbxPosYTexte.Text = string.Empty;
+
+            btnCouleurTexte.BackColor = default(Color);
+            btnCouleurTexte.Enabled = true;
+
+            cmbCalqueTexte.Enabled = false;
+
+            btnSupprimerTexte.Enabled = false;
+
+            nudProfondeurTexte.Enabled = false;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace WF_LogoGo
         private Color _couleur;
         private float _epaisseurPen;
         private bool _remplir;
-        private int _profondeurParCalque;
+        private int _profondeur;
         private string _nom;
         private int _numeroCalque;
         private Form _parent;
@@ -54,14 +54,17 @@ namespace WF_LogoGo
         /// <summary>
         /// Profondeur qui définit l'ordre d'apparition des sprites dans un même calque
         /// </summary>
-        public int ProfondeurParCalque { get => _profondeurParCalque; set => _profondeurParCalque = value; }
+        public int Profondeur { get => _profondeur; set => _profondeur = value; }
 
         /// <summary>
         /// Calque sur lequel est se trouve le sprite
         /// </summary>
         public int NumeroCalque { get => _numeroCalque; set => _numeroCalque = value; }
 
-
+        /// <summary>
+        /// Retourne la 
+        /// </summary>
+        public int AlphaCouleur { get => Couleur.A; }
 
         #endregion
 
@@ -70,7 +73,7 @@ namespace WF_LogoGo
         {
             Couleur = Color.Black;
             EpaisseurPen = 1;
-            ProfondeurParCalque = 1;
+            Profondeur = 1;
             NumeroCalque = calque;
             Remplir = false;
             _parent = parent;
@@ -90,14 +93,26 @@ namespace WF_LogoGo
         #region Méthodes
 
         /// <summary>
+        /// Applique une transparence à la couleur
+        /// </summary>
+        /// <param name="transparence"></param>
+        public void ChangerTransparence(int transparence)
+        {
+            Couleur = Color.FromArgb(transparence, Couleur);
+        }
+
+        /// <summary>
         /// Méthode qui dessine le sprite. La méthode est différente selon
         /// le type du sprite (rond, carré, ...)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public abstract void SpritePaint(object sender, PaintEventArgs e);
+        public void SpritePaint(object sender, PaintEventArgs e)
+        {
+            SpritePaintAvecGraphics(e.Graphics);
+        }
 
-        public abstract void Draw(Graphics g);
+        public abstract void SpritePaintAvecGraphics(Graphics g);
 
 
         /// <summary>

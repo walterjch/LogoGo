@@ -83,11 +83,12 @@
             this.msFichier = new System.Windows.Forms.ToolStripMenuItem();
             this.msEnregistrer = new System.Windows.Forms.ToolStripMenuItem();
             this.msOuvrir = new System.Windows.Forms.ToolStripMenuItem();
-            this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.btnPolygone = new System.Windows.Forms.Button();
             this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nudTransparenceCalque = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlProprietesTexte.SuspendLayout();
@@ -97,12 +98,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).BeginInit();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.nudTransparenceCalque);
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lsbCalques);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(532, 31);
@@ -173,16 +177,17 @@
             "Calque 1",
             "Calque 2",
             "Calque 3"});
-            this.lsbCalques.Location = new System.Drawing.Point(17, 380);
+            this.lsbCalques.Location = new System.Drawing.Point(17, 311);
             this.lsbCalques.Name = "lsbCalques";
-            this.lsbCalques.Size = new System.Drawing.Size(243, 180);
+            this.lsbCalques.Size = new System.Drawing.Size(243, 202);
             this.lsbCalques.TabIndex = 18;
+            this.lsbCalques.SelectedIndexChanged += new System.EventHandler(this.lsbCalques_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 344);
+            this.label2.Location = new System.Drawing.Point(17, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 16;
@@ -239,15 +244,14 @@
             this.cmbCalqueTexte.Enabled = false;
             this.cmbCalqueTexte.FormattingEnabled = true;
             this.cmbCalqueTexte.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
+            "Calque 1",
+            "Calque 2",
+            "Calque 3"});
             this.cmbCalqueTexte.Location = new System.Drawing.Point(128, 88);
             this.cmbCalqueTexte.Name = "cmbCalqueTexte";
             this.cmbCalqueTexte.Size = new System.Drawing.Size(90, 24);
             this.cmbCalqueTexte.TabIndex = 54;
+            this.cmbCalqueTexte.SelectedIndexChanged += new System.EventHandler(this.cmbCalque_SelectedIndexChanged);
             // 
             // label26
             // 
@@ -268,6 +272,7 @@
             this.btnSupprimerTexte.TabIndex = 48;
             this.btnSupprimerTexte.Text = "Supprimer";
             this.btnSupprimerTexte.UseVisualStyleBackColor = true;
+            this.btnSupprimerTexte.Click += new System.EventHandler(this.btnSupprimerSprite_Click);
             // 
             // label20
             // 
@@ -316,6 +321,7 @@
             0,
             0,
             0});
+            this.nudFontSize.ValueChanged += new System.EventHandler(this.nudFontSize_ValueChanged);
             // 
             // btnCouleurTexte
             // 
@@ -326,6 +332,7 @@
             this.btnCouleurTexte.Size = new System.Drawing.Size(43, 25);
             this.btnCouleurTexte.TabIndex = 49;
             this.btnCouleurTexte.UseVisualStyleBackColor = false;
+            this.btnCouleurTexte.Click += new System.EventHandler(this.btnCouleur_Click);
             // 
             // tbxTexte
             // 
@@ -334,6 +341,8 @@
             this.tbxTexte.Name = "tbxTexte";
             this.tbxTexte.Size = new System.Drawing.Size(98, 22);
             this.tbxTexte.TabIndex = 47;
+            this.tbxTexte.TextChanged += new System.EventHandler(this.tbxTexte_Leave);
+            this.tbxTexte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             // 
             // tbxPosXTexte
             // 
@@ -342,6 +351,9 @@
             this.tbxPosXTexte.Name = "tbxPosXTexte";
             this.tbxPosXTexte.Size = new System.Drawing.Size(57, 22);
             this.tbxPosXTexte.TabIndex = 50;
+            this.tbxPosXTexte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxPosXTexte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
+            this.tbxPosXTexte.Leave += new System.EventHandler(this.tbxPosTexte_Leave);
             // 
             // tbxPosYTexte
             // 
@@ -350,6 +362,9 @@
             this.tbxPosYTexte.Name = "tbxPosYTexte";
             this.tbxPosYTexte.Size = new System.Drawing.Size(57, 22);
             this.tbxPosYTexte.TabIndex = 53;
+            this.tbxPosYTexte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxPosYTexte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
+            this.tbxPosYTexte.Leave += new System.EventHandler(this.tbxPosTexte_Leave);
             // 
             // nudProfondeurTexte
             // 
@@ -358,6 +373,7 @@
             this.nudProfondeurTexte.Name = "nudProfondeurTexte";
             this.nudProfondeurTexte.Size = new System.Drawing.Size(57, 22);
             this.nudProfondeurTexte.TabIndex = 58;
+            this.nudProfondeurTexte.ValueChanged += new System.EventHandler(this.nudProfondeur_ValueChanged);
             // 
             // label19
             // 
@@ -554,6 +570,8 @@
             this.tbxPosY.Name = "tbxPosY";
             this.tbxPosY.Size = new System.Drawing.Size(57, 22);
             this.tbxPosY.TabIndex = 54;
+            this.tbxPosY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxPosY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxPosY.Leave += new System.EventHandler(this.tbxPos_Leave);
             // 
             // label14
@@ -583,6 +601,8 @@
             this.tbxPosX.Name = "tbxPosX";
             this.tbxPosX.Size = new System.Drawing.Size(57, 22);
             this.tbxPosX.TabIndex = 53;
+            this.tbxPosX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxPosX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxPosX.Leave += new System.EventHandler(this.tbxPos_Leave);
             // 
             // label16
@@ -622,6 +642,8 @@
             this.tbxLargeur.Name = "tbxLargeur";
             this.tbxLargeur.Size = new System.Drawing.Size(57, 22);
             this.tbxLargeur.TabIndex = 48;
+            this.tbxLargeur.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxLargeur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxLargeur.Leave += new System.EventHandler(this.tbxLargeur_Leave);
             // 
             // label8
@@ -651,6 +673,8 @@
             this.tbxHauteur.Name = "tbxHauteur";
             this.tbxHauteur.Size = new System.Drawing.Size(57, 22);
             this.tbxHauteur.TabIndex = 47;
+            this.tbxHauteur.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
+            this.tbxHauteur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxHauteur.Leave += new System.EventHandler(this.tbxHauteur_Leave);
             // 
             // label5
@@ -678,7 +702,6 @@
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msFichier,
-            this.affichageToolStripMenuItem,
             this.aideToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -699,26 +722,21 @@
             // msEnregistrer
             // 
             this.msEnregistrer.Name = "msEnregistrer";
-            this.msEnregistrer.Size = new System.Drawing.Size(155, 26);
+            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
             this.msEnregistrer.Text = "Enregistrer";
             // 
             // msOuvrir
             // 
             this.msOuvrir.Name = "msOuvrir";
-            this.msOuvrir.Size = new System.Drawing.Size(155, 26);
+            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
             this.msOuvrir.Text = "Ouvrir";
-            // 
-            // affichageToolStripMenuItem
-            // 
-            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
-            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.affichageToolStripMenuItem.Text = "Affichage";
             // 
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
+            this.aideToolStripMenuItem.Click += new System.EventHandler(this.aideToolStripMenuItem_Click);
             // 
             // btnPolygone
             // 
@@ -728,12 +746,41 @@
             this.btnPolygone.TabIndex = 26;
             this.btnPolygone.Text = "Polygone";
             this.btnPolygone.UseVisualStyleBackColor = true;
+            this.btnPolygone.Click += new System.EventHandler(this.btnPolygone_Click);
             // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
             this.exporterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.exporterToolStripMenuItem.Text = "Exporter";
+            // 
+            // nudTransparenceCalque
+            // 
+            this.nudTransparenceCalque.Location = new System.Drawing.Point(128, 534);
+            this.nudTransparenceCalque.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudTransparenceCalque.Name = "nudTransparenceCalque";
+            this.nudTransparenceCalque.Size = new System.Drawing.Size(57, 22);
+            this.nudTransparenceCalque.TabIndex = 72;
+            this.nudTransparenceCalque.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudTransparenceCalque.ValueChanged += new System.EventHandler(this.nudTransparenceCalque_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Location = new System.Drawing.Point(17, 534);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 17);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Transparence :";
             // 
             // frmLogoGo
             // 
@@ -761,6 +808,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,13 +869,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem msFichier;
-        private System.Windows.Forms.ToolStripMenuItem affichageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem msEnregistrer;
         private System.Windows.Forms.ToolStripMenuItem msOuvrir;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button btnPolygone;
         private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown nudTransparenceCalque;
+        private System.Windows.Forms.Label label3;
     }
 }
 
