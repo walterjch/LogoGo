@@ -1,5 +1,3 @@
-
-
 # Table des matières
 
 [TOC]
@@ -210,9 +208,15 @@ Dans cette partie de la fenêtre, il y a le choix entre plusieurs types de forme
 
 Lorsque l'utilisateur souhaite créer un polygone quelconque, une fenêtre  (voir **6.2.3 Fiche de création de Polygone**) s'ouvre au permet à l'utilisateur de placer des points dans une PictureBox. Le Polygone s'affiche sur la fiche principale uniquement lorsque l'utilisateur finit de placer les points.
 
+![Fenêtre principale](/Images/formesBoutons.png)
+
 **2. Calques**
 
 Chaque calque est présent dans une ListBox (élément WindowsForm). Lorsqu'on sélectionne un calque, celui-ci devient actif et, pour cela, il faut simplement mémoriser le numéro du calque sélectionné. Le calque actif est  celui sur lequel les formes apparaissent.
+
+![Fenêtre principale](/Images/lsbCalques.png)
+
+Comme vous pouvez le deviner, c'est également ici qu'on modifie la transparence d'un calque. Il faut le sélectionner puis changer la valeur "Transparence".
 
 **3. Propriétés**
 
@@ -220,7 +224,7 @@ Ce sont les caractéristiques d'une forme (Sprite). Elles sont modifiables via l
 
 ![Fenêtre principale](/Images/panelProprietes.png)
 
-Les propriétés ci-dessus sont celles d'une forme standard (Rond, Carré, Triangle). Si la forme actuellement sélectionnée est un Polygone dessiné par l'utilisateur, les propriétés "Hauteur" et "Largeur" ne sont pas modifiables car cela déformerait la forme que l'utilisateur à créé. La hauteur et la largeur de la picturebox sont calculées automatiquement dans le code.
+Les propriétés ci-dessus sont celles d'une forme standard (Rond, Carré, Triangle). Si la forme actuellement sélectionnée est un Polygone dessiné par l'utilisateur, les propriétés "Hauteur" et "Largeur" ne sont pas modifiables car cela déformerait la forme que l'utilisateur à créé. La hauteur et la largeur de la PictureBox sont calculées automatiquement dans le code.
 
 Pour le texte aussi, la taille n'est pas modifiable car elle dépend complétement de la longueur du texte ainsi que de la taille de la police utilisée.
 Voilà à quoi ressemble le panel des propriétés d'un objet Texte :
@@ -250,6 +254,8 @@ Enregistrer et Exporter ouvrent une boîte de dialogue de type SaveFileDialog pu
 
 Un appui sur le bouton "Aide" ouvre une page internet avec le manuel utilisateur. L'utilisateur est redirigé sur le lien GitHub du projet pour qu'il puisse regarder la documentation qui lui est destinée.
 
+![Fenêtre principale](/Images/barreMenuAide.png)
+
 ### Fiche de création de Polygone
 
 Cette fenêtre s'affiche lorsque l'utilisateur clique sur la bouton "Polygone" de la fiche principale. Elle permet de placer les points d'un polygone comme on le souhaite et, ainsi, créer une forme particulière.
@@ -261,22 +267,297 @@ C'est uniquement à l'intérieur de la PictureBox (délimitée par un rectangle)
 Cette forme possède deux boutons : "Annuler" et "OK".
 Ces deux boutons ont leur DialogResult configuré sur "Cancel" et "OK", respectivement. À l'appui du bouton "OK", les points placés par l'utilisateur sont validés et la forme apparaît sur la fiche principale. Le bouton "Annuler", lui, annule l'action, ferme la fenêtre et la forme ne se crée pas.
 
+Voici quelques exemples de ce que l'on peut créer :
 
+![Fenêtre principale](/Images/exemplesPolygones.png)
 
 ## Le logo
 
-Le logo de l'application a été créé sur LogoGo. Cela m'a permis de vérifier la facilité ou les difficultés que l'on pouvait rencontrer durant la création d'un logo.
+Le logo de l'application a été créé sur LogoGo. Cela m'a permis de vérifier la facilité ou les difficultés que l'on pouvait rencontrer durant la création d'un logo. J'ai utilisé les trois claques pour créer ce logo.
 
-[METTRE IMAGE DU LOGO]
+Il n'est composé que de ronds (7) et de carrés (1). J'ai modifié la bordure du carré et je l'ai placé sur le Calque 1. Ensuite, l'ai mis un rond au centre du carré mais, cette fois, sur le Calque 3. Le calque 2 m'a permit de placer après coup les 6 petits ronds entre celui qui est sur le premier plan et le carré à l'arrière.
+
+![Fenêtre principale](/Images/logoApp_LogoGo.png)
+
+Voilà à quoi ressemble de fichier .xml de ce logo :
+
+```xml
+<?xml version="1.0"?>
+<Logo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpritesSerializables>
+    <ListeDeSpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-5000231</Couleur>
+        <Location>
+          <X>157</X>
+          <Y>114</Y>
+        </Location>
+        <EpaisseurPen>10</EpaisseurPen>
+        <Remplir>false</Remplir>
+        <NumeroCalque>1</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Carré_1</Nom>
+        <IdType>1</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>120</Width>
+          <Height>120</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-10526801</Couleur>
+        <Location>
+          <X>265</X>
+          <Y>86</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_2</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>35</Width>
+          <Height>35</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-10526801</Couleur>
+        <Location>
+          <X>133</X>
+          <Y>225</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_3</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>35</Width>
+          <Height>35</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-9276742</Couleur>
+        <Location>
+          <X>134</X>
+          <Y>194</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_4</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>50</Width>
+          <Height>50</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-9276742</Couleur>
+        <Location>
+          <X>250</X>
+          <Y>104</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_5</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>50</Width>
+          <Height>50</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-7566138</Couleur>
+        <Location>
+          <X>147</X>
+          <Y>163</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_6</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>65</Width>
+          <Height>65</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-7697722</Couleur>
+        <Location>
+          <X>224</X>
+          <Y>124</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>2</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_7</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>65</Width>
+          <Height>65</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-3355418</Couleur>
+        <Location>
+          <X>168</X>
+          <Y>127</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>3</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_1</Nom>
+        <IdType>2</IdType>
+        <TaillePolice>0</TaillePolice>
+        <Size>
+          <Width>95</Width>
+          <Height>95</Height>
+        </Size>
+      </SpriteSerializable>
+    </ListeDeSpriteSerializable>
+  </SpritesSerializables>
+</Logo>
+```
+
+
 
 # Analyse organique
+
+## Architecture du projet
+
+## Classes
+
+![Fenêtre principale](/Images/diagrammeClasses.png)
+
+Vous pouvez voir, sur l'image ci-dessus, mon diagramme de classe. On peut y observer la structure de mes classes. Pour une version plus détaillée, voir **8.2. Diagramme de classe**
+On voit donc que la classe Sprite hérite de PictureBox et que toutes les formes sont des classes filles héritant de Sprite. Cependant, il est bien de corriger une erreur figurant sur cette image : le lien entre Logo et les autres classes. En effet, les relations entre les différentes classes doivent être précisées.
+
+![Fenêtre principale](/Images/composition.png)
+
+La classe Sprites contenant une liste d'objets de type Sprite, il serait juste de noter une composition entre les deux classes. Il en va de même pour les classes SpritesSerializables et SpriteSerializable :
+
+![Fenêtre principale](/Images/compositionSerializables.png)
+
+Concernant la classe Logo, c'est elle qui contient les instances des classes Sprites et SpritesSerializables. Il y a donc une composition entre la classe Logo et ces deux dernières.
+
+## Description des principales méthodes
+
+Ce chapitre regroupe les explications des méthodes les plus importantes de chaque classes du projet. Certains points sont mieux expliqués dans **8. Réalisation**.
+
+### Classe Logo
+
+La classe Logo est comme une sorte de container. Un objet Logo contient tous les sprites créés et peut accéder à chacun d'eux.
+
+
+
+## Arborescence des fichiers
 
 
 
 # Réalisation
 
 ## Sauvegarde et chargement
+
+La sérialisation/désérialisation est une chose que j'avais bien exercé avant le TPI. Nous avions, en classe, expérimenter la sérialisation d'objets simples ainsi que de listes d'objets, ce qui était le cas pour mon projet. La subtilité de ce travail a été de trouver la bonne manière de sérialiser puisqu'un objet Sprite n'est pas sérialisable (il hérite de PictureBox et il est impossible de sérialiser un objet WindowsForm). Lors de la première réflexion, après avoir lu l'énoncé, c'est un problème que j'ai envisagé. J'avais prévu de faire une deuxième classe Sprite (SpriteSerializable) qui, elle, n'hériterait pas de PictureBox. Ceci servirait à mémoriser les propriétés d'une forme.
+
+Il fallait donc trouver un moyen de convertir ces objets dans les deux sens : passer d'un Sprite à un SpriteSerializable au moment de la sérialisation, puis l'inverse lors de la désérialisation. Pour ce faire, j'ai créé une méthode (dans la classe SpriteSerializable) pouvant prendre un Sprite en paramètre. Cette méthodes attribue la valeur des propriétés du Sprite passé en paramètre aux propriétés d'un SpriteSerializable. Ensuite, la méthode EnListeSerializable (dans la classe Sprites) permet de convertir toute la liste de formes en une liste de formes sérialisables. De cette manière, ce n'est pas la liste d'objets Sprite que l'on essaye de sérialiser, mais celle contenant les objets de type SpriteSerializable.
+
+C'est en suivant la même logique que j'ai réussi la désérialisation. La classe SpriteSerializable contient une méthode nommée EnSprite et la classe SpritesSerializables contient une méthode EnSprites. Pour savoir quel type de sprite il faut recréer, j'ai fait un Switch case en utilisant le IdType.
+
+Pour les méthodes de sérialisation et désérialisation, j'ai utilisé les fonctions que nous avons vu avec M. Bonvin en classe. Voici la méthode (incomplète) permettant la sérialisation :
+
+```c#
+private void XMLSerialize()
+{
+   Stream stream = File.Open(NomFichier, FileMode.Create);
+   XmlSerializer formatter = new XmlSerializer(typeof(Logo));
+   formatter.Serialize(stream, this);
+   stream.Close();
+}  
+```
+
+Voici la méthode (incomplète) pour la désérialisation :
+
+```c#
+public void XMLDeserialize()
+{
+   Stream stream = File.Open(NomFichier, FileMode.Open);
+   XmlSerializer formatter = new XmlSerializer(typeof(Logo));
+   Logo obj = (Logo)formatter.Deserialize(stream);
+   stream.Close();
+}
+```
+
+### Pourquoi le XML ?
+
+Il est possible de sérialiser en plusieurs formats, alors pourquoi le XML ? Tout simplement car c'est la format le plus adapté à LogoGo. Le syntaxe de l'XML étant composée de balises, il est facile de comprendre l'architecture d'un fichier de ce type. Voici à quoi le XML ressemble :
+
+```xml
+<?xml version="1.0"?>
+<Logo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpritesSerializables>
+    <ListeDeSpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-16777216</Couleur>
+        <Location>
+          <X>105</X>
+          <Y>70</Y>
+        </Location>
+        <EpaisseurPen>1</EpaisseurPen>
+        <Remplir>true</Remplir>
+        <NumeroCalque>1</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Carré_1</Nom>
+        <IdType>1</IdType>
+        <Size>
+          <Width>100</Width>
+          <Height>100</Height>
+        </Size>
+      </SpriteSerializable>
+      <SpriteSerializable>
+        <Couleur>-16711872</Couleur>
+        <Location>
+          <X>153</X>
+          <Y>119</Y>
+        </Location>
+        <EpaisseurPen>5</EpaisseurPen>
+        <Remplir>false</Remplir>
+        <NumeroCalque>1</NumeroCalque>
+        <ProfondeurParCalque>1</ProfondeurParCalque>
+        <Nom>Rond_1</Nom>
+        <IdType>2</IdType>
+        <Size>
+          <Width>100</Width>
+          <Height>100</Height>
+        </Size>
+      </SpriteSerializable>
+    </ListeDeSpriteSerializable>
+  </SpritesSerializables>
+</Logo>
+```
+
+L'avantage des fichier .xml (par rapport aux fichier .bin, par exemple), c'est qu'on a la possibilité de l'éditer aisément. Je peux sans soucis ouvrir le fichier de mon logo et rajouter une forme. C'est une valeur ajoutée comparée à plusieurs formats.
+
 ## Diagramme de classe
+
+
+
 ## Classe mère commune (héritage)
 
 La création d'une classe mère commune à plusieurs autres classes est, même si elle paraît évidente pour ce projet, était nécessaire pour la réalisation de ce projet. 
@@ -339,11 +620,31 @@ Dans l'énoncé, il était également question de transparence des plans. Pour m
 
 L'exportation d'image est, globalement, assez simple. Étant donné que nous pouvons facilement récupérer l'image d'une PictureBox, il est possible sauvegarder cette image de la méthode suivante :
 
-```
+```c#
 maPictureBox.Image.Save(@"C:\Images\monImage",ImageFormat.Jpeg);
 ```
 
+Cependant, le projet LogoGo a une subtilité à ce niveau : nous n'avons pas qu'une Picturebox, mais plusieurs. Tous les objets PictureBox (tous les sprites) ne former qu'une seule image. Ce point m'a donc demandé une certaine réflexion mais, après quelques heures, j'ai réussi à faire en sorte que cette fonctionnalité fonctionne correctement.
 
+Tout d'abord, quand l'utilisateur clique sur "Fichier" dans la barre de menu, il doit cliquer sur "Exporter", comme le montre l'image ci-dessous :
+
+![Fenêtre principale](/Images/barreMenu_Fichier.png)
+
+Suite à cela, la fenêtre d'aperçu s'ouvre et montre à l'utilisateur une aperçu de son logo.
+
+Pour ce faire, j'ai dessiné tous les sprites précédemment créés par l'utilisateur sur une même PictureBox : celle au centre de la fiche ExporterLogo (fiche montrant l'aperçu). En parcourant la liste des sprites, j'ajoute le Paint de chaque sprite ("SpritePaint" dans le code) au Paint de la PictureBox d'aperçu.
+
+![Fenêtre principale](/Images/apercuLogo.png)
+
+Dès que l'utilisateur clique sur "Exporter", le programme recadre l'image de la PictureBox d'aperçu, la fenêtre d'aperçu se ferme et un SaveFileDialog apparaît et permet à l'utilisateur de choisir la destination, le nom, ainsi que l'extension de l'image finale. Voilà à quoi ressemble ce SaveFileDialog :
+
+![Fenêtre principale](/Images/saveFileDialogLogo.png)
+
+Une fois que l'utilisateur clique sur "Enregistrer", se trouvant en bas à droite du SaveFileDialog, l'image est correctement enregistrée au bon endroit et recadrée de la bonne façon. En ce qui concerne, justement le code du recadrage, je m'y suis pris de manière à ce que le code trouve l'endroit auquel l'image doit être découpée. Pour cela, je parcours la liste des formes et compare leur positions afin de trouver les coins du logo final. En connaissant les coordonnées des coins, il est possible de trouver la largeur ainsi que la hauteur du logo. Il suffit ensuite d'appeler la méthode RedimensionnerLogo qui accepte en paramètre une image (image que l'on veut recadrer), des coordonnées X et Y (position à laquelle on veut recadrer), une largeur ainsi qu'une hauteur (taille de l'image finale).
+
+Ce cette manière, on obtient une image finale qui ressemble à celle-ci :
+
+![Fenêtre principale](/Images/exempleLogo.png)
 
 # Tests unitaires
 

@@ -19,9 +19,13 @@ namespace WF_LogoGo
         {
             _nombreCarres++;
             Nom = "Carré_" + _nombreCarres.ToString();
+            IdType = 1;
         }
 
-        
+        public Carre(SpriteSerializable s, Form parent) : base(s, parent)
+        {
+            IdType = 1;
+        }
         #endregion
 
         #region Méthodes

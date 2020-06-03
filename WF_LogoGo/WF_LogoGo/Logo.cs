@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace WF_LogoGo
 {
@@ -12,6 +14,7 @@ namespace WF_LogoGo
         #region Variables d'instance
 
         private Sprites _sprites;
+        private SpritesSerializables _spritesSerializables;
         private Sprite _spriteChoisi;
         private string _nomFichier;
         private Form _parent;
@@ -33,9 +36,15 @@ namespace WF_LogoGo
         /// </summary>
         private string NomFichier { get => _nomFichier; set => _nomFichier = value; }
 
-
+        [XmlIgnore]
         public Sprite SpriteChoisi { get => _spriteChoisi; set => _spriteChoisi = value; }
 
+        /// <summary>
+        /// Liste de sprites serializables
+        /// </summary>
+        public SpritesSerializables SpritesSerializables { get => _spritesSerializables; set => _spritesSerializables = value; }
+
+        [XmlIgnore]
         public Sprites Sprites { get => _sprites; private set => _sprites = value; }
         #endregion
 
@@ -50,6 +59,7 @@ namespace WF_LogoGo
 
         public Logo()
         {
+            SpritesSerializables = new SpritesSerializables();
             Sprites = new Sprites();
             NomFichier = NOM_PAR_DEFAUT;
 
@@ -57,6 +67,55 @@ namespace WF_LogoGo
         #endregion
 
         #region Méthodes
+
+
+        /// <summary>
+        /// Sauvegarde de Logo dans l'état
+        /// </summary>
+        public void Enregistrer(string nomFichier)
+        {
+            NomFichier = nomFichier;
+            XMLSerialize();
+        }
+
+
+        /// <summary>
+        /// Récupère un projet sauvegardé
+        /// </summary>
+        public void Charger(string nomFichier)
+        {
+            NomFichier = nomFichier;
+            Sprites = null;
+            XMLDeserialize();
+        }
+
+        /// <summary>
+        /// Serialise le Logo en un fichier XML
+        /// </summary>
+        private void XMLSerialize()
+        {
+            SpritesSerializables = Sprites.EnListeSerializable();
+            Stream stream = File.Open(NomFichier, FileMode.Create);
+            XmlSerializer formatter = new XmlSerializer(typeof(Logo));
+            formatter.Serialize(stream, this);
+            stream.Close();
+        }
+
+        /// <summary>
+        /// Deserialise un fichier XML
+        /// </summary>
+        public void XMLDeserialize()
+        {
+            Stream stream = File.Open(NomFichier, FileMode.Open);
+            XmlSerializer formatter = new XmlSerializer(typeof(Logo));
+            Logo obj = (Logo)formatter.Deserialize(stream);
+            stream.Close();
+
+            this.Sprites = new Sprites();
+            Sprites = obj.SpritesSerializables.EnSprites(_parent);
+            NomFichier = obj.NomFichier;
+        }
+
 
         /// <summary>
         /// Ajoute le Sprite spécifié

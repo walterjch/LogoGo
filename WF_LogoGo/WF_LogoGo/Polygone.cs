@@ -12,15 +12,10 @@ namespace WF_LogoGo
     {
         #region Variables d'instance
         private static int _nombrePolygones = 0;
-        private PointF[] _trace;
         private PointF CoinSuperieurGauche;
         private PointF CoinSuperieurDroit;
         private PointF CoinInferieurDroit;
         private PointF CoinInferieurGauche;
-        #endregion
-
-        #region Propriétés
-        public PointF[] Trace { get => _trace; set => _trace = value; }
         #endregion
 
         #region Constructeurs
@@ -30,6 +25,12 @@ namespace WF_LogoGo
             Nom = "Polygone_" + _nombrePolygones.ToString();
             Width = 50;
             Height = 50;
+            IdType = 5;
+        }
+
+        public Polygone(SpriteSerializable s, Form parent) : base(s, parent)
+        {
+            IdType = 5;
         }
         #endregion
 

@@ -90,6 +90,7 @@
             this.nudTransparenceCalque = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlProprietesTexte.SuspendLayout();
@@ -725,12 +726,14 @@
             this.msEnregistrer.Name = "msEnregistrer";
             this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
             this.msEnregistrer.Text = "Enregistrer";
+            this.msEnregistrer.Click += new System.EventHandler(this.msEnregistrer_Click);
             // 
             // msOuvrir
             // 
             this.msOuvrir.Name = "msOuvrir";
             this.msOuvrir.Size = new System.Drawing.Size(216, 26);
             this.msOuvrir.Text = "Ouvrir";
+            this.msOuvrir.Click += new System.EventHandler(this.msOuvrir_Click);
             // 
             // aideToolStripMenuItem
             // 
@@ -783,6 +786,10 @@
             this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 73;
             this.label3.Text = "Transparence :";
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // frmLogoGo
             // 
@@ -880,6 +887,7 @@
         private System.Windows.Forms.NumericUpDown nudTransparenceCalque;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 

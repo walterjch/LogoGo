@@ -55,6 +55,20 @@ namespace WF_LogoGo
         {
             ListeDeSprite = ListeDeSprite.OrderBy(s => s.NumeroCalque).ThenBy(s => s.Profondeur).ToList<Sprite>();
         }
+
+        /// <summary>
+        /// S'occupe de convertir la liste de Sprite pour quelle soit serializable
+        /// </summary>
+        /// <returns>Une liste de SpriteSerializable</returns>
+        public SpritesSerializables EnListeSerializable()
+        {
+            SpritesSerializables ListeSerializable = new SpritesSerializables();
+            foreach (Sprite unSprite in ListeDeSprite)
+            {
+                ListeSerializable.Ajouter(unSprite.EnSpriteSerializable());
+            }
+            return ListeSerializable;
+        }
         #endregion
     }
 }

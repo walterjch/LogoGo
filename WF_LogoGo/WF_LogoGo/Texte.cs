@@ -12,19 +12,9 @@ namespace WF_LogoGo
     {
         #region Variables d'instance
         private static int _nombreCarres = 0;
-        private string _nomPolice;
-        private int _taillePolice;
-        private string _texte;
         #endregion
 
-        #region Constantes
-        #endregion
 
-        #region Propriétés
-        public string TexteAEcrire { get => _texte; set => _texte = value; }
-        public string NomPolice { get => _nomPolice; set => _nomPolice = value; }
-        public int TaillePolice { get => _taillePolice; set => _taillePolice = value; }
-        #endregion
 
         #region Constructeurs
         public Texte(Form parent, int calque) : base(parent, calque)
@@ -34,8 +24,13 @@ namespace WF_LogoGo
             TexteAEcrire = Nom;
             NomPolice = "Times New Roman";
             TaillePolice = 24;
+            IdType = 4;
         }
 
+        public Texte(SpriteSerializable s, Form parent) : base(s, parent)
+        {
+            IdType = 4;
+        }
         #endregion
 
         #region Méthodes

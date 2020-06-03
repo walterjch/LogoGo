@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WF_LogoGo.Carre" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAIAA=</HashCode>
+      <FileName>Carre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.ExporterLogo" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAgCQBQAAAAACAABACAAABAECBAggAAAAAAAA=</HashCode>
+      <FileName>ExporterLogo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.frmCreerPolygone" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACABABAQAACAAIACQAAAAFAAAAAAAAAAKAA=</HashCode>
+      <FileName>frmCreerPolygone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.frmLogoGo" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/64FCQICxCIWBBsACCOAUudDAAAAAWMGk6IQWSEgAjA=</HashCode>
+      <FileName>frmLogoGo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Logo" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAACEAAAAAAIAQAAIIEAAQAAAAABAAAICgCAABAAI=</HashCode>
+      <FileName>Logo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Polygone" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAABABBAAAABAAAJAAAAAAAAAAA=</HashCode>
+      <FileName>Polygone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Program" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Rond" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAIAA=</HashCode>
+      <FileName>Rond.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Sprite" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACBEAQIBEgEQhAIAAEQRCIIQREJAAAICEABYAI=</HashCode>
+      <FileName>Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Sprites" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAAAQEAAAAAAAAAAACAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Sprites.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.SpriteSerializable" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACAEAAIhEAAAAIIAAEARCIIAREIACAIAAIBIwI=</HashCode>
+      <FileName>SpriteSerializable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.SpritesSerializables" Collapsed="true">
+    <Position X="1.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAIAAQA=</HashCode>
+      <FileName>SpritesSerializables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Texte" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEABABAAAAAAAAAAAIAAAAAAAAIAA=</HashCode>
+      <FileName>Texte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Triangle" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Properties.Resources" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WF_LogoGo.Properties.Settings" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -17,6 +17,12 @@ namespace WF_LogoGo
         private int _profondeur;
         private string _nom;
         private int _numeroCalque;
+        private int _idType;
+        private PointF[] _trace;
+        private string _texte;
+        private string _nomPolice;
+        private int _taillePolice;
+
         private Form _parent;
 
 
@@ -62,9 +68,35 @@ namespace WF_LogoGo
         public int NumeroCalque { get => _numeroCalque; set => _numeroCalque = value; }
 
         /// <summary>
+        /// Identdifiant permettant de savoir quel type de sprite nous avons
+        /// </summary>
+        public int IdType { get => _idType; set => _idType = value; }
+
+        /// <summary>
         /// Retourne la 
         /// </summary>
         public int AlphaCouleur { get => Couleur.A; }
+
+        /// <summary>
+        /// Certains sprites ont besoin d'un tracé pour se dessiner
+        /// </summary>
+        public PointF[] Trace { get => _trace; set => _trace = value; }
+
+        /// <summary>
+        /// Certains sprites ont besoin d'un texte
+        /// </summary>
+        public string TexteAEcrire { get => _texte; set => _texte = value; }
+
+        /// <summary>
+        /// Certains sprites ont besoin d'un nom de police
+        /// </summary>
+        public string NomPolice { get => _nomPolice; set => _nomPolice = value; }
+
+        /// <summary>
+        /// Certains sprites ont besoin d'une taille de police
+        /// </summary>
+        public int TaillePolice { get => _taillePolice; set => _taillePolice = value; }
+
 
         #endregion
 
@@ -86,6 +118,35 @@ namespace WF_LogoGo
             base.MouseDown += SpriteMouseDown;
             base.MouseUp += SpriteMouseUp;
             base.MouseMove += SpriteMouseMove;
+        }
+
+        public Sprite(SpriteSerializable s, Form parent)
+        {
+            Couleur = Color.FromArgb(s.Couleur);
+            NumeroCalque = s.NumeroCalque;
+            EpaisseurPen = s.EpaisseurPen;
+            Profondeur = s.ProfondeurParCalque;
+            Remplir = s.Remplir;
+            if (this is Polygone)
+            {
+                Trace = s.Trace;
+            }
+            if (this is Texte)
+            {
+                TexteAEcrire = s.TexteAEcrire;
+                TaillePolice = s.TaillePolice;
+                NomPolice = s.NomPolice;
+            }
+            _parent = parent;
+
+            Nom = s.Nom;
+            Location = s.Location;
+            Size = s.Size;
+            BackColor = Color.Transparent;
+
+            MouseDown += new MouseEventHandler(SpriteMouseDown);
+            MouseUp += new MouseEventHandler(SpriteMouseUp);
+            base.MouseMove += new MouseEventHandler(SpriteMouseMove);
         }
 
         #endregion
@@ -153,6 +214,17 @@ namespace WF_LogoGo
             (sender as PictureBox).BackColor = Color.FromArgb(100, Color.Silver);
             _dragging = true;
             _posSouris = new Point(e.X, e.Y);
+        }
+
+        /// <summary>
+        /// Retourne un sprite serializable
+        /// </summary>
+        /// <returns></returns>
+        public SpriteSerializable EnSpriteSerializable()
+        {
+            SpriteSerializable s = new SpriteSerializable();
+            s.AttribuerValeursProprietes(this);
+            return s;
         }
 
         /// <summary>

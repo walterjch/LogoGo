@@ -377,6 +377,50 @@ namespace WF_LogoGo
         }
 
         /// <summary>
+        /// Ouvre un openFileDialog pour que l'utilisateur choisisse
+        /// quel fichier il voudrait charger.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void msOuvrir_Click(object sender, EventArgs e)
+        {
+            openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML-File | *.xml";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                MonLogo.Charger(openFileDialog.FileName);
+
+                MonLogo.TrierSprites();
+                foreach (Sprite unSprite in MonLogo.Sprites.ListeDeSprite)
+                {
+                    unSprite.Click += this.ProprietesClick;
+                    Paint += unSprite.SpritePaint;
+                    this.Controls.Add(unSprite);
+                }
+                Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Ouvre un saveFileDialog pour que l'utilisateur choisisse
+        /// où le fichier sera enregistré.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void msEnregistrer_Click(object sender, EventArgs e)
+        {
+            saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML-File | *.xml";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                MonLogo.Enregistrer(saveFileDialog.FileName);
+            }
+
+        }
+
+        /// <summary>
         /// Ouvre une page web sur la documentation du projet
         /// </summary>
         /// <param name="sender"></param>

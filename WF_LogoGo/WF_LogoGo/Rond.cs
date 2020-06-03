@@ -19,9 +19,12 @@ namespace WF_LogoGo
         {
             _nombreCarres++;
             Nom = "Rond_" + _nombreCarres.ToString();
+            IdType = 2;
         }
-
-
+        public Rond(SpriteSerializable s, Form parent) : base(s, parent)
+        {
+            IdType = 2;
+        }
         #endregion
 
         #region Méthodes

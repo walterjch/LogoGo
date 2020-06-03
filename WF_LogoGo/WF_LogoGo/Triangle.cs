@@ -19,8 +19,13 @@ namespace WF_LogoGo
         {
             _nombreTriangles++;
             Nom = "Triangle_" + _nombreTriangles.ToString();
+            IdType = 3;
         }
 
+        public Triangle(SpriteSerializable s, Form parent) : base(s, parent)
+        {
+            IdType = 3;
+        }
         #endregion
 
         #region Méthodes
@@ -28,7 +33,7 @@ namespace WF_LogoGo
         public override void SpritePaintAvecGraphics(Graphics g)
         {
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            Point[] trace =
+            Point[] Trace =
             {
                 new Point(Location.X, Location.Y + Height),
                 new Point(Location.X + Width / 2, Location.Y),
@@ -38,12 +43,12 @@ namespace WF_LogoGo
             if (Remplir)
             {
                 SolidBrush b = new SolidBrush(Couleur);
-                g.FillPolygon(b, trace);
+                g.FillPolygon(b, Trace);
             }
             else
             {
                 Pen p = new Pen(Couleur, EpaisseurPen);
-                g.DrawPolygon(p, trace);
+                g.DrawPolygon(p, Trace);
             }
         }
         #endregion
