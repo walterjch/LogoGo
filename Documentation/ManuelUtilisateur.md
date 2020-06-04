@@ -54,7 +54,7 @@ Voici la transparence du deuxième :
 
 ![Fenêtre principale](/Images/exempleNudTransparence.png)
 
-Comme vous pouvez le voir, plus la transparence est proche de 0, plus le calque devient tranparent.
+Comme vous pouvez le voir, plus la transparence est proche de 0, plus le calque devient transparent.
 
 **3. Propriétés**
 
@@ -101,11 +101,11 @@ Si vous avez terminé de créer votre logo et que vous désirez l'exporter en im
 
 3. Vous verrez un aperçu de votre logo. Cliquez sur "Exporter".*
 
-   [METTRE IMAGE FICHE APERCU]
+   ![Fenêtre principale](/Images/ficheExporter.png)
 
 4. Choisissez le nom, l'extension ainsi que la destination du logo.
 
-   ![Fenêtre principale](/Images/saveFileDialog.png)
+   ![Fenêtre principale](/Images/saveFileDialogLogo.png)
 
 5. Cliquez sur "Enregistrer".
 
@@ -125,6 +125,8 @@ Si vous désirez sauvegarder votre logo pour, peut-être, le continuer plus tard
 
 3. Choisissez le nom et la destination du logo.
 
+   ![Fenêtre principale](/Images/saveFileDialogXML.png)
+
 4. Cliquez sur "Enregistrer".
 
 Le logo sera enregistré sous la forme d'un fichier XML (VotreFichier.xml) et vous pourrez le rouvrir avec LogoGo quand vous voudrez.
@@ -141,12 +143,29 @@ Vous pouvez charger un logo que vous avez sauvegardé pour continuer à le modif
 
 3. Choisissez le fichier que vous désirer ouvrir.
 
+   ![Fenêtre principale](/Images/openFileDialogXML.png)
+
 4. Cliquez sur "Ouvrir".
 
-Les formes que vous avez précédemment enregistré apparaîtront alors et vous pourrez continuer à travailler sur votre logo.
+Les formes que vous avez précédemment enregistré apparaîtront alors et vous pourrez continuer à travailler sur votre logo, comme dans l'image ci-dessous :
+
+![Fenêtre principale](/Images/exempleOuvrirFichier.png)
 
 ## Aide
 
-Cliquer sur "Aide" (sur la barre de menu) vous dirigera automatiquement sur cette documentation. C'est, sans aucun doute, la manière la plus rapide d'obtenir des informations sur le fonctionnement de l'application.
+Cliquer sur "Aide" (sur la barre de menu) vous dirigera dossier "Documentation" du projet. C'est, sans aucun doute, la manière la plus rapide d'obtenir des informations sur le fonctionnement de l'application.
 
 ![Fenêtre principale](/Images/barreMenuAide.png)
+
+# Les différents messages
+
+Pendant l'utilisation de l'application LogoGo, il est possible que vous rencontriez certains messages... Voyons dans quelles circonstances ces messages peuvent apparaître.
+
+## Fermeture de l'application
+
+Avez-vous bien enregistré votre logo avant de quitter l'application ?
+Lorsque vous tentez de quitter LogoGo, une fenêtre vous avertit que, si vous n'avez pas sauvegardé votre logo, vous perdrez toute progression dans la création de votre image. Voici à quoi ressemble cette fenêtre d'avertissement :
+
+![Fenêtre principale](/Images/MessageBoxFermeture.png)
+
+Ce message est la pour vous aider. Il vous suffit de cliquer sur OK si vous avez bien enregistré votre projet ou si vous ne souhaitez pas sauvegarder les dernières modifications. Si vous voulez retourner sur LogoGo pour continuer ou pour sauvegarder votre logo, appuyez sur Annuler, cela annulera la fermeture de LogoGo.

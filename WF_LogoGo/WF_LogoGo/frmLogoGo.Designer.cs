@@ -763,21 +763,21 @@
             // msEnregistrer
             // 
             this.msEnregistrer.Name = "msEnregistrer";
-            this.msEnregistrer.Size = new System.Drawing.Size(155, 26);
+            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
             this.msEnregistrer.Text = "Enregistrer";
             this.msEnregistrer.Click += new System.EventHandler(this.msEnregistrer_Click);
             // 
             // msOuvrir
             // 
             this.msOuvrir.Name = "msOuvrir";
-            this.msOuvrir.Size = new System.Drawing.Size(155, 26);
+            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
             this.msOuvrir.Text = "Ouvrir";
             this.msOuvrir.Click += new System.EventHandler(this.msOuvrir_Click);
             // 
             // msExporter
             // 
             this.msExporter.Name = "msExporter";
-            this.msExporter.Size = new System.Drawing.Size(155, 26);
+            this.msExporter.Size = new System.Drawing.Size(216, 26);
             this.msExporter.Text = "Exporter";
             this.msExporter.Click += new System.EventHandler(this.msExporter_Click);
             // 
@@ -790,7 +790,7 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.FileName = "openFileDialog";
             // 
             // frmLogoGo
             // 
@@ -802,6 +802,7 @@
             this.Controls.Add(this.pnlProprietesTexte);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmLogoGo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoGo";

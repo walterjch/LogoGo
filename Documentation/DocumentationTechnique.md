@@ -164,15 +164,47 @@ Voici l'affichage si nous cliquons sur le texte rose :
 
 L'utilisateur peut paramétrer une forme comme il le souhaite. Les propriétés visibles sont modifiables et les modifications sont automatiquement appliquées et visibles sur la forme concernée.
 
+Pour illustrer cette fonctionnalité, voila deux images, avant et après avoir modifié les propriétés d'un triangle :
+
+![Fenêtre principale](/Images/exempleModifTriangle1.png)
+
+![Fenêtre principale](/Images/exempleModifTriangle2.png)
+
+Les propriétés modifiées ici sont celle marquées en rouge sur l'image qui suit :
+
+![Fenêtre principale](/Images/exempleModifTriangle3.png)
+
 #### Modification du calque d'une forme
 
 L'utilisateur peut aisément changer une forme de calque, même après la création de la forme. Il peut le faire en modifiant la propriété correspondante et en choisissant le calque souhaité. On voit alors la forme changer de calque. En passant du calque 1 au calque 3, par exemple, on voit la forme se placer au-dessus de toutes les formes du calque 1 et du calque 2. Étant donné qu'elle serait la dernière ajoutée au calque 3, elle serait également par-dessus des formes qui faisaient déjà partie de ce calque.
 
+Voici un exemple concret :
 
+![Fenêtre principale](/Images/exempleOrdreCalques1.png)
+
+Sur l'image ci-dessus, on distingue trois forme : un triangle vert, un polygone rouge, ainsi qu'un carré saumon. Le carré est sur la calque 2 et les deux autres sont sur le calque 1. En clique sur le triangle. nous pouvons voir sur quel calque il est on modifiant la propriété calque. Comme l'image le montre, il suffit, ici, de cliquer sur "Calque 3" pour changer le triangle de calque :
+
+![Fenêtre principale](/Images/exempleOrdreCalques2.png)
+
+Comme expliqué plus tôt dans le chapitre, le triangle passe au dessus des formes des calques 1 et 2. Voilà à quoi ressemblera la disposition des formes :
+
+![Fenêtre principale](/Images/exempleOrdreCalques3.png)
 
 #### Modification de profondeur
 
 Deux formes dans un même calques apparaissent dans un certain ordre (ordre de création). Cependant, l'utilisateur peut décider de cet ordre en modifiant la propriété correspondante. Tout comme pour les calques, on voit la forme se mettre au-dessus des formes ayant une profondeur moins élevée.
+
+Voici un démonstration :
+
+![Fenêtre principale](/Images/exempleProfondeur1.png)
+
+Ces deux formes se trouvent toutes deux sur le même calque. Il suffit d'augmenter la propriété Profondeur comme suit pour changer l'ordre des formes.
+
+![Fenêtre principale](/Images/exempleProfondeur3.png)
+
+Voilà le résultat :
+
+![Fenêtre principale](/Images/exempleProfondeur2.png)
 
 ### Sauvegarde d'un logo
 
@@ -516,19 +548,19 @@ Cette classe contient plusieurs méthodes...
 
 Cette méthode est abstraite car elle doit être différente pour chaque type de sprite (un carré n'est pas dessiné de la même façon qu'un triangle). Chaque classe fille de Sprite a donc une surcharge (override) de cette méthode, ce qui permet de coder quelque chose de différent pour chaque cas.
 
-- Dans la classe Carre :
+- Dans la classe **Carre**:
 
   Dessine le carré avec FillRectangle ou DrawRectangle selon la valeur de la propriété Remplir.
 
-- Dans la classe Rond :
+- Dans la classe **Rond** :
 
   Dessine le rond avec FillEllipse ou DrawEllipse selon la  valeur de la propriété Remplir.
 
-- Dans les classes Polygone et Triangle :
+- Dans les classes **Polygone** et **Triangle** :
 
   Dessine le triangle avec FillPolygone ou DrawPolygone selon la valeur de la propriété Remplir.
 
-- Dans la classe Texte :
+- Dans la classe **Texte** :
 
   Dessine le texte avec DrawString avec un certaine police d'écriture.
 
@@ -540,7 +572,9 @@ Cette méthode, bien qu'importante, est très simple. Elle ne fait que créer un
 
 #### Le déplacement de sprite
 
-[EXPLIQUER LES 3 EVENTS]
+Une des fonctionnalités qui rend l'application agréable à l'utilisateur est celle qui permet de déplacer une forme avec la souris (comme un drag n drop). Cette fonctionnalité se compose de trois événements :
+
+**SpriteMouseDown** sert surtout à s'assurer que l'utilisateur a bien appuyé sur la forme avec le clic gauche de la souris. C'est au moment de l'appui sur une forme que l'événement est appelé. **SpriteMouseMove** se charge de déplacer la forme en fonction de la position de la souris pour que la forme se déplace comme le souhaite l'utilisateur. Cet événement est déclenché lorsque l'utilisateur déplace la souris. L'événement nommé **SpriteMouseUp** sert à marquer la fin du déplacement, étant donné qu'il est déclenché lorsque l'utilisateur lâche le bouton de sa souris.
 
 ### Classe Sprites
 
