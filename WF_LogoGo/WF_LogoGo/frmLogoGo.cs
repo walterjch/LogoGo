@@ -362,7 +362,7 @@ namespace WF_LogoGo
         /// <param name="e"></param>
         private void msExporter_Click(object sender, EventArgs e)
         {
-            ExporterLogo frmExporter = new ExporterLogo(MonLogo);
+            frmExporterLogo frmExporter = new frmExporterLogo(MonLogo);
 
             if (frmExporter.ShowDialog() == DialogResult.OK)
             {
@@ -614,6 +614,24 @@ namespace WF_LogoGo
             btnSupprimerTexte.Enabled = false;
 
             nudProfondeurTexte.Enabled = false;
+        }
+
+        private void frmLogoGo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MonLogo.Sprites.ListeDeSprite.Count != 0)
+            {
+                DialogResult resultat = MessageBox.Show("Attention, la fermeture de LogoGo aura pour résultat la perte de votre projet si vous ne l'avez pas enregistré. Si vous êtes sûr de l'avoir sauvegardé, cliquez sur OK.", "Fermeture de l'application", MessageBoxButtons.OKCancel);
+                if (resultat == DialogResult.OK)
+                {
+                    e.Cancel = false;
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            
         }
     }
 }

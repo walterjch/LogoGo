@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogoGo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nudTransparenceCalque = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPolygone = new System.Windows.Forms.Button();
             this.btnTexte = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnRond = new System.Windows.Forms.Button();
             this.btnCarre = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.lsbCalques = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlProprietesTexte = new System.Windows.Forms.Panel();
@@ -83,15 +87,13 @@
             this.msFichier = new System.Windows.Forms.ToolStripMenuItem();
             this.msEnregistrer = new System.Windows.Forms.ToolStripMenuItem();
             this.msOuvrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.msExporter = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.btnPolygone = new System.Windows.Forms.Button();
-            this.msExporter = new System.Windows.Forms.ToolStripMenuItem();
-            this.nudTransparenceCalque = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnlProprietesTexte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).BeginInit();
@@ -100,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEpaisseur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).BeginInit();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,6 +117,24 @@
             this.panel1.Size = new System.Drawing.Size(272, 589);
             this.panel1.TabIndex = 0;
             // 
+            // nudTransparenceCalque
+            // 
+            this.nudTransparenceCalque.Location = new System.Drawing.Point(128, 534);
+            this.nudTransparenceCalque.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudTransparenceCalque.Name = "nudTransparenceCalque";
+            this.nudTransparenceCalque.Size = new System.Drawing.Size(57, 22);
+            this.nudTransparenceCalque.TabIndex = 72;
+            this.nudTransparenceCalque.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudTransparenceCalque.ValueChanged += new System.EventHandler(this.nudTransparenceCalque_ValueChanged);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnPolygone);
@@ -129,6 +148,16 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formes";
+            // 
+            // btnPolygone
+            // 
+            this.btnPolygone.Location = new System.Drawing.Point(15, 115);
+            this.btnPolygone.Name = "btnPolygone";
+            this.btnPolygone.Size = new System.Drawing.Size(92, 32);
+            this.btnPolygone.TabIndex = 26;
+            this.btnPolygone.Text = "Polygone";
+            this.btnPolygone.UseVisualStyleBackColor = true;
+            this.btnPolygone.Click += new System.EventHandler(this.btnPolygone_Click);
             // 
             // btnTexte
             // 
@@ -169,6 +198,16 @@
             this.btnCarre.Text = "Carré";
             this.btnCarre.UseVisualStyleBackColor = true;
             this.btnCarre.Click += new System.EventHandler(this.btnCarre_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Location = new System.Drawing.Point(17, 534);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 17);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Transparence :";
             // 
             // lsbCalques
             // 
@@ -724,16 +763,23 @@
             // msEnregistrer
             // 
             this.msEnregistrer.Name = "msEnregistrer";
-            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
+            this.msEnregistrer.Size = new System.Drawing.Size(155, 26);
             this.msEnregistrer.Text = "Enregistrer";
             this.msEnregistrer.Click += new System.EventHandler(this.msEnregistrer_Click);
             // 
             // msOuvrir
             // 
             this.msOuvrir.Name = "msOuvrir";
-            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
+            this.msOuvrir.Size = new System.Drawing.Size(155, 26);
             this.msOuvrir.Text = "Ouvrir";
             this.msOuvrir.Click += new System.EventHandler(this.msOuvrir_Click);
+            // 
+            // msExporter
+            // 
+            this.msExporter.Name = "msExporter";
+            this.msExporter.Size = new System.Drawing.Size(155, 26);
+            this.msExporter.Text = "Exporter";
+            this.msExporter.Click += new System.EventHandler(this.msExporter_Click);
             // 
             // aideToolStripMenuItem
             // 
@@ -741,51 +787,6 @@
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
             this.aideToolStripMenuItem.Click += new System.EventHandler(this.aideToolStripMenuItem_Click);
-            // 
-            // btnPolygone
-            // 
-            this.btnPolygone.Location = new System.Drawing.Point(15, 115);
-            this.btnPolygone.Name = "btnPolygone";
-            this.btnPolygone.Size = new System.Drawing.Size(92, 32);
-            this.btnPolygone.TabIndex = 26;
-            this.btnPolygone.Text = "Polygone";
-            this.btnPolygone.UseVisualStyleBackColor = true;
-            this.btnPolygone.Click += new System.EventHandler(this.btnPolygone_Click);
-            // 
-            // msExporter
-            // 
-            this.msExporter.Name = "msExporter";
-            this.msExporter.Size = new System.Drawing.Size(216, 26);
-            this.msExporter.Text = "Exporter";
-            this.msExporter.Click += new System.EventHandler(this.msExporter_Click);
-            // 
-            // nudTransparenceCalque
-            // 
-            this.nudTransparenceCalque.Location = new System.Drawing.Point(128, 534);
-            this.nudTransparenceCalque.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudTransparenceCalque.Name = "nudTransparenceCalque";
-            this.nudTransparenceCalque.Size = new System.Drawing.Size(57, 22);
-            this.nudTransparenceCalque.TabIndex = 72;
-            this.nudTransparenceCalque.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudTransparenceCalque.ValueChanged += new System.EventHandler(this.nudTransparenceCalque_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.Location = new System.Drawing.Point(17, 534);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 17);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Transparence :";
             // 
             // openFileDialog
             // 
@@ -800,12 +801,15 @@
             this.Controls.Add(this.pnlProprietesStandard);
             this.Controls.Add(this.pnlProprietesTexte);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogoGo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoGo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogoGo_FormClosing);
             this.Load += new System.EventHandler(this.frmLogoGo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.pnlProprietesTexte.ResumeLayout(false);
             this.pnlProprietesTexte.PerformLayout();
@@ -817,7 +821,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudProfondeur)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTransparenceCalque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

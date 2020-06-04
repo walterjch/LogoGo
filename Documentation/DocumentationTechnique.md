@@ -125,6 +125,8 @@ Une application se doit d'avoir un certain nombre de fonctionnalités que l'util
 
 L'utilisateur doit pouvoir choisir sur quel plan les formes sont créées. Les formes doivent donc se positionner sur le calque que l'utilisateur a choisi. Par défaut, le calque "Calque 1" est sélectionné. En ce qui concerne l'ordre d'apparition des calques, j'ai décidé de que le calque 1 serait le premier à apparaître, le calque apparaît ensuite et ainsi de suite. Ainsi, le dernier calque apparaît au-dessus des autres.
 
+![Fenêtre principale](/Images/lsbCalques.png)
+
 ### Création d'une forme
 
 L'utilisateur peur créer une forme qui, selon le bouton choisit, varie. La forme apparaît alors sur le calque que l'utilisateur à précédemment eu l'occasion de sélectionner. Toutes les formes ont des propriétés de base qui sont (pour la majorité des formes actuellement disponibles), 100 pixels de hauteur ainsi que 100 pixels de largeur, par exemple.
@@ -187,6 +189,24 @@ Les fichiers sauvegardés peuvent être à nouveau ouverts et chargés dans Logo
 Une fois que l'utilisateur estime que son logo est terminé, il peut l'exporter en image. Il est bien entendu possible de choisir où le fichier sera enregistrer. Plusieurs choix d'extensions sont également disponibles. 
 
 Le logo doit, avant tout, avoir la bonne taille. Pour cela, j'ai élaboré une méthode permettant de recadrer l'image finale la où se trouvent les formes créées par l'utilisateur afin de voir couper l'image au bon endroit.
+
+### Modification de le Transparence 
+
+![Fenêtre principale](/Images/lsbCalques.png)
+
+Comme vous pouvez le voir, vous pouvez voir et modifier la transparence du calque sélectionné. Voici un exemple de transparence :
+
+![Fenêtre principale](/Images/exempleTransparence.png)
+
+Sur cette image, on peut observer que le rond noir (qui est sur le calque 1) est visible à travers le triangle rouge (qui est sur le calque 2). La transparence du calque 1 n'a pas été changé. Le calque 2, lui, a vu sa transparence passer de 255 à 200 comme vous pouvez le voir sur l'image ci-dessous :
+
+![Fenêtre principale](/Images/exempleNudTransparence.png)
+
+La valeur de cet objet NumericUpDown s'affichant dynamiquement, on voit la valeur correspondant au calque actuellement sélectionné. Voici ce que le NumericUpDown affiche lorsque l'on clique sur Calque 1 :
+
+![Fenêtre principale](/Images/nudTransparence.png)
+
+Le fonctionnement exact de la transparence d'un plan est expliqué en détails dans le Chapitre **8.6. Plans graphiques**.
 
 ## Interfaces
 
@@ -464,9 +484,100 @@ Ce chapitre regroupe les explications des méthodes les plus importantes de chaq
 
 La classe Logo est comme une sorte de container. Un objet Logo contient tous les sprites créés et peut accéder à chacun d'eux.
 
+#### Actions sur les sprites
 
+La classe logo contient trois petites méthodes :
+
+- AjouterSprite
+- SupprimerSprite
+- TrierSprites
+
+**AjouterSprite** fait appel à la méthode "Ajouter" de la classe Sprites. **SupprimerSprite** fait, comme la précédente, appel à la méthode "Supprimer" de la classe Sprites. Pareil pour **TrierSprites**, elle appelle la méthode "Trier" de la même classe que les autres.
+
+#### XMLSerialize / XMLDeserialize
+
+Ces deux méthodes travaillent de paire pour la fonctionnalité de sauvegarde. Un utilisateur doit être en mesure de sauvegarder un fichier mais aussi de le rouvrir. Pour la sauvegarde, c'est XMLSerialize qui s'en occupe. Avant de sérialiser, une conversion de la liste "Sprites" est nécessaire (voir **8.1 Sauvegarde et chargement**). Le code concernant directement la sérialisation est tiré d'une méthode vue en classe avec M. Bonvin dans le cadre d'un atelier C#.
+
+Au moment du chargement de fichier, c'est XMLDeserialize qui est concernée. Tout comme pour XMLSerialize, une conversion est nécessaire mais, cette fois-ci, c'est après la désérialisation que l'on doit faire cette conversion. Il faut passer d'une liste de type SpriteSerializable à une liste de type Sprite. La désérialisation a également été abordée avec M. Bonvin lors des ateliers.
+
+### Classe Sprite
+
+La classe Sprite est essentielle à ce type d'application car c'est une classe mère. Toutes les formes de l'application sont des classes filles qui héritent de Sprite. Les classes filles en question sont :
+
+- Rond
+- Carre
+- Triangle
+- Polygone
+- Texte
+
+Cette classe contient plusieurs méthodes...
+
+#### SpritePaintAvecGraphics
+
+Cette méthode est abstraite car elle doit être différente pour chaque type de sprite (un carré n'est pas dessiné de la même façon qu'un triangle). Chaque classe fille de Sprite a donc une surcharge (override) de cette méthode, ce qui permet de coder quelque chose de différent pour chaque cas.
+
+- Dans la classe Carre :
+
+  Dessine le carré avec FillRectangle ou DrawRectangle selon la valeur de la propriété Remplir.
+
+- Dans la classe Rond :
+
+  Dessine le rond avec FillEllipse ou DrawEllipse selon la  valeur de la propriété Remplir.
+
+- Dans les classes Polygone et Triangle :
+
+  Dessine le triangle avec FillPolygone ou DrawPolygone selon la valeur de la propriété Remplir.
+
+- Dans la classe Texte :
+
+  Dessine le texte avec DrawString avec un certaine police d'écriture.
+
+Cette méthode accepte un objet de type Graphics en paramètre car cela facilite certaines choses. Par exemple, lors de l'exportation, je doit pouvoir dessiner les formes avec un Graphics créé à partir d'une image (Graphics.FromImage(...)). C'est de cette façon qu'il est possible de récupérer l'image de la PictureBox contenant tous les sprites. Dans le Paint, j'appelle tout simplement la méthode SpritePaintAvecGraphics et, en paramètre, je passe e.Graphics.
+
+#### EnSpriteSerializable
+
+Cette méthode, bien qu'importante, est très simple. Elle ne fait que créer un nouvel objet SpriteSerializable puis appeler la méthode "AttribuerValeursProprietes" de la classe SpriteSerializable avant de retourné l'objet créé.
+
+#### Le déplacement de sprite
+
+[EXPLIQUER LES 3 EVENTS]
+
+### Classe Sprites
+
+#### Action sur les sprites
+
+Comme la Classe Sprite, Sprites contient trois méthodes simples qui agissent sur la liste de type Sprite. La méthode Ajouter ne fait qu'ajouter le sprite spécifié à la liste et, respectivement, Supprimer supprime l'objet Sprite spécifié. Finalement, la méthode trier trie la liste selon deux propriétés : NumeroCalque et Profondeur. Pour plus d'informations sur le trie de la liste, voir **8.6. Plans Graphiques**.
+
+#### EnListeSerializable
+
+La méthode EnListeSerializable est complémentaire à la méthode EnSpriteSerializable de la classe Sprite. Par le biais d'une boucle foreach, elle parcours tous les formes présentes dans la liste de sprites. Pour chaque objet Sprite, elle créé un objet de type SpriteSerializable et l'ajoute à une liste. La méthode retourne la liste de type SpriteSerializable qui a été créée.
+
+### Classe SpriteSerializable
+
+#### EnSprite
+
+Méthode simple qui contient un Switch case permettant de savoir quel type de forme créer selon la propriété IdType. Chaque forme ayant un identifiant (Carré = 1, Rond = 2, ...) il est possible de créer le bon type de Sprite à chaque fois. La méthode retourne toujours un objet. Si l'identifiant est inconnu, la méthode retourne un carré par défaut. Cela arrive grâce à la possibilité de créer un cas par défaut dans un Switch case. Voilà un code d'exemple de cas par défaut :
+
+```c#
+default:
+    return new Carre(this, parent);
+```
+
+
+
+#### AttribuerValeursProprietes
+
+Cette méthode est essentielle car, pour sérialiser un Sprite, il est indispensable de mémoriser ses caractéristiques si on veut pouvoir les retrouver plus tard. La méthode AttribuerValeursProprietes prends un Sprite un paramètre et l'utilise pour attribuer les valeurs contenues dans ce dernier à l'objet SpriteSerializable. À la fin de cette opération, un sprite aura été, en quelques sortes, converti en SpriteSerializable.
+
+### Classe SpritesSerializables
+
+#### EnSprites
+
+Si la classe Sprites a une méthode EnListeSerializable, la classe SpritesSerializables a un méthode qui inverse l'opération. La méthode EnSprites est utile au moment de la désérialisation. C'est elle qui va utiliser la méthode EnSprite de la classe SpriteSerializable pour chaque élément. Elle parcourt la liste d'objets SpriteSerializable et en créé une liste d'objets Sprite. La liste est retournée et peut ensuite être utilisée.
 
 ## Arborescence des fichiers
+
+
 
 
 
@@ -555,6 +666,18 @@ Il est possible de sérialiser en plusieurs formats, alors pourquoi le XML ? Tou
 L'avantage des fichier .xml (par rapport aux fichier .bin, par exemple), c'est qu'on a la possibilité de l'éditer aisément. Je peux sans soucis ouvrir le fichier de mon logo et rajouter une forme. C'est une valeur ajoutée comparée à plusieurs formats.
 
 ## Diagramme de classe
+
+Comme vous avez pu le voir plus tôt, voilà à quoi ressemble le diagramme de classe de l'application :
+
+![Fenêtre principale](/Images/diagrammeClasses.png)
+
+Et, comme corrigé dans le chapitre **Analyse organique**, voilà les liaisons appropriées entre les paires de classes Sprite/Sprites et SpriteSerializable/SpritesSerializables :
+
+![Fenêtre principale](/Images/composition.png)
+
+![Fenêtre principale](/Images/compositionSerializables.png)
+
+Ces classes sont reliées par une composition car les classes au pluriel (Sprites et SpritesSerializables) contienne des listes d'objets Sprite et SpriteSerializable. Si un objet Sprites est supprimé, les objets Sprite seront également supprimés et il en va de même pour les classes d'objets sérialisables. De plus, la classe Logo contient un objet Sprites ainsi qu'un objet SpritesSerializables. On peut dont également dire qu'il y a une composition entre ces deux classes et Logo. Voici à quoi ressemble chaque classe en détails :
 
 
 

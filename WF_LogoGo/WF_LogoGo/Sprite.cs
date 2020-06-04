@@ -15,7 +15,6 @@ namespace WF_LogoGo
         private float _epaisseurPen;
         private bool _remplir;
         private int _profondeur;
-        private string _nom;
         private int _numeroCalque;
         private int _idType;
         private PointF[] _trace;
@@ -52,10 +51,6 @@ namespace WF_LogoGo
         /// </summary>
         public bool Remplir { get => _remplir; set => _remplir = value; }
 
-        /// <summary>
-        /// Nom du sprite
-        /// </summary>
-        public string Nom { get => _nom; set => _nom = value; }
 
         /// <summary>
         /// Profondeur qui définit l'ordre d'apparition des sprites dans un même calque
@@ -139,7 +134,7 @@ namespace WF_LogoGo
             }
             _parent = parent;
 
-            Nom = s.Nom;
+            Name = s.Nom;
             Location = s.Location;
             Size = s.Size;
             BackColor = Color.Transparent;
@@ -233,7 +228,7 @@ namespace WF_LogoGo
         /// <returns>Nom du sprite (" - Rond_1")</returns>
         public override string ToString()
         {
-            return " - " + Nom;
+            return " - " + Name;
         }
         #endregion
     }

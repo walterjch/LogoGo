@@ -38,7 +38,23 @@ Suite à la création d'une forme, vous pouvez la déplacer avec a souris (quell
 
 Chaque calque est présent dans une liste. Lorsqu'on sélectionne un calque, celui-ci devient actif. Le calque actif est  celui sur lequel les formes apparaissent.
 
-La sélection d'un calque se fait lorsque vous cliquez dessus.
+La sélection d'un calque se fait lorsque vous cliquez dessus. Sur l'image ci-dessous, c'est le premier calque qui est sélectionné.
+
+![Fenêtre principale](/Images/lsbCalques.png)
+
+On voit également la transparence du calque sélectionné. Si on crée un rond sur le premier calque (Calque 1) et un triangle sur le deuxième calque (Calque 2) et que l'on modifie la transparence du Calque 2, voici ce que l'on obtient :
+
+![Fenêtre principale](/Images/exempleTransparence.png)
+
+Voici la transparence du premier calque :
+
+![Fenêtre principale](/Images/nudTransparence.png)
+
+Voici la transparence du deuxième :
+
+![Fenêtre principale](/Images/exempleNudTransparence.png)
+
+Comme vous pouvez le voir, plus la transparence est proche de 0, plus le calque devient tranparent.
 
 **3. Propriétés**
 
@@ -132,3 +148,5 @@ Les formes que vous avez précédemment enregistré apparaîtront alors et vous 
 ## Aide
 
 Cliquer sur "Aide" (sur la barre de menu) vous dirigera automatiquement sur cette documentation. C'est, sans aucun doute, la manière la plus rapide d'obtenir des informations sur le fonctionnement de l'application.
+
+![Fenêtre principale](/Images/barreMenuAide.png)

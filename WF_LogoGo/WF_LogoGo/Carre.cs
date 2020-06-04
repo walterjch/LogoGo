@@ -18,7 +18,7 @@ namespace WF_LogoGo
         public Carre(Form parent, int calque) : base(parent, calque)
         {
             _nombreCarres++;
-            Nom = "Carré_" + _nombreCarres.ToString();
+            Name = "Carré_" + _nombreCarres.ToString();
             IdType = 1;
         }
 

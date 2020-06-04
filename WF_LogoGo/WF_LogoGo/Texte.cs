@@ -20,8 +20,8 @@ namespace WF_LogoGo
         public Texte(Form parent, int calque) : base(parent, calque)
         {
             _nombreCarres++;
-            Nom = "Texte " + _nombreCarres.ToString();
-            TexteAEcrire = Nom;
+            Name = "Texte " + _nombreCarres.ToString();
+            TexteAEcrire = Name;
             NomPolice = "Times New Roman";
             TaillePolice = 24;
             IdType = 4;

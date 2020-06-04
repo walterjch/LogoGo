@@ -48,11 +48,11 @@
     <Compile Include="Carre.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExporterLogo.cs">
+    <Compile Include="frmExporterLogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExporterLogo.Designer.cs">
-      <DependentUpon>ExporterLogo.cs</DependentUpon>
+    <Compile Include="frmExporterLogo.Designer.cs">
+      <DependentUpon>frmExporterLogo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCreerPolygone.cs">
       <SubType>Form</SubType>
@@ -87,8 +87,8 @@
     <Compile Include="Triangle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="ExporterLogo.resx">
-      <DependentUpon>ExporterLogo.cs</DependentUpon>
+    <EmbeddedResource Include="frmExporterLogo.resx">
+      <DependentUpon>frmExporterLogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreerPolygone.resx">
       <DependentUpon>frmCreerPolygone.cs</DependentUpon>
@@ -104,8 +104,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoApp_LogoGo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

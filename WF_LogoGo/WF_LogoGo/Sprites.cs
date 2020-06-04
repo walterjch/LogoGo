@@ -49,7 +49,7 @@ namespace WF_LogoGo
         }
 
         /// <summary>
-        /// Trie les Sprites selon leur profondeur
+        /// Trie les Sprites selon leur calque et leur profondeur
         /// </summary>
         public void Trier()
         {

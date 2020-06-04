@@ -18,7 +18,7 @@ namespace WF_LogoGo
         public Triangle(Form parent, int calque) : base(parent, calque)
         {
             _nombreTriangles++;
-            Nom = "Triangle_" + _nombreTriangles.ToString();
+            Name = "Triangle_" + _nombreTriangles.ToString();
             IdType = 3;
         }
 

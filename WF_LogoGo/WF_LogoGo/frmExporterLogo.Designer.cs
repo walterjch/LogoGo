@@ -1,6 +1,6 @@
 ﻿namespace WF_LogoGo
 {
-    partial class ExporterLogo
+    partial class frmExporterLogo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExporterLogo));
             this.btnOK = new System.Windows.Forms.Button();
             this.pbxResultatFinal = new System.Windows.Forms.PictureBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
-            // ExporterLogo
+            // frmExporterLogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,7 +73,8 @@
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.pbxResultatFinal);
             this.Controls.Add(this.btnOK);
-            this.Name = "ExporterLogo";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmExporterLogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Exportation du logo";
             this.Load += new System.EventHandler(this.ExporterLogo_Load);

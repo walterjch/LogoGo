@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WF_LogoGo
 {
-    public partial class ExporterLogo : Form
+    public partial class frmExporterLogo : Form
     {
         private Logo LogoAExporter;
         public Image LogoFinal;
@@ -25,7 +25,7 @@ namespace WF_LogoGo
         private Point CoinInferieurDroit;
         private Point CoinInferieurGauche;
 
-        public ExporterLogo(Logo logoAExporer)
+        public frmExporterLogo(Logo logoAExporer)
         {
             InitializeComponent();
             LogoAExporter = logoAExporer;

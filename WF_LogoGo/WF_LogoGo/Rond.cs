@@ -18,7 +18,7 @@ namespace WF_LogoGo
         public Rond(Form parent, int calque) : base(parent, calque)
         {
             _nombreCarres++;
-            Nom = "Rond_" + _nombreCarres.ToString();
+            Name = "Rond_" + _nombreCarres.ToString();
             IdType = 2;
         }
         public Rond(SpriteSerializable s, Form parent) : base(s, parent)

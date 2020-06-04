@@ -140,7 +140,7 @@ namespace WF_LogoGo
             Remplir = s.Remplir;
             NumeroCalque = s.NumeroCalque;
             ProfondeurParCalque = s.Profondeur;
-            Nom = s.Nom;
+            Nom = s.Name;
             IdType = s.IdType;
             Trace = s.Trace;
             TexteAEcrire = s.TexteAEcrire;

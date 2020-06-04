@@ -22,7 +22,7 @@ namespace WF_LogoGo
         public Polygone(Form parent, int calque) : base(parent, calque)
         {
             _nombrePolygones++;
-            Nom = "Polygone_" + _nombrePolygones.ToString();
+            Name = "Polygone_" + _nombrePolygones.ToString();
             Width = 50;
             Height = 50;
             IdType = 5;
