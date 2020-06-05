@@ -84,7 +84,10 @@ namespace WF_LogoGo
         /// </summary>
         public void Charger(string nomFichier)
         {
-            NomFichier = nomFichier;
+            if (nomFichier != null)
+            {
+                NomFichier = nomFichier;
+            }            
             Sprites = null;
             XMLDeserialize();
         }

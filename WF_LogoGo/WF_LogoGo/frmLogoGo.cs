@@ -362,16 +362,25 @@ namespace WF_LogoGo
         /// <param name="e"></param>
         private void msExporter_Click(object sender, EventArgs e)
         {
-            frmExporterLogo frmExporter = new frmExporterLogo(MonLogo);
-
-            if (frmExporter.ShowDialog() == DialogResult.OK)
+            if (MonLogo.Sprites.EstVide)
             {
-                saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
-                                        + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("Votre projet est vide. Essayer de créer votre logo avant d'exporter !");
+            }
+            else
+            {
+                frmExporterLogo frmExporter = new frmExporterLogo(MonLogo);
+
+                if (frmExporter.ShowDialog() == DialogResult.OK)
                 {
-                    frmExporter.LogoFinal.Save(saveFileDialog.FileName);
+                    saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
+                                            + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+                    saveFileDialog.FileName = "Logo";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        frmExporter.LogoFinal.Save(saveFileDialog.FileName);
+                    }
                 }
             }
         }
@@ -384,21 +393,29 @@ namespace WF_LogoGo
         /// <param name="e"></param>
         private void msOuvrir_Click(object sender, EventArgs e)
         {
-            openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "XML-File | *.xml";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                MonLogo.Charger(openFileDialog.FileName);
+                openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "XML-File | *.xml";
 
-                MonLogo.TrierSprites();
-                foreach (Sprite unSprite in MonLogo.Sprites.ListeDeSprite)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    unSprite.Click += this.ProprietesClick;
-                    Paint += unSprite.SpritePaint;
-                    this.Controls.Add(unSprite);
+                    MonLogo.Charger(openFileDialog.FileName);
+
+                    MonLogo.TrierSprites();
+                    foreach (Sprite unSprite in MonLogo.Sprites.ListeDeSprite)
+                    {
+                        unSprite.Click += this.ProprietesClick;
+                        Paint += unSprite.SpritePaint;
+                        this.Controls.Add(unSprite);
+                    }
+                    Invalidate();
                 }
-                Invalidate();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Il semblerait que vous tentiez d'ouvrir un fichier invalide. Le fichier contient peut-être une erreur.");
             }
         }
 
@@ -410,14 +427,21 @@ namespace WF_LogoGo
         /// <param name="e"></param>
         private void msEnregistrer_Click(object sender, EventArgs e)
         {
-            saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "XML-File | *.xml";
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (MonLogo.Sprites.EstVide)
             {
-                MonLogo.Enregistrer(saveFileDialog.FileName);
+                MessageBox.Show("Votre projet est vide. Essayer de créer votre logo avant d'enregistrer !");
             }
+            else
+            {
+                saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "XML-File | *.xml";
+                saveFileDialog.FileName = "Logo.xml";
 
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    MonLogo.Enregistrer(saveFileDialog.FileName);
+                }
+            }
         }
 
         /// <summary>
@@ -428,6 +452,29 @@ namespace WF_LogoGo
         private void aideToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/walterjch/LogoGo/tree/master/Documentation");
+        }
+
+        /// <summary>
+        /// À la fermeture de frmLogo, affiche un messagebox. Ferme l'application ou non en fonction du dialogResilt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmLogoGo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MonLogo.Sprites != null && MonLogo.Sprites.ListeDeSprite.Count != 0)
+            {
+                DialogResult resultat = MessageBox.Show("Attention, la fermeture de LogoGo aura pour résultat la perte de votre projet si vous ne l'avez pas enregistré. Si vous êtes sûr de l'avoir sauvegardé, cliquez sur OK.", "Fermeture de l'application", MessageBoxButtons.OKCancel);
+                if (resultat == DialogResult.OK)
+                {
+                    e.Cancel = false;
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+
         }
         #endregion
 
@@ -614,24 +661,6 @@ namespace WF_LogoGo
             btnSupprimerTexte.Enabled = false;
 
             nudProfondeurTexte.Enabled = false;
-        }
-
-        private void frmLogoGo_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MonLogo.Sprites.ListeDeSprite.Count != 0)
-            {
-                DialogResult resultat = MessageBox.Show("Attention, la fermeture de LogoGo aura pour résultat la perte de votre projet si vous ne l'avez pas enregistré. Si vous êtes sûr de l'avoir sauvegardé, cliquez sur OK.", "Fermeture de l'application", MessageBoxButtons.OKCancel);
-                if (resultat == DialogResult.OK)
-                {
-                    e.Cancel = false;
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
-            
         }
     }
 }

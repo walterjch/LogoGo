@@ -127,7 +127,7 @@
             0});
             this.nudTransparenceCalque.Name = "nudTransparenceCalque";
             this.nudTransparenceCalque.Size = new System.Drawing.Size(57, 22);
-            this.nudTransparenceCalque.TabIndex = 72;
+            this.nudTransparenceCalque.TabIndex = 0;
             this.nudTransparenceCalque.Value = new decimal(new int[] {
             255,
             0,
@@ -145,7 +145,7 @@
             this.groupBox1.Location = new System.Drawing.Point(17, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(232, 220);
-            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formes";
             // 
@@ -154,7 +154,7 @@
             this.btnPolygone.Location = new System.Drawing.Point(15, 115);
             this.btnPolygone.Name = "btnPolygone";
             this.btnPolygone.Size = new System.Drawing.Size(92, 32);
-            this.btnPolygone.TabIndex = 26;
+            this.btnPolygone.TabIndex = 4;
             this.btnPolygone.Text = "Polygone";
             this.btnPolygone.UseVisualStyleBackColor = true;
             this.btnPolygone.Click += new System.EventHandler(this.btnPolygone_Click);
@@ -164,7 +164,7 @@
             this.btnTexte.Location = new System.Drawing.Point(126, 77);
             this.btnTexte.Name = "btnTexte";
             this.btnTexte.Size = new System.Drawing.Size(92, 32);
-            this.btnTexte.TabIndex = 25;
+            this.btnTexte.TabIndex = 3;
             this.btnTexte.Text = "Texte";
             this.btnTexte.UseVisualStyleBackColor = true;
             this.btnTexte.Click += new System.EventHandler(this.btnTexte_Click);
@@ -174,7 +174,7 @@
             this.btnTriangle.Location = new System.Drawing.Point(15, 77);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(92, 32);
-            this.btnTriangle.TabIndex = 23;
+            this.btnTriangle.TabIndex = 2;
             this.btnTriangle.Text = "Triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
             this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
@@ -184,7 +184,7 @@
             this.btnRond.Location = new System.Drawing.Point(126, 37);
             this.btnRond.Name = "btnRond";
             this.btnRond.Size = new System.Drawing.Size(92, 32);
-            this.btnRond.TabIndex = 22;
+            this.btnRond.TabIndex = 1;
             this.btnRond.Text = "Rond";
             this.btnRond.UseVisualStyleBackColor = true;
             this.btnRond.Click += new System.EventHandler(this.btnRond_Click);
@@ -194,7 +194,7 @@
             this.btnCarre.Location = new System.Drawing.Point(15, 37);
             this.btnCarre.Name = "btnCarre";
             this.btnCarre.Size = new System.Drawing.Size(92, 32);
-            this.btnCarre.TabIndex = 21;
+            this.btnCarre.TabIndex = 0;
             this.btnCarre.Text = "Carré";
             this.btnCarre.UseVisualStyleBackColor = true;
             this.btnCarre.Click += new System.EventHandler(this.btnCarre_Click);
@@ -206,7 +206,7 @@
             this.label3.Location = new System.Drawing.Point(17, 534);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 17);
-            this.label3.TabIndex = 73;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Transparence :";
             // 
             // lsbCalques
@@ -381,7 +381,7 @@
             this.tbxTexte.Location = new System.Drawing.Point(128, 54);
             this.tbxTexte.Name = "tbxTexte";
             this.tbxTexte.Size = new System.Drawing.Size(98, 22);
-            this.tbxTexte.TabIndex = 47;
+            this.tbxTexte.TabIndex = 0;
             this.tbxTexte.TextChanged += new System.EventHandler(this.tbxTexte_Leave);
             this.tbxTexte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             // 
@@ -495,7 +495,7 @@
             this.pnlProprietesStandard.Location = new System.Drawing.Point(0, 384);
             this.pnlProprietesStandard.Name = "pnlProprietesStandard";
             this.pnlProprietesStandard.Size = new System.Drawing.Size(530, 231);
-            this.pnlProprietesStandard.TabIndex = 67;
+            this.pnlProprietesStandard.TabIndex = 0;
             // 
             // btnSupprimerSprite
             // 
@@ -503,7 +503,7 @@
             this.btnSupprimerSprite.Location = new System.Drawing.Point(422, 177);
             this.btnSupprimerSprite.Name = "btnSupprimerSprite";
             this.btnSupprimerSprite.Size = new System.Drawing.Size(104, 35);
-            this.btnSupprimerSprite.TabIndex = 71;
+            this.btnSupprimerSprite.TabIndex = 18;
             this.btnSupprimerSprite.Text = "Supprimer";
             this.btnSupprimerSprite.UseVisualStyleBackColor = true;
             this.btnSupprimerSprite.Click += new System.EventHandler(this.btnSupprimerSprite_Click);
@@ -514,7 +514,7 @@
             this.nudEpaisseur.Location = new System.Drawing.Point(378, 138);
             this.nudEpaisseur.Name = "nudEpaisseur";
             this.nudEpaisseur.Size = new System.Drawing.Size(57, 22);
-            this.nudEpaisseur.TabIndex = 57;
+            this.nudEpaisseur.TabIndex = 17;
             this.nudEpaisseur.ValueChanged += new System.EventHandler(this.nudEpaisseur_ValueChanged);
             // 
             // label11
@@ -524,7 +524,7 @@
             this.label11.Location = new System.Drawing.Point(301, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 17);
-            this.label11.TabIndex = 69;
+            this.label11.TabIndex = 16;
             this.label11.Text = "Épaisseur :";
             // 
             // chkRemplir
@@ -534,7 +534,7 @@
             this.chkRemplir.Location = new System.Drawing.Point(36, 185);
             this.chkRemplir.Name = "chkRemplir";
             this.chkRemplir.Size = new System.Drawing.Size(78, 21);
-            this.chkRemplir.TabIndex = 51;
+            this.chkRemplir.TabIndex = 9;
             this.chkRemplir.Text = "Remplir";
             this.chkRemplir.UseVisualStyleBackColor = true;
             this.chkRemplir.CheckedChanged += new System.EventHandler(this.chkRemplir_CheckedChanged);
@@ -545,7 +545,7 @@
             this.nudProfondeur.Location = new System.Drawing.Point(129, 145);
             this.nudProfondeur.Name = "nudProfondeur";
             this.nudProfondeur.Size = new System.Drawing.Size(57, 22);
-            this.nudProfondeur.TabIndex = 50;
+            this.nudProfondeur.TabIndex = 8;
             this.nudProfondeur.ValueChanged += new System.EventHandler(this.nudProfondeur_ValueChanged);
             this.nudProfondeur.Click += new System.EventHandler(this.nudProfondeur_ValueChanged);
             // 
@@ -556,7 +556,7 @@
             this.label4.Location = new System.Drawing.Point(33, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 17);
-            this.label4.TabIndex = 68;
+            this.label4.TabIndex = 7;
             this.label4.Text = "Profondeur :";
             // 
             // cmbCalque
@@ -570,7 +570,7 @@
             this.cmbCalque.Location = new System.Drawing.Point(129, 113);
             this.cmbCalque.Name = "cmbCalque";
             this.cmbCalque.Size = new System.Drawing.Size(90, 24);
-            this.cmbCalque.TabIndex = 49;
+            this.cmbCalque.TabIndex = 6;
             this.cmbCalque.SelectedIndexChanged += new System.EventHandler(this.cmbCalque_SelectedIndexChanged);
             // 
             // btnCouleur
@@ -580,7 +580,7 @@
             this.btnCouleur.Location = new System.Drawing.Point(372, 38);
             this.btnCouleur.Name = "btnCouleur";
             this.btnCouleur.Size = new System.Drawing.Size(43, 25);
-            this.btnCouleur.TabIndex = 52;
+            this.btnCouleur.TabIndex = 11;
             this.btnCouleur.UseVisualStyleBackColor = false;
             this.btnCouleur.Click += new System.EventHandler(this.btnCouleur_Click);
             // 
@@ -591,7 +591,7 @@
             this.label12.Location = new System.Drawing.Point(33, 116);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 67;
+            this.label12.TabIndex = 5;
             this.label12.Text = "Calque :";
             // 
             // label13
@@ -610,7 +610,7 @@
             this.tbxPosY.Location = new System.Drawing.Point(372, 104);
             this.tbxPosY.Name = "tbxPosY";
             this.tbxPosY.Size = new System.Drawing.Size(57, 22);
-            this.tbxPosY.TabIndex = 54;
+            this.tbxPosY.TabIndex = 15;
             this.tbxPosY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             this.tbxPosY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxPosY.Leave += new System.EventHandler(this.tbxPos_Leave);
@@ -622,7 +622,7 @@
             this.label14.Location = new System.Drawing.Point(296, 105);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 17);
-            this.label14.TabIndex = 65;
+            this.label14.TabIndex = 14;
             this.label14.Text = "CoordY :";
             // 
             // label15
@@ -641,7 +641,7 @@
             this.tbxPosX.Location = new System.Drawing.Point(372, 74);
             this.tbxPosX.Name = "tbxPosX";
             this.tbxPosX.Size = new System.Drawing.Size(57, 22);
-            this.tbxPosX.TabIndex = 53;
+            this.tbxPosX.TabIndex = 13;
             this.tbxPosX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             this.tbxPosX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxPosX.Leave += new System.EventHandler(this.tbxPos_Leave);
@@ -653,7 +653,7 @@
             this.label16.Location = new System.Drawing.Point(296, 73);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 17);
-            this.label16.TabIndex = 63;
+            this.label16.TabIndex = 12;
             this.label16.Text = "CoordX :";
             // 
             // label17
@@ -663,7 +663,7 @@
             this.label17.Location = new System.Drawing.Point(296, 40);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(65, 17);
-            this.label17.TabIndex = 62;
+            this.label17.TabIndex = 10;
             this.label17.Text = "Couleur :";
             // 
             // label7
@@ -682,7 +682,7 @@
             this.tbxLargeur.Location = new System.Drawing.Point(129, 80);
             this.tbxLargeur.Name = "tbxLargeur";
             this.tbxLargeur.Size = new System.Drawing.Size(57, 22);
-            this.tbxLargeur.TabIndex = 48;
+            this.tbxLargeur.TabIndex = 4;
             this.tbxLargeur.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             this.tbxLargeur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxLargeur.Leave += new System.EventHandler(this.tbxLargeur_Leave);
@@ -694,7 +694,7 @@
             this.label8.Location = new System.Drawing.Point(33, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 17);
-            this.label8.TabIndex = 58;
+            this.label8.TabIndex = 3;
             this.label8.Text = "Largeur :";
             // 
             // label6
@@ -713,7 +713,7 @@
             this.tbxHauteur.Location = new System.Drawing.Point(129, 49);
             this.tbxHauteur.Name = "tbxHauteur";
             this.tbxHauteur.Size = new System.Drawing.Size(57, 22);
-            this.tbxHauteur.TabIndex = 47;
+            this.tbxHauteur.TabIndex = 2;
             this.tbxHauteur.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Proprietes_KeyDown);
             this.tbxHauteur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Proprietes_KeyPress);
             this.tbxHauteur.Leave += new System.EventHandler(this.tbxHauteur_Leave);
@@ -725,7 +725,7 @@
             this.label5.Location = new System.Drawing.Point(33, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 17);
-            this.label5.TabIndex = 55;
+            this.label5.TabIndex = 1;
             this.label5.Text = "Hauteur :";
             // 
             // label1
@@ -735,7 +735,7 @@
             this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 18);
-            this.label1.TabIndex = 46;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Propriétés :";
             // 
             // menuStrip
@@ -747,7 +747,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(804, 28);
-            this.menuStrip.TabIndex = 68;
+            this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
             // msFichier
@@ -763,21 +763,21 @@
             // msEnregistrer
             // 
             this.msEnregistrer.Name = "msEnregistrer";
-            this.msEnregistrer.Size = new System.Drawing.Size(216, 26);
+            this.msEnregistrer.Size = new System.Drawing.Size(155, 26);
             this.msEnregistrer.Text = "Enregistrer";
             this.msEnregistrer.Click += new System.EventHandler(this.msEnregistrer_Click);
             // 
             // msOuvrir
             // 
             this.msOuvrir.Name = "msOuvrir";
-            this.msOuvrir.Size = new System.Drawing.Size(216, 26);
+            this.msOuvrir.Size = new System.Drawing.Size(155, 26);
             this.msOuvrir.Text = "Ouvrir";
             this.msOuvrir.Click += new System.EventHandler(this.msOuvrir_Click);
             // 
             // msExporter
             // 
             this.msExporter.Name = "msExporter";
-            this.msExporter.Size = new System.Drawing.Size(216, 26);
+            this.msExporter.Size = new System.Drawing.Size(155, 26);
             this.msExporter.Text = "Exporter";
             this.msExporter.Click += new System.EventHandler(this.msExporter_Click);
             // 
@@ -788,10 +788,6 @@
             this.aideToolStripMenuItem.Text = "Aide";
             this.aideToolStripMenuItem.Click += new System.EventHandler(this.aideToolStripMenuItem_Click);
             // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
             // frmLogoGo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -801,6 +797,7 @@
             this.Controls.Add(this.pnlProprietesStandard);
             this.Controls.Add(this.pnlProprietesTexte);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLogoGo";

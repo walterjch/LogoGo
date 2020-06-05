@@ -4,9 +4,25 @@
 
 
 
-# Résumé
+# Résumé du rapport TPI
 
-[Résumé en une page à faire à la fin]
+## Situation de départ
+
+Les TPI 2020 ont eu lieu de façon particulière. À cause le la pandémie (COVID-19) qui nous a pris par surprise, nous avons réalisé nos TPI à la maison. Nous avons disposé (comme pour les élèves ayant passé le TPI en 2019) de 11 jours au total. Malgré les conditions particulières, aucune modification n'a été apportée sur la durée ou sur la difficulté de ce travail de fin ce formation. Mise à part une date reporté d'environ un mois, le TPI a eu lieu "normalement".
+
+Pour mon TPI j'ai réalisé une application WindowsForm en C# orienté objet. permettant à l'utilisateur de créer des logos. Il est possible d'ajouter des formes et du texte sur une certaine zone et il est possible d'en modifier les propriétés. L'utilisateur peut changer la taille, la couleur, l'épaisseur, le remplissage, la position, et d'autres propriétés permettant de faire ce qu'il souhaite des formes mises à disposition. Il y a également un système de calque permettant de choisir l'ordre dans lequel les formes apparaissent. L'utilisateur peut choisir sur quel calque créer les formes et peut aussi les changer de calque après leur création. Il est possible d'exporter le logo en image (plusieurs formats sont disponibles). Si l'utilisateur souhaite continuer la création de son logo plus tard, il peut sauvegarder le logo puis le rouvrir. La sauvegarde se fait en créant un fichier XML.
+
+## Mise en œuvre
+
+Durant le premier jour de TPI, j'ai pris du temps pour analyser le cahier des charges en le lisant plusieurs fois pour être sûr des fonctionnalités qui devaient être disponibles à la fin des 11 jours. Je n'ai pas eu besoin d'estimer les tâches que j'avais à faire puisqu'un planning prévisionnel m'a été fourni. Ce planning m'a été  d'une grande aide car je n'ai eu qu'à reprendre la même structure et de la remplir au fur et à mesure que j'avançais pour obtenir mon planning effectif.
+
+Après un certain temps de réflexion sur la façon dont j'allais m'y prendre, j'ai réalisé un diagramme de classe qui semblait correct. J'ai pris un long moment pour réaliser l'interface principale et pour faire en sorte qu'elle tienne la route. L'image d'exemple donnée dans le cahier des charge m'a servit d'inspiration.
+
+En parallèle de la réalisation de l'application, je me suis arrangé pour maintenir un certain rythme dans la rédaction des différentes documentations pour ne pas me retrouver submergé par la documentation en fin de projet. J'ai également sauvegardé mon projet entre une et trois fois par jour pour garder une trace des modifications ainsi que pour pouvoir, en cas de problème, revenir à une version précédente. Pour sauvegarder mon projet, j'ai utilisé git qui, étant la manière que j'ai le plus utilisé pour sauvegarder efficacement des projets au sein du CFPT, m'a semblé être le meilleur choix.
+
+## Conclusion
+
+Pendant ces 11 jours de travail, j'ai réussi à réaliser tous les points demandés dans le cahier des charges. Toutes les fonctionnalités sont utilisables et je n'ai pas eu de retard particulier. Durant la première moitié du travail, la planning effectif était assez différent du planning prévisionnel mais cette différence s'est estompé au fil des jours et les deux plannings se sont équilibrés.
 
 
 
@@ -85,6 +101,7 @@ Pour ce travail, j'utilise le matériel suivant :
 - Microsoft Visual Studio 2019
 - Typora
 - Sous-système Debian
+- GitHub
 
 
 
@@ -123,7 +140,7 @@ Une application se doit d'avoir un certain nombre de fonctionnalités que l'util
 
 ### Sélection du plan de travail
 
-L'utilisateur doit pouvoir choisir sur quel plan les formes sont créées. Les formes doivent donc se positionner sur le calque que l'utilisateur a choisi. Par défaut, le calque "Calque 1" est sélectionné. En ce qui concerne l'ordre d'apparition des calques, j'ai décidé de que le calque 1 serait le premier à apparaître, le calque apparaît ensuite et ainsi de suite. Ainsi, le dernier calque apparaît au-dessus des autres.
+L'utilisateur doit pouvoir choisir sur quel plan les formes sont créées. Les formes doivent donc se positionner sur le calque que l'utilisateur a choisi. Par défaut, le calque "Calque 1" est sélectionné. En ce qui concerne l'ordre d'apparition des calques, j'ai décidé de que le calque 1 serait le premier à apparaître, le calque 2 apparaît ensuite et ainsi de suite. Ainsi, le dernier calque apparaît au-dessus des autres.
 
 ![Fenêtre principale](/Images/lsbCalques.png)
 
@@ -277,6 +294,10 @@ Ce sont les caractéristiques d'une forme (Sprite). Elles sont modifiables via l
 ![Fenêtre principale](/Images/panelProprietes.png)
 
 Les propriétés ci-dessus sont celles d'une forme standard (Rond, Carré, Triangle). Si la forme actuellement sélectionnée est un Polygone dessiné par l'utilisateur, les propriétés "Hauteur" et "Largeur" ne sont pas modifiables car cela déformerait la forme que l'utilisateur à créé. La hauteur et la largeur de la PictureBox sont calculées automatiquement dans le code.
+
+Voici à quoi ressemble les propriétés d'un polygone créé par un utilisateur : 
+
+![Fenêtre principale](/Images/panelProprietesPolygone.png)
 
 Pour le texte aussi, la taille n'est pas modifiable car elle dépend complétement de la longueur du texte ainsi que de la taille de la police utilisée.
 Voilà à quoi ressemble le panel des propriétés d'un objet Texte :
@@ -489,9 +510,38 @@ Voilà à quoi ressemble de fichier .xml de ce logo :
 
 
 
-# Analyse organique
+## Les messages
 
-## Architecture du projet
+Pendant l'utilisation de l'application LogoGo, il est possible de rencontrer certains messages... Voyons dans quelles circonstances ces messages peuvent apparaître et à quoi ils ressemblent.
+
+### Fermeture de l'application
+
+Avez-vous bien enregistré votre logo avant de quitter l'application ?
+Lorsque vous tentez de quitter LogoGo, une fenêtre vous avertit que, si vous n'avez pas sauvegardé votre logo, vous perdrez toute progression dans la création de votre image. Voici à quoi ressemble cette fenêtre d'avertissement :
+
+![Fenêtre principale](/Images/MessageBoxFermeture.png)
+
+Ce message est la pour vous aider. Il vous suffit de cliquer sur OK si vous avez bien enregistré votre projet ou si vous ne souhaitez pas sauvegarder les dernières modifications. Si vous voulez retourner sur LogoGo pour continuer ou pour sauvegarder votre logo, appuyez sur Annuler, cela annulera la fermeture de LogoGo.
+
+### Enregistrement
+
+Comme vous venez de le voir, si vous tentez de quitter l'application, un message vous avertira que vous devez enregistrer votre projet à part si votre projet est vide. À l'inverse, si vous tentez d'enregistrer un projet qui ne contient aucun forme, cette fenêtre s'ouvrira :
+
+![Fenêtre principale](/Images/MessageBoxEnregistrement.png)
+
+Vous devez ajouter au moins une forme pour pouvoir enregistrer le logo.
+
+### Exportation
+
+Il est possible de vous retrouver face à ce message si vous tentez d'exporter un projet vide. Vous ne pouvez pas exporter en image un projet qui ne contient rien du tout.
+
+![Fenêtre principale](/Images/MessageBoxExportation.png)
+
+Vous devez ajouter au moins une forme pour pouvoir exporter le logo.
+
+
+
+# Analyse organique
 
 ## Classes
 
@@ -611,9 +661,7 @@ Si la classe Sprites a une méthode EnListeSerializable, la classe SpritesSerial
 
 ## Arborescence des fichiers
 
-
-
-
+![Fenêtre principale](/Images/arborescenceProjet.png)
 
 # Réalisation
 
@@ -711,9 +759,11 @@ Et, comme corrigé dans le chapitre **Analyse organique**, voilà les liaisons a
 
 ![Fenêtre principale](/Images/compositionSerializables.png)
 
-Ces classes sont reliées par une composition car les classes au pluriel (Sprites et SpritesSerializables) contienne des listes d'objets Sprite et SpriteSerializable. Si un objet Sprites est supprimé, les objets Sprite seront également supprimés et il en va de même pour les classes d'objets sérialisables. De plus, la classe Logo contient un objet Sprites ainsi qu'un objet SpritesSerializables. On peut dont également dire qu'il y a une composition entre ces deux classes et Logo. Voici à quoi ressemble chaque classe en détails :
+Ces classes sont reliées par une composition car les classes au pluriel (Sprites et SpritesSerializables) contienne des listes d'objets Sprite et SpriteSerializable. Si un objet Sprites est supprimé, les objets Sprite seront également supprimés et il en va de même pour les classes d'objets sérialisables. De plus, la classe Logo contient un objet Sprites ainsi qu'un objet SpritesSerializables. On peut dont également dire qu'il y a une composition entre ces deux classes et Logo.
 
+Voici à quoi ressemble chaque classe en détails :
 
+[METTRE IMAGE DE CHAQUE CLASSE EN DETAILS]
 
 ## Classe mère commune (héritage)
 
@@ -803,9 +853,7 @@ Ce cette manière, on obtient une image finale qui ressemble à celle-ci :
 
 ![Fenêtre principale](/Images/exempleLogo.png)
 
-# Tests unitaires
-
-# Plan de test
+# Plan de tests
 
 Afin de vérifier qu'aucune régression et aucune erreur ne survienne au cours du développement, il est pratique d'avoir un certain scénario qui, étant testé chaque jour, permet de s'assurer que tout fonctionne.
 
@@ -817,18 +865,20 @@ Voilà le plan de test que j'ai utilisé :
 |  2   |             Création d'une forme de chaque type.             | Chaque forme se crée correctement et apparaît avec les propriétés par défaut. On peut modifier les propriétés. |
 |  3   |         Modification des propriétés de chaque forme.         | Chaque forme est modifiée comme prévu et les modifications sont bien visibles. |
 |  4   | Changement de la propriété "Calque" pour avoir au moins une forme sur chaque calque. | Les formes se mettent sur le bon calque et on voit les formes se mettre dans le bon ordre. |
-|  5   |                   Enregistrement du logo.                    | L'explorateur de fichier s'ouvre et on peut enregistrer le logo sans problème. Si aucun nom de fichier n'est choisit, un nom par défaut est utilisé. |
+|  5   |                   Enregistrement du logo.                    | L'explorateur de fichier s'ouvre et on peut enregistrer le logo sans problème. Le nom par défaut est "Logo". |
 |  6   |              Suppression de toutes les formes.               | Les formes se suppriment les unes après les autres comme on le souhaite. La partie "Propriétés" se met à jour. |
 |  7   |                   Ouverture d'un fichier.                    | Charge le logo correctement. Les formes ont les bonnes propriétés et sont sur les bons calques. |
 |  8   |                   Modification des formes.                   | Les modifications fonctionnent et aucune erreur ne survient. |
-|  9   |                     Exportation du logo.                     | L'explorateur de fichier s'ouvre et nous permet de sauvegarder le logo en divers formats d'image. Si aucun nom de fichier n'est choisit, un nom par défaut est utilisé. |
+|  9   |                     Exportation du logo.                     | L'explorateur de fichier s'ouvre et nous permet de sauvegarder le logo en divers formats d'image. Le nom par défaut est "Logo". |
 |  10  |                   Vérification de l'image.                   | L'image enregistrée contient bien le logo et fait le bonne taille. |
+|  11  |                 Fermeture de l'application.                  |    La MessageBox demande si on est sûr de vouloir fermer.    |
+|  12  |                Appui sur OK de la MessageBox.                |           La MessageBox se ferme. LogoGo se ferme.           |
 
 
 
 # Rapports de tests
 
-Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec le temps.
+Dans ce chapitre, j'ai répertorié le résultat des tests de j'ai réalisé en suivant mon plant de test (voir **9.2. Plan de tests**). Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec le temps.
 
 ## Rapport de tests du 28 Mai :
 
@@ -844,6 +894,8 @@ Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec
 |  8   | 28.05.2020 |  NON   |                   Modification des formes.                   |                       Pas implémenté.                        |
 |  9   | 28.05.2020 |  NON   |                     Exportation du logo.                     |                       Pas implémenté.                        |
 |  10  | 28.05.2020 |  NON   |                   Vérification de l'image.                   |                Ne peut pas encore être crée.                 |
+|  11  | 28.05.2020 |  NON   |                 Fermeture de l'application.                  |                       Pas implémenté.                        |
+|  12  | 28.05.2020 |  NON   |                Appui sur OK de la MessageBox.                |                       Pas implémenté.                        |
 
 ## Rapport du tests du 2 juin :
 
@@ -859,6 +911,58 @@ Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec
 |  8   | 02.06.2020 |  NON   |                   Modification des formes.                   | Ne peut pas essayer tant que le chargement de fichier n'est pas implémenté. |
 |  9   | 02.06.2020 |  NON   |                     Exportation du logo.                     |                       Pas implémenté.                        |
 |  10  | 02.06.2020 |  NON   |                   Vérification de l'image.                   |                Ne peut pas encore être crée.                 |
+|  11  | 02.06.2020 |  NON   |                 Fermeture de l'application.                  |                       Pas implémenté.                        |
+|  12  | 02.06.2020 |  NON   |                Appui sur OK de la MessageBox.                |                       Pas implémenté.                        |
+
+## Rapport du tests du 4 juin :
+
+|  Id  |    Date    | Réussi |                         Description                          |                           Résultat                           |
+| :--: | :--------: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   | 04.06.2020 |  OUI   |                 Lancement de l'application.                  | Impossible de modifier les propriétés. Calque 1 choisi par défaut. |
+|  2   | 04.06.2020 |  OUI   |             Création d'une forme de chaque type.             | Les formes se créent et les propriétés se mettent à jour comme prévu. |
+|  3   | 04.06.2020 |  OUI   |         Modification des propriétés de chaque forme.         | La modification marche pour toutes les formes et on le voit. |
+|  4   | 04.06.2020 |  OUI   | Changement de la propriété "Calque" pour avoir au moins une forme sur chaque calque. |        Fonctionne pour toutes les formes disponibles.        |
+|  5   | 04.06.2020 |  OUI   |                   Enregistrement du logo.                    | Enregistre le fichier correctement. Le nom par défaut est Logo.xml |
+|  6   | 04.06.2020 |  OUI   |              Suppression de toutes les formes.               | Il est possible de supprimer les formes que l'on a créé. Les propriétés s'actualisent correctement. |
+|  7   | 04.06.2020 |  OUI   |                   Ouverture d'un fichier.                    | Crée les formes correctement avec les bonnes propriétés et sur les bons calques. |
+|  8   | 04.06.2020 |  OUI   |                   Modification des formes.                   |         Les modifications fonctionnent normalement.          |
+|      | 04.06.2020 |  OUI   |                     Exportation du logo.                     |         Nom par défaut "Logo.bmp". Tout est correct.         |
+|  10  | 04.06.2020 |  OUI   |                   Vérification de l'image.                   | L'image se créer parfaitement avec les formes correctes. Bonne taille. |
+|  11  | 04.06.2020 |  OUI   |                 Fermeture de l'application.                  |            La MessageBox s'affiche correctement.             |
+|  12  | 04.06.2020 |  NON   |                Appui sur OK de la MessageBox.                | Fonctionne à moitié. La MessageBox s'affiche une deuxième fois. Après cela, l'application se ferme comme prévu. |
+
+# Fonctionnalités à ajouter
+
+Arrivant à la fin du projet, je me suis rendu compte qu'il existe beaucoup de fonctionnalités intéressantes qui seraient très utiles à l'application. Cet avant-dernier chapitre liste certaines fonctions qui pourraient être ajoutées dans le futur.
+
+**Masquer un calque**
+
+Pour mieux travailler sur chaque calque, la possibilité d'afficher ou non les calques de notre choix peut être une idée très intéressante. Cette fonctionnalité est disponible dans de grands logiciels comme, par exemple, Photoshop.
+
+**Ajout / Suppression de calque**
+
+La création et suppression de calque sont deux fonctionnalités qui ne seraient pas difficiles à implémenter et qui ajouteraient un plus à la version actuelle de LogoGo. Certains logos n'ont pas forcément besoin de trois calques et, à l'inverse, certains en demandent bien plus,
+
+**La rotation de sprite**
+
+La rotation de sprite est une fonctionnalité qui permettrait de créer des logos bien plus complexes. Pour être honnête, c'est une fonctionnalité que je voulais implémenter dès le début du projet. Les 11 jours sont malheureusement passés trop vite et je n'est pas pu ajouter la rotation aux fonctionnalités de l'application car j'ai préférer consacrer mon temps aux fonctionnalités essentielles.
+
+**Fusion de calques**
+
+C'est une autre fonctionnalité facile à implémenter. Il suffirait d'ajouter toutes les formes de deux calques sur un seul et même calque dans le bon ordre. Cette fonctionnalité rendrait, selon moi, la création de logo plus organisée.
+
+**Plus d'options**
+
+Pour les textes par exemple, il serait intéressant de pouvoir souligner, surligner ou encore changer la police d'un texte. Même si les modification que LogoGo permet de faire aux textes fonctionnent, il serait bien d'avoir plus de choix.
+
+**Plus de formes !**
+
+Plus il y a de choix, mieux c'est. Créer des étoiles, flèches, traits, octogones, hexagones et j'en passe. Une fois qu'on connait le chemin à tracer, la création de n'importe quelle forme devient très simple. Il serait judicieux d'ajouter plus de formes à celle disponibles actuellement. L'utilisation de courbes de Bézier serait également très intéressante pour créer des formes plus raffinées.
 
 # Conclusion
 
+C'est grâce aux exercices faits en classe tout au long de ma formation que j'ai pu réaliser ce projet. Certaines connaissances ayant été acquises en première année (DrawString, DrawRectangle, ...) et d'autres en quatrième (Sérialisation, désérialisation, ...), j'ai été obligé d'utiliser de nombreuses notions pour être en mesure d'arriver au bout de ce travail. Même si le travail est globalement réussi, beaucoup de fonctionnalités peuvent encore être ajoutées ou optimisée...
+
+Je suis satisfait du travail que j'ai fourni durant ces 11 jours de travail car, même si on fait beaucoup d'exercices et de travaux en groupe durant les cours, je n'avais jamais fourni cette quantité de travail seul pour une période de temps si courte. Cependant, j'ai remarqué que j'ai encore beaucoup de choses à améliorer. J'ai, par exemple, remarqué qu'il m'arrivait de perdre la notion du temps et des tâches qu'il me restait à accomplir. Même si cela ne m'a pas spécialement porté préjudice durant le TPI, c'est un défaut sur lequel je dois travailler pour éviter d'avoir du retard dans de futurs projets d'une certaine envergure.
+
+Les points techniques demandé ayant tous été remplis, je peux dire que je suis content du résultat du résultat de ce travail. Les conditions de ce travail ayant été particulières (TPI à la maison à cause du COVID-19), il fallait s'attendre à ce que certaines choses ne se passent pas comme je le voulais. Le fait de travailler à la maison m'a fait remarquer des pertes de motivation à certains moments. Le simple trajet de la maison au lieu de travail donne plus envie de travailler que le travail à domicile, selon moi. Même en considérant ces éléments inattendus, estime que, lors de mes prochains grands projets, je pourrais mieux m'organiser afin d'être satisfait d'avantage sur certains points.

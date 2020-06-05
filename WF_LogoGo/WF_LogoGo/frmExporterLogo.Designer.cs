@@ -73,7 +73,10 @@
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.pbxResultatFinal);
             this.Controls.Add(this.btnOK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmExporterLogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Exportation du logo";

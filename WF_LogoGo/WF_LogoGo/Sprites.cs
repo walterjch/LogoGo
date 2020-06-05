@@ -18,6 +18,10 @@ namespace WF_LogoGo
         /// Liste dans laquelle sont stockés tous les sprites existants
         /// </summary>
         public List<Sprite> ListeDeSprite { get => _listeDeSprite; private set => _listeDeSprite = value; }
+        /// <summary>
+        /// Permet de savoir si la liste de sprites est vide.
+        /// </summary>
+        public bool EstVide { get => ListeDeSprite.Count == 0; }
         #endregion
 
         #region Constructeurs

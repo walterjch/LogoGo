@@ -6,6 +6,8 @@ Ce document a pour but d'expliquer comment utiliser l'application LogoGo dans to
 
 LogoGo est une application qui, comme sont nom l'indique, vous permet de créer des logos. Vous pouvez créer, modifier, supprimer du texte, des ronds, des carrés ainsi que d'autres formes géométriques et les assembler pour fabriquer vos propres logos. Les calques vous donnent la possibilité de créer des logos plus ou moins complexes selon vos besoins.
 
+![Fenêtre principale](/Images/IntroManuelUtilisateur.png)
+
 # Installation
 
 Pour installer LogoGo, il vous suffit de télécharger le dossier compressé (.zip) de l'application et de la dézipper. Vous obtiendrez alors un dossier que vous pourrez laisser à l'emplacement de votre choix (cela n'aura aucune influence sur le fonctionnement de l'application).
@@ -169,3 +171,19 @@ Lorsque vous tentez de quitter LogoGo, une fenêtre vous avertit que, si vous n'
 ![Fenêtre principale](/Images/MessageBoxFermeture.png)
 
 Ce message est la pour vous aider. Il vous suffit de cliquer sur OK si vous avez bien enregistré votre projet ou si vous ne souhaitez pas sauvegarder les dernières modifications. Si vous voulez retourner sur LogoGo pour continuer ou pour sauvegarder votre logo, appuyez sur Annuler, cela annulera la fermeture de LogoGo.
+
+## Enregistrement
+
+Comme vous venez de le voir, si vous tentez de quitter l'application, un message vous avertira que vous devez enregistrer votre projet à part si votre projet est vide. À l'inverse, si vous tentez d'enregistrer un projet qui ne contient aucun forme, cette fenêtre s'ouvrira :
+
+![Fenêtre principale](/Images/MessageBoxEnregistrement.png)
+
+Vous devez ajouter au moins une forme pour pouvoir enregistrer le logo.
+
+## Exportation
+
+Il est possible de vous retrouver face à ce message si vous tentez d'exporter un projet vide. Vous ne pouvez pas exporter en image un projet qui ne contient rien du tout.
+
+![Fenêtre principale](/Images/MessageBoxExportation.png)
+
+Vous devez ajouter au moins une forme pour pouvoir exporter le logo.
