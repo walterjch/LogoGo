@@ -8,21 +8,21 @@
 
 ## Situation de départ
 
-Les TPI 2020 ont eu lieu de façon particulière. À cause le la pandémie (COVID-19) qui nous a pris par surprise, nous avons réalisé nos TPI à la maison. Nous avons disposé (comme pour les élèves ayant passé le TPI en 2019) de 11 jours au total. Malgré les conditions particulières, aucune modification n'a été apportée sur la durée ou sur la difficulté de ce travail de fin ce formation. Mise à part une date reporté d'environ un mois, le TPI a eu lieu "normalement".
+Les TPI 2020 ont eu lieu de façon particulière. À cause le la pandémie (COVID-19) qui nous a pris par surprise, nous avons réalisé nos TPI à la maison. Nous avons disposé (comme pour les élèves ayant passé le TPI en 2019) de 11 jours au total. Malgré les conditions particulières, aucune modification n'a été apportée sur la durée ou sur la difficulté de ce travail de fin de formation. Mise à part une date reporté d'environ un mois, le TPI a eu lieu "normalement".
 
-Pour mon TPI j'ai réalisé une application WindowsForm en C# orienté objet. permettant à l'utilisateur de créer des logos. Il est possible d'ajouter des formes et du texte sur une certaine zone et il est possible d'en modifier les propriétés. L'utilisateur peut changer la taille, la couleur, l'épaisseur, le remplissage, la position, et d'autres propriétés permettant de faire ce qu'il souhaite des formes mises à disposition. Il y a également un système de calque permettant de choisir l'ordre dans lequel les formes apparaissent. L'utilisateur peut choisir sur quel calque créer les formes et peut aussi les changer de calque après leur création. Il est possible d'exporter le logo en image (plusieurs formats sont disponibles). Si l'utilisateur souhaite continuer la création de son logo plus tard, il peut sauvegarder le logo puis le rouvrir. La sauvegarde se fait en créant un fichier XML.
+Pour mon TPI j'ai réalisé une application WindowsForm en C# orienté objet permettant à l'utilisateur de créer des logos. Il est possible d'ajouter des formes et du texte sur une certaine zone et d'en modifier les propriétés. L'utilisateur peut changer la taille, la couleur, l'épaisseur, le remplissage, la position, et d'autres propriétés permettant de faire ce qu'il souhaite des formes mises à disposition. Il y a également un système de calques permettant de choisir l'ordre dans lequel les formes apparaissent. L'utilisateur peut choisir sur quel calque créer les formes et peut aussi les changer de calque après leur création. Il est possible d'exporter le logo en image (plusieurs formats sont disponibles). Si l'utilisateur souhaite continuer la création de son logo plus tard, il peut sauvegarder le logo puis le rouvrir. La sauvegarde se fait en créant un fichier XML.
 
 ## Mise en œuvre
 
-Durant le premier jour de TPI, j'ai pris du temps pour analyser le cahier des charges en le lisant plusieurs fois pour être sûr des fonctionnalités qui devaient être disponibles à la fin des 11 jours. Je n'ai pas eu besoin d'estimer les tâches que j'avais à faire puisqu'un planning prévisionnel m'a été fourni. Ce planning m'a été  d'une grande aide car je n'ai eu qu'à reprendre la même structure et de la remplir au fur et à mesure que j'avançais pour obtenir mon planning effectif.
+Durant le premier jour de TPI, j'ai pris du temps pour analyser le cahier des charges en le lisant plusieurs fois pour être sûr des fonctionnalités qui devaient être disponibles à la fin des 11 jours. Je n'ai pas eu besoin d'estimer les tâches que j'avais à faire puisqu'un planning prévisionnel m'a été fourni. Ce planning m'a été d'une grande aide car je n'ai eu qu'à reprendre la même structure et la remplir au fur et à mesure que j'avançais pour obtenir mon planning effectif.
 
-Après un certain temps de réflexion sur la façon dont j'allais m'y prendre, j'ai réalisé un diagramme de classe qui semblait correct. J'ai pris un long moment pour réaliser l'interface principale et pour faire en sorte qu'elle tienne la route. L'image d'exemple donnée dans le cahier des charge m'a servit d'inspiration.
+Après un certain temps de réflexion sur la façon dont j'allais m'y prendre, j'ai réalisé un diagramme de classe qui semblait correct. J'ai pris un long moment pour créer l'interface principale et pour faire en sorte qu'elle tienne la route. L'image d'exemple donnée dans le cahier des charge m'a servit d'inspiration.
 
 En parallèle de la réalisation de l'application, je me suis arrangé pour maintenir un certain rythme dans la rédaction des différentes documentations pour ne pas me retrouver submergé par la documentation en fin de projet. J'ai également sauvegardé mon projet entre une et trois fois par jour pour garder une trace des modifications ainsi que pour pouvoir, en cas de problème, revenir à une version précédente. Pour sauvegarder mon projet, j'ai utilisé git qui, étant la manière que j'ai le plus utilisé pour sauvegarder efficacement des projets au sein du CFPT, m'a semblé être le meilleur choix.
 
 ## Conclusion
 
-Pendant ces 11 jours de travail, j'ai réussi à réaliser tous les points demandés dans le cahier des charges. Toutes les fonctionnalités sont utilisables et je n'ai pas eu de retard particulier. Durant la première moitié du travail, la planning effectif était assez différent du planning prévisionnel mais cette différence s'est estompé au fil des jours et les deux plannings se sont équilibrés.
+Pendant ces 11 jours de travail, j'ai réussi à réaliser tous les points demandés dans le cahier des charges. Toutes les fonctionnalités sont utilisables et je n'ai pas eu de retard particulier. Durant la première moitié du travail, la planning effectif était assez différent du planning prévisionnel mais cette différence s'est estompée au fil des jours et les deux plannings se sont équilibrés.
 
 
 
@@ -199,7 +199,7 @@ Voici un exemple concret :
 
 ![Fenêtre principale](/Images/exempleOrdreCalques1.png)
 
-Sur l'image ci-dessus, on distingue trois forme : un triangle vert, un polygone rouge, ainsi qu'un carré saumon. Le carré est sur la calque 2 et les deux autres sont sur le calque 1. En clique sur le triangle. nous pouvons voir sur quel calque il est on modifiant la propriété calque. Comme l'image le montre, il suffit, ici, de cliquer sur "Calque 3" pour changer le triangle de calque :
+Sur l'image ci-dessus, on distingue trois forme : un triangle vert, un polygone rouge, ainsi qu'un carré saumon. Le carré est sur la calque 2 et les deux autres sont sur le calque 1. En cliquant sur le triangle, nous pouvons voir sur quel calque il est et modifier la propriété calque. Comme l'image le montre, il suffit, ici, de cliquer sur "Calque 3" pour changer le triangle de calque :
 
 ![Fenêtre principale](/Images/exempleOrdreCalques2.png)
 
@@ -215,7 +215,7 @@ Voici un démonstration :
 
 ![Fenêtre principale](/Images/exempleProfondeur1.png)
 
-Ces deux formes se trouvent toutes deux sur le même calque. Il suffit d'augmenter la propriété Profondeur comme suit pour changer l'ordre des formes.
+Ces deux formes se trouvent toutes deux sur le même calque. Il suffit d'augmenter la propriété Profondeur du carré comme suit pour changer l'ordre des formes.
 
 ![Fenêtre principale](/Images/exempleProfondeur3.png)
 
@@ -225,7 +225,7 @@ Voilà le résultat :
 
 ### Sauvegarde d'un logo
 
-Le projet peut être sauvegardé. En sauvegardant, l'utilisateur doit choisir le chemin (destination) de la sauvegarde. Il peut ensuite choisir le nom du fichier qui sera sauvegarder. L'extension du fichier est fixe (.xml).
+Le projet peut être sauvegardé. En sauvegardant, l'utilisateur doit choisir le chemin (destination) de la sauvegarde. Il peut ensuite choisir le nom du fichier qui sera sauvegardé. L'extension du fichier est fixe (.xml).
 
 Si l'utilisateur ne choisit aucun nom, le fichier prend automatiquement le nom "Logo.xml". En ce qui concerne la destination du fichier, il est impossible de ne choisir aucune destination puisque le SaveFileDialog s'ouvre obligatoirement avec un chemin existant.
 
@@ -237,7 +237,7 @@ Les fichiers sauvegardés peuvent être à nouveau ouverts et chargés dans Logo
 
 Une fois que l'utilisateur estime que son logo est terminé, il peut l'exporter en image. Il est bien entendu possible de choisir où le fichier sera enregistrer. Plusieurs choix d'extensions sont également disponibles. 
 
-Le logo doit, avant tout, avoir la bonne taille. Pour cela, j'ai élaboré une méthode permettant de recadrer l'image finale la où se trouvent les formes créées par l'utilisateur afin de voir couper l'image au bon endroit.
+Le logo doit, avant tout, avoir la bonne taille. Pour cela, j'ai élaboré une méthode permettant de recadrer l'image finale là où se trouvent les formes créées par l'utilisateur afin de pouvoir couper l'image au bon endroit.
 
 ### Modification de le Transparence 
 
@@ -247,7 +247,7 @@ Comme vous pouvez le voir, vous pouvez voir et modifier la transparence du calqu
 
 ![Fenêtre principale](/Images/exempleTransparence.png)
 
-Sur cette image, on peut observer que le rond noir (qui est sur le calque 1) est visible à travers le triangle rouge (qui est sur le calque 2). La transparence du calque 1 n'a pas été changé. Le calque 2, lui, a vu sa transparence passer de 255 à 200 comme vous pouvez le voir sur l'image ci-dessous :
+Sur cette image, on peut observer que le rond noir (qui est sur le calque 1) est visible à travers le triangle rouge (qui est sur le calque 2). La transparence du calque 1 n'a pas été changée. Le calque 2, lui, a vu sa transparence passer de 255 à 200 comme vous pouvez le voir sur l'image ci-dessous :
 
 ![Fenêtre principale](/Images/exempleNudTransparence.png)
 
@@ -275,7 +275,7 @@ C'est à partir de cette fenêtre qu'on a accès à toutes les fonctionnalités 
 
 Dans cette partie de la fenêtre, il y a le choix entre plusieurs types de formes. Chaque bouton correspond à une forme différente qui, à l'appui d'un bouton, apparaîtra sur le calque actif. Le fonctionnement est identique pour chaque forme, sauf une, le Polygone.
 
-Lorsque l'utilisateur souhaite créer un polygone quelconque, une fenêtre  (voir **6.2.3 Fiche de création de Polygone**) s'ouvre au permet à l'utilisateur de placer des points dans une PictureBox. Le Polygone s'affiche sur la fiche principale uniquement lorsque l'utilisateur finit de placer les points.
+Lorsque l'utilisateur souhaite créer un polygone quelconque, une fenêtre  (voir **6.2.3 Fiche de création de Polygone**) s'ouvre et permet à l'utilisateur de placer des points dans une PictureBox. Le Polygone s'affiche sur la fiche principale uniquement lorsque l'utilisateur finit de placer les points.
 
 ![Fenêtre principale](/Images/formesBoutons.png)
 
@@ -306,7 +306,7 @@ Voilà à quoi ressemble le panel des propriétés d'un objet Texte :
 
 ### Barre de menu
 
-La barre de menu est accessible à tout moment sur le haut de la fiche principale et comporte trois types d'option :
+La barre de menu est accessible à tout moment sur le haut de la fiche principale et comporte deux options :
 
 - Fichier
 - Aide
@@ -325,13 +325,13 @@ Enregistrer et Exporter ouvrent une boîte de dialogue de type SaveFileDialog pu
 
 **Aide**
 
-Un appui sur le bouton "Aide" ouvre une page internet avec le manuel utilisateur. L'utilisateur est redirigé sur le lien GitHub du projet pour qu'il puisse regarder la documentation qui lui est destinée.
+Un appui sur le bouton "Aide" ouvre une page internet avec toutes la documentation du projet. L'utilisateur est redirigé sur le lien GitHub du projet pour qu'il puisse regarder la documentation qui lui est destinée.
 
 ![Fenêtre principale](/Images/barreMenuAide.png)
 
 ### Fiche de création de Polygone
 
-Cette fenêtre s'affiche lorsque l'utilisateur clique sur la bouton "Polygone" de la fiche principale. Elle permet de placer les points d'un polygone comme on le souhaite et, ainsi, créer une forme particulière.
+Cette fenêtre s'affiche lorsque l'utilisateur clique sur le bouton "Polygone" de la fiche principale. Elle permet de placer les points d'un polygone comme on le souhaite et, ainsi, créer une forme particulière.
 
 ![Fenêtre principale](/Images/ficheCreerPolygone.png)
 
@@ -521,7 +521,7 @@ Lorsque vous tentez de quitter LogoGo, une fenêtre vous avertit que, si vous n'
 
 ![Fenêtre principale](/Images/MessageBoxFermeture.png)
 
-Ce message est la pour vous aider. Il vous suffit de cliquer sur OK si vous avez bien enregistré votre projet ou si vous ne souhaitez pas sauvegarder les dernières modifications. Si vous voulez retourner sur LogoGo pour continuer ou pour sauvegarder votre logo, appuyez sur Annuler, cela annulera la fermeture de LogoGo.
+Ce message est là pour vous aider. Il vous suffit de cliquer sur OK si vous avez bien enregistré votre projet ou si vous ne souhaitez pas sauvegarder les dernières modifications. Si vous voulez retourner sur LogoGo pour continuer ou pour sauvegarder votre logo, appuyez sur Annuler, cela annulera la fermeture de LogoGo.
 
 ### Enregistrement
 
@@ -530,6 +530,14 @@ Comme vous venez de le voir, si vous tentez de quitter l'application, un message
 ![Fenêtre principale](/Images/MessageBoxEnregistrement.png)
 
 Vous devez ajouter au moins une forme pour pouvoir enregistrer le logo.
+
+### Ouverture
+
+Si le fichier ouvert est invalide, ce message apparaîtra :
+
+![Fenêtre principale](/Images/MessageBoxOuverture.png)
+
+Un fichier est invalide lorsqu'il est modifié de manière incorrecte ou s'il est corrompu.
 
 ### Exportation
 
@@ -578,7 +586,7 @@ La classe logo contient trois petites méthodes :
 
 #### XMLSerialize / XMLDeserialize
 
-Ces deux méthodes travaillent de paire pour la fonctionnalité de sauvegarde. Un utilisateur doit être en mesure de sauvegarder un fichier mais aussi de le rouvrir. Pour la sauvegarde, c'est XMLSerialize qui s'en occupe. Avant de sérialiser, une conversion de la liste "Sprites" est nécessaire (voir **8.1 Sauvegarde et chargement**). Le code concernant directement la sérialisation est tiré d'une méthode vue en classe avec M. Bonvin dans le cadre d'un atelier C#.
+Ces deux méthodes travaillent de paire pour les fonctionnalités de sauvegarde et de chargement. Un utilisateur doit être en mesure de sauvegarder un fichier mais aussi de le rouvrir. Pour la sauvegarde, c'est XMLSerialize qui s'en occupe. Avant de sérialiser, une conversion de la liste "Sprites" est nécessaire (voir **8.1 Sauvegarde et chargement**). Le code concernant directement la sérialisation est tiré d'une méthode vue en classe avec M. Bonvin dans le cadre d'un atelier C#.
 
 Au moment du chargement de fichier, c'est XMLDeserialize qui est concernée. Tout comme pour XMLSerialize, une conversion est nécessaire mais, cette fois-ci, c'est après la désérialisation que l'on doit faire cette conversion. Il faut passer d'une liste de type SpriteSerializable à une liste de type Sprite. La désérialisation a également été abordée avec M. Bonvin lors des ateliers.
 
@@ -608,13 +616,13 @@ Cette méthode est abstraite car elle doit être différente pour chaque type de
 
 - Dans les classes **Polygone** et **Triangle** :
 
-  Dessine le triangle avec FillPolygone ou DrawPolygone selon la valeur de la propriété Remplir.
+  Dessine le triangle/polygone avec FillPolygone ou DrawPolygone selon la valeur de la propriété Remplir.
 
 - Dans la classe **Texte** :
 
   Dessine le texte avec DrawString avec un certaine police d'écriture.
 
-Cette méthode accepte un objet de type Graphics en paramètre car cela facilite certaines choses. Par exemple, lors de l'exportation, je doit pouvoir dessiner les formes avec un Graphics créé à partir d'une image (Graphics.FromImage(...)). C'est de cette façon qu'il est possible de récupérer l'image de la PictureBox contenant tous les sprites. Dans le Paint, j'appelle tout simplement la méthode SpritePaintAvecGraphics et, en paramètre, je passe e.Graphics.
+Cette méthode accepte un objet de type Graphics en paramètre car cela facilite certaines choses. Par exemple, lors de l'exportation, je doit pouvoir dessiner les formes avec un Graphics créé à partir d'une image (Graphics.FromImage(...)). C'est de cette façon qu'il est possible de récupérer l'image de la PictureBox contenant tous les sprites. Dans le Paint de cette PictureBox, j'appelle tout simplement la méthode SpritePaintAvecGraphics et, en paramètre, je passe e.Graphics.
 
 #### EnSpriteSerializable
 
@@ -630,17 +638,17 @@ Une des fonctionnalités qui rend l'application agréable à l'utilisateur est c
 
 #### Action sur les sprites
 
-Comme la Classe Sprite, Sprites contient trois méthodes simples qui agissent sur la liste de type Sprite. La méthode Ajouter ne fait qu'ajouter le sprite spécifié à la liste et, respectivement, Supprimer supprime l'objet Sprite spécifié. Finalement, la méthode trier trie la liste selon deux propriétés : NumeroCalque et Profondeur. Pour plus d'informations sur le trie de la liste, voir **8.6. Plans Graphiques**.
+Comme la Classe Sprite, Sprites contient trois méthodes simples qui agissent sur la liste de type Sprite. La méthode **Ajouter** ne fait qu'ajouter le sprite spécifié à la liste et, respectivement, **Supprimer** supprime l'objet Sprite spécifié. Finalement, la méthode **Trier** trie la liste selon deux propriétés : NumeroCalque et Profondeur. Pour plus d'informations sur le trie de la liste, voir **8.6. Plans Graphiques**.
 
 #### EnListeSerializable
 
-La méthode EnListeSerializable est complémentaire à la méthode EnSpriteSerializable de la classe Sprite. Par le biais d'une boucle foreach, elle parcours tous les formes présentes dans la liste de sprites. Pour chaque objet Sprite, elle créé un objet de type SpriteSerializable et l'ajoute à une liste. La méthode retourne la liste de type SpriteSerializable qui a été créée.
+La méthode EnListeSerializable est complémentaire à la méthode EnSpriteSerializable de la classe Sprite. Par le biais d'une boucle foreach, elle parcourt toutes les formes présentes dans la liste de sprites. Pour chaque objet Sprite, elle créé un objet de type SpriteSerializable et l'ajoute à une liste. La méthode retourne la liste de type SpriteSerializable qui a été créée.
 
 ### Classe SpriteSerializable
 
 #### EnSprite
 
-Méthode simple qui contient un Switch case permettant de savoir quel type de forme créer selon la propriété IdType. Chaque forme ayant un identifiant (Carré = 1, Rond = 2, ...) il est possible de créer le bon type de Sprite à chaque fois. La méthode retourne toujours un objet. Si l'identifiant est inconnu, la méthode retourne un carré par défaut. Cela arrive grâce à la possibilité de créer un cas par défaut dans un Switch case. Voilà un code d'exemple de cas par défaut :
+Méthode simple qui contient un Switch case permettant de savoir quel type de forme créer selon la propriété IdType. Chaque forme ayant un identifiant (Carré = 1, Rond = 2, ...), il est possible de créer le bon type de Sprite à chaque fois. La méthode retourne toujours un objet. Si l'identifiant est inconnu, la méthode retourne un carré par défaut. Cela arrive grâce à la possibilité de créer un cas par défaut dans un Switch case. Voilà un code d'exemple de cas par défaut :
 
 ```c#
 default:
@@ -651,7 +659,7 @@ default:
 
 #### AttribuerValeursProprietes
 
-Cette méthode est essentielle car, pour sérialiser un Sprite, il est indispensable de mémoriser ses caractéristiques si on veut pouvoir les retrouver plus tard. La méthode AttribuerValeursProprietes prends un Sprite un paramètre et l'utilise pour attribuer les valeurs contenues dans ce dernier à l'objet SpriteSerializable. À la fin de cette opération, un sprite aura été, en quelques sortes, converti en SpriteSerializable.
+Cette méthode est essentielle car, pour sérialiser un Sprite, il est indispensable de mémoriser ses caractéristiques si on veut pouvoir les retrouver plus tard. La méthode AttribuerValeursProprietes prends un Sprite un paramètre et l'utilise pour attribuer les valeurs contenues dans ce dernier à l'objet SpriteSerializable. À la fin de cette opération, un sprite aura été, en quelque sorte, converti en SpriteSerializable.
 
 ### Classe SpritesSerializables
 
@@ -667,9 +675,9 @@ Si la classe Sprites a une méthode EnListeSerializable, la classe SpritesSerial
 
 ## Sauvegarde et chargement
 
-La sérialisation/désérialisation est une chose que j'avais bien exercé avant le TPI. Nous avions, en classe, expérimenter la sérialisation d'objets simples ainsi que de listes d'objets, ce qui était le cas pour mon projet. La subtilité de ce travail a été de trouver la bonne manière de sérialiser puisqu'un objet Sprite n'est pas sérialisable (il hérite de PictureBox et il est impossible de sérialiser un objet WindowsForm). Lors de la première réflexion, après avoir lu l'énoncé, c'est un problème que j'ai envisagé. J'avais prévu de faire une deuxième classe Sprite (SpriteSerializable) qui, elle, n'hériterait pas de PictureBox. Ceci servirait à mémoriser les propriétés d'une forme.
+La sérialisation/désérialisation est une chose que j'avais bien exercé avant le TPI. Nous avions, en classe, expérimenté la sérialisation d'objets simples ainsi que de listes d'objets, ce qui était le cas pour mon projet. La subtilité de ce travail a été de trouver la bonne manière de sérialiser puisqu'un objet Sprite n'est pas sérialisable (il hérite de PictureBox et il est impossible de sérialiser un objet WindowsForm). Lors de la première réflexion, après avoir lu l'énoncé, c'est un problème que j'ai envisagé. J'avais prévu de faire une deuxième classe Sprite (SpriteSerializable) qui, elle, n'hériterait pas de PictureBox. Ceci servirait à mémoriser les propriétés d'une forme.
 
-Il fallait donc trouver un moyen de convertir ces objets dans les deux sens : passer d'un Sprite à un SpriteSerializable au moment de la sérialisation, puis l'inverse lors de la désérialisation. Pour ce faire, j'ai créé une méthode (dans la classe SpriteSerializable) pouvant prendre un Sprite en paramètre. Cette méthodes attribue la valeur des propriétés du Sprite passé en paramètre aux propriétés d'un SpriteSerializable. Ensuite, la méthode EnListeSerializable (dans la classe Sprites) permet de convertir toute la liste de formes en une liste de formes sérialisables. De cette manière, ce n'est pas la liste d'objets Sprite que l'on essaye de sérialiser, mais celle contenant les objets de type SpriteSerializable.
+Il fallait donc trouver un moyen de convertir ces objets dans les deux sens : passer d'un Sprite à un SpriteSerializable au moment de la sérialisation, puis l'inverse lors de la désérialisation. Pour ce faire, j'ai créé une méthode (dans la classe SpriteSerializable) pouvant prendre un Sprite en paramètre. Cette méthodes attribue la valeur des propriétés du Sprite passé en paramètre aux propriétés d'un SpriteSerializable. Ensuite, la méthode EnListeSerializable (dans la classe Sprites) permet de convertir toute la liste de formes en une liste de formes sérialisables. De cette manière, ce n'est pas la liste d'objets Sprite que l'on essaie de sérialiser, mais celle contenant les objets de type SpriteSerializable.
 
 C'est en suivant la même logique que j'ai réussi la désérialisation. La classe SpriteSerializable contient une méthode nommée EnSprite et la classe SpritesSerializables contient une méthode EnSprites. Pour savoir quel type de sprite il faut recréer, j'ai fait un Switch case en utilisant le IdType.
 
@@ -699,7 +707,7 @@ public void XMLDeserialize()
 
 ### Pourquoi le XML ?
 
-Il est possible de sérialiser en plusieurs formats, alors pourquoi le XML ? Tout simplement car c'est la format le plus adapté à LogoGo. Le syntaxe de l'XML étant composée de balises, il est facile de comprendre l'architecture d'un fichier de ce type. Voici à quoi le XML ressemble :
+Il est possible de sérialiser en plusieurs formats, alors pourquoi le XML ? Tout simplement car c'est la format le plus adapté à LogoGo. Le syntaxe de XML étant composée de balises, il est facile de comprendre l'architecture d'un fichier de ce type. Voici à quoi le XML ressemble :
 
 ```xml
 <?xml version="1.0"?>
@@ -745,7 +753,7 @@ Il est possible de sérialiser en plusieurs formats, alors pourquoi le XML ? Tou
 </Logo>
 ```
 
-L'avantage des fichier .xml (par rapport aux fichier .bin, par exemple), c'est qu'on a la possibilité de l'éditer aisément. Je peux sans soucis ouvrir le fichier de mon logo et rajouter une forme. C'est une valeur ajoutée comparée à plusieurs formats.
+L'avantage des fichier .xml (par rapport aux fichier .bin, par exemple), c'est qu'on a la possibilité de l'éditer aisément. Je peux sans soucis ouvrir le fichier de mon logo et rajouter/supprimer/modifier une forme. C'est une valeur ajoutée comparée à plusieurs formats.
 
 ## Diagramme de classe
 
@@ -763,11 +771,11 @@ Ces classes sont reliées par une composition car les classes au pluriel (Sprite
 
 Voici à quoi ressemble chaque classe en détails :
 
-[METTRE IMAGE DE CHAQUE CLASSE EN DETAILS]
+![Fenêtre principale](/Images/diagrammeClassesDetaille.png)
 
 ## Classe mère commune (héritage)
 
-La création d'une classe mère commune à plusieurs autres classes est, même si elle paraît évidente pour ce projet, était nécessaire pour la réalisation de ce projet. 
+La création d'une classe mère commune à plusieurs autres classes est, même si elle paraît évidente pour ce projet, nécessaire pour la réalisation de ce projet. 
 
 En effet, l'utilisateur doit pouvoir créer plusieurs types d'objet qui ont tous les propriétés communes. N'importe lequel de mes objets ont besoin, par exemple, d'une hauteur, d'une largeur, d'une position (X, Y), d'une couleur, etc.
 J'ai donc procédé de la façon suivante : une classe Sprite sert de classe mère et est une classe abstraite. Toutes les autres formes (Carre.cs, Triangle.cs, Texte.cs, etc.) héritent de cette classe et donc, de ses propriétés. Si une nouvelle classe doit être créée (car nous voulons ajouter un nouveau type de forme), il suffit de créer une nouvelle classe qui hérite de Sprite.
@@ -782,7 +790,7 @@ L'énoncé dit que l'utilisateur doit pouvoir créer un logo avec "au moins troi
 
 On peut ajouter des carrés, des ronds, des triangles, des polygones quelconques, et du texte.
 Les carrés et les ronds sont les moins complexes puisque l'objet Graphics contient déjà des méthodes pour ces deux formes (DrawEllipse/DrawRectangle et FillEllipse/FillRectangle). Pour ce qui est du texte, la méthode DrawString est idéale.
-Pour les triangles et autres types de polygone, par contre, il a fallu utilisé les méthodes DrawPolygon et FillPolygon qui nous donnent la possibilité de dessiner des formes plus complexes en donnant des points à la méthodes. Pour faire simple, ces méthodes relient les points qu'on leur donne en paramètres. Il m'a donc fallu, pour ce qui est du triangle, calculer la position des sommets d'un triangles à partir de sa taille puisque la position des sommets dépendent directement de la taille que l'utilisateur choisit.
+Pour les triangles et autres types de polygone, par contre, il a fallu utiliser les méthodes DrawPolygon et FillPolygon qui nous donnent la possibilité de dessiner des formes plus complexes en donnant des points à la méthodes. Pour faire simple, ces méthodes relient les points qu'on leur donne en paramètres. Il m'a donc fallu, pour ce qui est du triangle, calculer la position des sommets d'un triangles à partir de sa taille puisque la position des sommets dépendent directement de la taille que l'utilisateur choisit.
 
 Pour les polygones plus complexes, c'est l'utilisateur qui place les points. Ces points sont récoltés dans un tableau qui est donné aux méthodes FillPolygon et DrawPolygon.
 
@@ -798,11 +806,15 @@ En remplissant une copie de ce planning pendant mon travail, voilà ce que j'ai 
 
 [METTRE IMAGE DU PLANNING EFFECTIF A LA FIN]
 
-Il y a beaucoup de différences mais on observe également quelques similitudes. J'ai, par exemple, une certaine continuité au niveau de la documentation, des tests et du journal de bord qui correspond au planning prévu.
+Il y a beaucoup de différences mais on observe également quelques similitudes. J'ai, par exemple, une certaine continuité au niveau de la documentation, des tests et du journal de bord qui correspond au planning prévu. J'ai par ailleurs écrit dans le journal un jour de plus que ce qui était prévu.
 
-En ce qui concerne les différences, il a des choses qui m'ont pris plus longtemps que prévu et, pour d'autres, moins que prévu. La conception de l'interface, par exemple, m'a pris quelques heures en plus ce que le planning prévisionnel indiquait alors que la mise en place n'a duré que quelques minutes. Le fait d'être chez moi m'a aidé au niveau de la tâche "Installation, mise en place" car je n'ai pas eu besoin de préparer grand chose, à part une mise à jour de VisualStudio.
+En ce qui concerne les différences, il a des choses qui m'ont pris plus longtemps que prévu et, pour d'autres, moins que prévu. La conception de l'interface, par exemple, m'a pris quelques heures en plus ce que le planning prévisionnel indiquait alors que la mise en place n'a duré que quelques minutes. Le fait d'être chez moi m'a aidé au niveau de la tâche "Installation, mise en place" car je n'ai pas eu besoin de préparer grand chose, à part une mise à jour de VisualStudio qui fût très rapide.
 
-La réalisation des classes de base m'ont pris nettement moins de temps que les classes filles de Sprite. Les classes telles que Texte.cs ainsi que Polygone.cs m'ont pris plus de temps que les autres classes et plus de temps que ce qui était prévu.
+La réalisation des classes de base m'ont pris nettement moins de temps que les classes filles de Sprite. Les classes telles que Texte.cs ainsi que Polygone.cs m'ont pris plus de temps que les autres classes et plus de temps que ce qui était prévu. C'est clairement les réflexions qui m'ont pris le plus de temps.
+
+La partie concernant la gestion de fichiers (export, enregistrement et chargement) m'a pris un peu plus de temps que sur le planning prévisionnel mais, comme j'ai eu un petit peu d'avant sur le reste, j'ai commencé la gestion de fichier une demie journée plus tôt. On voit d'ailleurs qu'au début, le planning effectif était plutôt différent de celui qui m'a été fourni. Au fil des jours, le planning prévisionnel s'est avéré plus ou moins exact, puisque tout a été terminé plus ou moins au même moment que les prévisions.
+
+Pour résumer, je pense qu'on peut affirmer que le planning prévisionnel était assez réaliste.
 
 ## Plans graphiques
 
@@ -811,9 +823,9 @@ La conception des différents plans de travail, ou calques, m'a demandé un mome
 Cependant, en partant sur cette idée, je me suis rendu compte que ce ne serait pas pratique. À chaque fois que je voudrait rafraîchir l'ordre d'affichage (lorsqu'un Sprite passe d'un calque à l'autre, par exemple), il aurait alors fallu parcourir la liste de sprites contenue dans chaque calque pour, ainsi, les afficher dans le bon ordre. En comprenant que cela ne serait pas la manière la plus optimisée, j'ai remarqué que meilleure possibilité que j'avais était simplement de ne pas faire de classe calque.
 
 Voilà comment j'ai procédé : dans la classe Sprite, il existe une propriété nommée "NumeroCalque". Ce numéro de calque sert tout simplement à identifier la priorité d'affichage d'un sprite.
-Lors de la création d'un sprite, cette propriété (NumeroCalque) prend la valeur du numéro de calque actuellement sélectionné par l'utilisateur. Au moment de l'affichage, je trie simplement la liste de tous les calques (liste qui est contenue dans la classe Sprites) par la propriété "NumeroCalque". Le code parcourt ensuite la liste triée et affiche les formes une par une.
+Lors de la création d'un sprite, cette propriété (NumeroCalque) prend la valeur du numéro de calque actuellement sélectionné par l'utilisateur. Au moment de l'affichage, je trie simplement la liste de tous les objets Sprite (liste qui est contenue dans la classe Sprites) par la propriété "NumeroCalque". Le code parcourt ensuite la liste triée et affiche les formes une par une.
 
-Dans l'application, il est également possible de modifier la propriété "Profondeur" d'une forme. Cela correspond à un niveau de profondeur dans un même calque et, ainsi, un carré ayant une profondeur plus élevée qu'un autre carré appartenant au même calque apparaîtra au-dessus de ce dernier. Pour ce faire, j'ai fait en sorte que la liste de sprites soit triée par, non pas une, mais deux propriétés : d'abord par le numéro de calque, puis par la profondeur. 
+Dans l'application, il est également possible de modifier la propriété "Profondeur" d'une forme. Cela correspond à un niveau de profondeur dans un même calque et, ainsi, un carré ayant une profondeur plus élevée qu'un autre carré appartenant au même calque apparaîtra au-dessus de ce dernier. Pour ce faire, j'ai fait en sorte que la liste d'objet de type Sprite soit triée par, non pas une, mais deux propriétés : d'abord par le numéro de calque, puis par la profondeur. 
 
 ```
 ListeDeSprite = ListeDeSprite.OrderBy(s => s.NumeroCalque).ThenBy(s => s.Profondeur).ToList<Sprite>();
@@ -821,7 +833,7 @@ ListeDeSprite = ListeDeSprite.OrderBy(s => s.NumeroCalque).ThenBy(s => s.Profond
 
 De cette façon, tous les sprites sont toujours dessinés dans le bon ordre.
 
-Dans l'énoncé, il était également question de transparence des plans. Pour menez à bien cette tâche, j'ai changé, pour être précis, la transparence de tous les sprites qui sont sur le calque concerné. En fait, un calque n'a pas vraiment de transparence, ce sont les formes sur ce calques qui doivent se dessiner d'une couleur plus ou moins transparente. Pour modifier la transparence d'un couleur est déterminée par la valeur de son alpha. Dans acronyme RGBA, le A correspond à la transparence (alpha) de la couleur. Il suffit donc de dessiner les sprites en utilisant une couleur avec la transparence du calque choisie par l'utilisateur.
+Dans l'énoncé, il était également question de transparence des plans. Pour mener à bien cette tâche, j'ai changé, pour être précis, la transparence de tous les sprites qui sont sur le calque concerné. En fait, un calque n'a pas vraiment de transparence, ce sont les formes sur ce calques qui doivent se dessiner d'une couleur plus ou moins transparente. La transparence d'une couleur est déterminée par la valeur de son alpha. Dans l'acronyme RGBA, le A correspond à la transparence (alpha) de la couleur. Il suffit donc de dessiner les sprites en utilisant une couleur avec la transparence du calque choisie par l'utilisateur.
 
 ## Exportation en image
 
@@ -831,7 +843,7 @@ L'exportation d'image est, globalement, assez simple. Étant donné que nous pou
 maPictureBox.Image.Save(@"C:\Images\monImage",ImageFormat.Jpeg);
 ```
 
-Cependant, le projet LogoGo a une subtilité à ce niveau : nous n'avons pas qu'une Picturebox, mais plusieurs. Tous les objets PictureBox (tous les sprites) ne former qu'une seule image. Ce point m'a donc demandé une certaine réflexion mais, après quelques heures, j'ai réussi à faire en sorte que cette fonctionnalité fonctionne correctement.
+Cependant, le projet LogoGo a une subtilité à ce niveau : nous n'avons pas qu'une Picturebox, mais plusieurs. Tous les objets PictureBox (tous les sprites) ne doivent former qu'une seule image. Ce point m'a donc demandé une certaine réflexion mais, après quelques heures, j'ai réussi à faire en sorte que cette fonctionnalité fonctionne correctement.
 
 Tout d'abord, quand l'utilisateur clique sur "Fichier" dans la barre de menu, il doit cliquer sur "Exporter", comme le montre l'image ci-dessous :
 
@@ -839,7 +851,7 @@ Tout d'abord, quand l'utilisateur clique sur "Fichier" dans la barre de menu, il
 
 Suite à cela, la fenêtre d'aperçu s'ouvre et montre à l'utilisateur une aperçu de son logo.
 
-Pour ce faire, j'ai dessiné tous les sprites précédemment créés par l'utilisateur sur une même PictureBox : celle au centre de la fiche ExporterLogo (fiche montrant l'aperçu). En parcourant la liste des sprites, j'ajoute le Paint de chaque sprite ("SpritePaint" dans le code) au Paint de la PictureBox d'aperçu.
+Pour ce faire, j'ai dessiné tous les sprites précédemment créés par l'utilisateur sur une même PictureBox : celle au centre de la fiche ExporterLogo (fiche montrant l'aperçu). En parcourant la liste des sprites, j'ajoute le dessin de chaque sprite ("SpritePaintAvecGraphics" dans le code) au Paint de la PictureBox d'aperçu.
 
 ![Fenêtre principale](/Images/apercuLogo.png)
 
@@ -847,7 +859,7 @@ Dès que l'utilisateur clique sur "Exporter", le programme recadre l'image de la
 
 ![Fenêtre principale](/Images/saveFileDialogLogo.png)
 
-Une fois que l'utilisateur clique sur "Enregistrer", se trouvant en bas à droite du SaveFileDialog, l'image est correctement enregistrée au bon endroit et recadrée de la bonne façon. En ce qui concerne, justement le code du recadrage, je m'y suis pris de manière à ce que le code trouve l'endroit auquel l'image doit être découpée. Pour cela, je parcours la liste des formes et compare leur positions afin de trouver les coins du logo final. En connaissant les coordonnées des coins, il est possible de trouver la largeur ainsi que la hauteur du logo. Il suffit ensuite d'appeler la méthode RedimensionnerLogo qui accepte en paramètre une image (image que l'on veut recadrer), des coordonnées X et Y (position à laquelle on veut recadrer), une largeur ainsi qu'une hauteur (taille de l'image finale).
+Une fois que l'utilisateur clique sur "Enregistrer", se trouvant en bas à droite du SaveFileDialog, l'image est correctement enregistrée au bon endroit et recadrée de la bonne façon. En ce qui concerne justement le code du recadrage, je m'y suis pris de manière à ce que le code trouve l'endroit auquel l'image doit être découpée. Pour cela, je parcours la liste des formes et compare leur positions afin de trouver les coins du logo final. En connaissant les coordonnées des coins, il est possible de trouver la largeur ainsi que la hauteur du logo. Il suffit ensuite d'appeler la méthode RedimensionnerLogo qui accepte en paramètre une image (image que l'on veut recadrer), des coordonnées X et Y (position à laquelle on veut recadrer), une largeur ainsi qu'une hauteur (taille de l'image finale).
 
 Ce cette manière, on obtient une image finale qui ressemble à celle-ci :
 
@@ -878,7 +890,7 @@ Voilà le plan de test que j'ai utilisé :
 
 # Rapports de tests
 
-Dans ce chapitre, j'ai répertorié le résultat des tests de j'ai réalisé en suivant mon plant de test (voir **9.2. Plan de tests**). Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec le temps.
+Dans ce chapitre, j'ai répertorié le résultat des tests de j'ai réalisé en suivant mon plan de test (voir **9. Plan de tests**). Voici trois rapports de test qui montrent l'évolution des fonctionnalités avec le temps.
 
 ## Rapport de tests du 28 Mai :
 
@@ -963,6 +975,6 @@ Plus il y a de choix, mieux c'est. Créer des étoiles, flèches, traits, octogo
 
 C'est grâce aux exercices faits en classe tout au long de ma formation que j'ai pu réaliser ce projet. Certaines connaissances ayant été acquises en première année (DrawString, DrawRectangle, ...) et d'autres en quatrième (Sérialisation, désérialisation, ...), j'ai été obligé d'utiliser de nombreuses notions pour être en mesure d'arriver au bout de ce travail. Même si le travail est globalement réussi, beaucoup de fonctionnalités peuvent encore être ajoutées ou optimisée...
 
-Je suis satisfait du travail que j'ai fourni durant ces 11 jours de travail car, même si on fait beaucoup d'exercices et de travaux en groupe durant les cours, je n'avais jamais fourni cette quantité de travail seul pour une période de temps si courte. Cependant, j'ai remarqué que j'ai encore beaucoup de choses à améliorer. J'ai, par exemple, remarqué qu'il m'arrivait de perdre la notion du temps et des tâches qu'il me restait à accomplir. Même si cela ne m'a pas spécialement porté préjudice durant le TPI, c'est un défaut sur lequel je dois travailler pour éviter d'avoir du retard dans de futurs projets d'une certaine envergure.
+Je suis satisfait du travail que j'ai fourni durant ces 11 jours de travail car, même si on fait beaucoup d'exercices et de travaux en groupe durant les cours, je n'avais jamais fourni cette quantité de travail seul pour une période de temps si courte. Cependant, j'ai remarqué que j'ai encore beaucoup de choses à améliorer. J'ai, par exemple, remarqué qu'il m'arrivait de perdre la notion du temps et des tâches qu'il me restaient à accomplir. Même si cela ne m'a pas spécialement porté préjudice durant le TPI, c'est un défaut sur lequel je dois travailler pour éviter d'avoir du retard dans de futurs projets d'une certaine envergure.
 
-Les points techniques demandé ayant tous été remplis, je peux dire que je suis content du résultat du résultat de ce travail. Les conditions de ce travail ayant été particulières (TPI à la maison à cause du COVID-19), il fallait s'attendre à ce que certaines choses ne se passent pas comme je le voulais. Le fait de travailler à la maison m'a fait remarquer des pertes de motivation à certains moments. Le simple trajet de la maison au lieu de travail donne plus envie de travailler que le travail à domicile, selon moi. Même en considérant ces éléments inattendus, estime que, lors de mes prochains grands projets, je pourrais mieux m'organiser afin d'être satisfait d'avantage sur certains points.
+Les points techniques demandé ayant tous été remplis, je peux dire que je suis content du résultat du résultat de ce travail. Les conditions de ce travail ayant été particulières (TPI à la maison à cause du COVID-19), il fallait s'attendre à ce que certaines choses ne se passent pas comme je le voulais. Le fait de travailler à la maison m'a fait remarquer des pertes de motivation à certains moments. Le simple trajet de la maison au lieu de travail donne plus envie de travailler que le travail à domicile, selon moi. Même en considérant ces éléments inattendus, j'estime que, lors de mes prochains grands projets, je pourrais mieux m'organiser afin d'être satisfait d'avantage sur certains points.

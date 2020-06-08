@@ -414,8 +414,8 @@ namespace WF_LogoGo
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Il semblerait que vous tentiez d'ouvrir un fichier invalide. Le fichier contient peut-être une erreur.");
+                Application.Restart();
             }
         }
 
@@ -478,6 +478,7 @@ namespace WF_LogoGo
         }
         #endregion
 
+        #region Méthodes
         /// <summary>
         /// Gère la création d'un nouveau sprite s'il est spécifié.
         /// Efface et affiche à nouveau les sprites dans le bon ordre
@@ -662,5 +663,6 @@ namespace WF_LogoGo
 
             nudProfondeurTexte.Enabled = false;
         }
+        #endregion
     }
 }

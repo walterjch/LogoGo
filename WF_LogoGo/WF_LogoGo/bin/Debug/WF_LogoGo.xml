@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WF_LogoGo</name>
+    </assembly>
+    <members>
+        <member name="F:WF_LogoGo.frmExporterLogo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.frmExporterLogo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WF_LogoGo.frmExporterLogo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WF_LogoGo.frmCreerPolygone.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.frmCreerPolygone.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WF_LogoGo.frmCreerPolygone.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnCarre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Créé un nouveau objet de txpe Carre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnRond_Click(System.Object,System.EventArgs)">
+            <summary>
+            Créé un nouveau objet de txpe Rond
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnTriangle_Click(System.Object,System.EventArgs)">
+            <summary>
+            Créé un nouveau objet de txpe Triangle
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnTexte_Click(System.Object,System.EventArgs)">
+            <summary>
+            Créé un nouveau objet de txpe Texte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnPolygone_Click(System.Object,System.EventArgs)">
+            <summary>
+            Créé un nouveau polygone
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.ProprietesClick(System.Object,System.EventArgs)">
+            <summary>
+            Affiche les proriétés du sprite sur lequel on a cliqué
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.frmLogoGo_Load(System.Object,System.EventArgs)">
+            <summary>
+            Au chargement de la fiche, met à jour certains  éléments.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.tbxHauteur_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Applique les modifications de hauteur lorsque l'on quitte
+            la textbox au sprite choisi
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.tbxLargeur_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Applique les modifications de taille lorsque l'on quitte
+            la textbox au sprite choisi
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.cmbCalque_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Appelle Dessine() et change de calque le sprite en question
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.nudProfondeur_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Change la profondeur par calque du sprite choisi en fonction
+            de la valeur du numericUpDown
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.chkRemplir_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Définit si le sprite sera remplit ou non.
+            Active/Désactive le champ nudEpaisseur selon le choix.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnCouleur_Click(System.Object,System.EventArgs)">
+            <summary>
+            Ouvre le colorDialog et applique la couleur choisie
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.tbxPos_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Applique les modifications de position lorsque l'on quitte
+            la textbox au sprite choisi
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.tbxPosTexte_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Applique les modifications de position lorsque l'on quitte
+            la textbox au sprite choisi
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.nudEpaisseur_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Applique le changement d'épaisseur au sprite choisi
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.btnSupprimerSprite_Click(System.Object,System.EventArgs)">
+            <summary>
+            Suprrime le sprite actuellement selectionné
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.tbxTexte_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Change le texte de l'objet Texte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.nudFontSize_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Change la taille de la police du texte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.Proprietes_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Valide les modifications des textbox si la touche enter
+            est appuyée
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.Proprietes_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Interdit les lettres dans les textbox en n'autorisant que
+            les chiffres et les contrôles
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.nudTransparenceCalque_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Change la transaprence de tous les sprites d'un calque
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.lsbCalques_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Mets à jour la transparence
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.msExporter_Click(System.Object,System.EventArgs)">
+            <summary>
+            Ouvre une form montrant le logo qui sera exporté.
+            Lorsque l'utilisateur confirme sa volonter de sauver
+            le logo, un saveFileDialog s'affiche pour qui choisise
+            où le fichier sera enregistré.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.msOuvrir_Click(System.Object,System.EventArgs)">
+            <summary>
+            Ouvre un openFileDialog pour que l'utilisateur choisisse
+            quel fichier il voudrait charger.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.msEnregistrer_Click(System.Object,System.EventArgs)">
+            <summary>
+            Ouvre un saveFileDialog pour que l'utilisateur choisisse
+            où le fichier sera enregistré.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.aideToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Ouvre une page web sur la documentation du projet
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.frmLogoGo_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            À la fermeture de frmLogo, affiche un messagebox. Ferme l'application ou non en fonction du dialogResilt
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.Dessine(WF_LogoGo.Sprite)">
+            <summary>
+            Gère la création d'un nouveau sprite s'il est spécifié.
+            Efface et affiche à nouveau les sprites dans le bon ordre
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.AfficherProprietes">
+            <summary>
+            Affiche les propriétés du sprite actuellement sélectionné
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.ReinitialiserProprietes">
+            <summary>
+            Réinitialise les propriétés affichées
+            </summary>
+        </member>
+        <member name="F:WF_LogoGo.frmLogoGo.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:WF_LogoGo.frmLogoGo.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:WF_LogoGo.Logo.NOM_PAR_DEFAUT">
+            <summary>
+            Nom du logo s'il n'est pas changé lors de la sauvegarde
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Logo.NomFichier">
+            <summary>
+            Nom auquel le fichier ets enregistré
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Logo.SpritesSerializables">
+            <summary>
+            Liste de sprites serializables
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Logo.Enregistrer(System.String)">
+            <summary>
+            Sauvegarde de Logo dans l'état
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Logo.Charger(System.String)">
+            <summary>
+            Récupère un projet sauvegardé
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Logo.XMLSerialize">
+            <summary>
+            Serialise le Logo en un fichier XML
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Logo.XMLDeserialize">
+            <summary>
+            Deserialise un fichier XML
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Logo.AjouterSprite(WF_LogoGo.Sprite)">
+            <summary>
+            Ajoute le Sprite spécifié
+            </summary>
+            <param name="s">Sprite à ajouter</param>
+        </member>
+        <member name="M:WF_LogoGo.Logo.SupprimerSprite(WF_LogoGo.Sprite)">
+            <summary>
+            Supprime le Sprite spécifié
+            </summary>
+            <param name="s">Sprite à supprimer</param>
+        </member>
+        <member name="M:WF_LogoGo.Logo.TrierSprites">
+            <summary>
+            Trie les Sprites
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.Couleur">
+            <summary>
+            Couleur du pinceau / crayon du sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.EpaisseurPen">
+            <summary>
+            Épaisseur du crayon
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.Remplir">
+            <summary>
+            Bool permettant de savoir s'il faut remplir ou non un sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.Profondeur">
+            <summary>
+            Profondeur qui définit l'ordre d'apparition des sprites dans un même calque
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.NumeroCalque">
+            <summary>
+            Calque sur lequel est se trouve le sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.IdType">
+            <summary>
+            Identdifiant permettant de savoir quel type de sprite nous avons
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.AlphaCouleur">
+            <summary>
+            Retourne la 
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.Trace">
+            <summary>
+            Certains sprites ont besoin d'un tracé pour se dessiner
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.TexteAEcrire">
+            <summary>
+            Certains sprites ont besoin d'un texte
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.NomPolice">
+            <summary>
+            Certains sprites ont besoin d'un nom de police
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprite.TaillePolice">
+            <summary>
+            Certains sprites ont besoin d'une taille de police
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.ChangerTransparence(System.Int32)">
+            <summary>
+            Applique une transparence à la couleur
+            </summary>
+            <param name="transparence"></param>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.SpritePaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Méthode qui dessine le sprite. La méthode est différente selon
+            le type du sprite (rond, carré, ...)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.SpriteMouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Déplace la picturebox du sprite en fonction de la souris
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.SpriteMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Cesse le déplacement de la picturebox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.SpriteMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Commence le déplacement de la souris
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.EnSpriteSerializable">
+            <summary>
+            Retourne un sprite serializable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WF_LogoGo.Sprite.ToString">
+            <summary>
+            Surcharge de la méthode ToString() de object
+            </summary>
+            <returns>Nom du sprite (" - Rond_1")</returns>
+        </member>
+        <member name="P:WF_LogoGo.Sprites.ListeDeSprite">
+            <summary>
+            Liste dans laquelle sont stockés tous les sprites existants
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Sprites.EstVide">
+            <summary>
+            Permet de savoir si la liste de sprites est vide.
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Sprites.Ajouter(WF_LogoGo.Sprite)">
+            <summary>
+            Ajoute à la liste le sprite spécifié
+            /// </summary>
+            <param name="unSprite">le Sprite à ajouter</param>
+        </member>
+        <member name="M:WF_LogoGo.Sprites.Supprimer(WF_LogoGo.Sprite)">
+            <summary>
+            Supprime de la liste le sprite spécifié
+            </summary>
+            <param name="unSprite">le Sprite à supprimer</param>
+        </member>
+        <member name="M:WF_LogoGo.Sprites.Trier">
+            <summary>
+            Trie les Sprites selon leur calque et leur profondeur
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.Sprites.EnListeSerializable">
+            <summary>
+            S'occupe de convertir la liste de Sprite pour quelle soit serializable
+            </summary>
+            <returns>Une liste de SpriteSerializable</returns>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Couleur">
+            <summary>
+            Couleur du pinceau / crayon du sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Location">
+            <summary>
+            Position à laquelle le sprite doit être
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.EpaisseurPen">
+            <summary>
+            Épaisseur du crayon
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Remplir">
+            <summary>
+            Bool permettant de savoir s'il faut remplir ou non un sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.NumeroCalque">
+            <summary>
+            Calque sur lequel le sprite est dessiné
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.ProfondeurParCalque">
+            <summary>
+            Profondeur qui définit l'ordre d'apparition des sprites dans un même calque
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Nom">
+            <summary>
+            Nom du sprite
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.IdType">
+            <summary>
+            Identdifiant permettant de savoir quel type de sprite nous avons
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Trace">
+            <summary>
+            Certains sprites on besoin d'un tracé pour ce dessiner
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.TexteAEcrire">
+            <summary>
+            Certains sprites ont besoin d'un texte
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.NomPolice">
+            <summary>
+            Certains sprites ont besoin d'un nom de police
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.TaillePolice">
+            <summary>
+            Certains sprites ont besoin d'une taille de police
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.SpriteSerializable.Size">
+            <summary>
+            Taille du sprite
+            </summary>
+        </member>
+        <member name="M:WF_LogoGo.SpriteSerializable.EnSprite(System.Windows.Forms.Form)">
+            <summary>
+            Crée le bon type de Sprite en fonction de Type
+            </summary>
+            <param name="parent"></param>
+            <returns>Un objet Sprite</returns>
+        </member>
+        <member name="M:WF_LogoGo.SpritesSerializables.Ajouter(WF_LogoGo.SpriteSerializable)">
+            <summary>
+            Ajoute à la liste le SpriteSerializable spécifié
+            /// </summary>
+            <param name="unSprite">le SpriteSerializable à ajouter</param>
+        </member>
+        <member name="M:WF_LogoGo.SpritesSerializables.EnSprites(System.Windows.Forms.Form)">
+            <summary>
+            Crée un objet Sprites à partir de ListeDeSpriteSerializable
+            </summary>
+            <param name="parent"></param>
+            <returns>Un objet Sprites</returns>
+        </member>
+        <member name="T:WF_LogoGo.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="P:WF_LogoGo.Properties.Resources.logoApp_LogoGo">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,9 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ 
+ Auteur      : JAUCH Walter
+
+ Date        : 09.06.2020
+ 
+ Version     : 1.0
+
+ Description : LogoGo est une application permettant de créer des logos
+               à partir de certaines formes (carré, rond, texte, etc.).
+               L'utilisateur peut modfifier ces formes et il dipsose de calques.
+
+               Il est possible d'exporter, enregistrer, et ouvir un logo.
+
+ Fichier     : Rond.cs
+ 
+ */
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WF_LogoGo
@@ -29,6 +41,10 @@ namespace WF_LogoGo
 
         #region Méthodes
 
+        /// <summary>
+        /// Dessine un Rond selon la propriété Remplir.
+        /// </summary>
+        /// <param name="g">Objet Graphics avec lequel la forme sera dessinée</param>
         public override void SpritePaintAvecGraphics(Graphics g)
         {
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;

@@ -1,14 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ 
+ Auteur      : JAUCH Walter
+
+ Date        : 09.06.2020
+ 
+ Version     : 1.0
+
+ Description : LogoGo est une application permettant de créer des logos
+               à partir de certaines formes (carré, rond, texte, etc.).
+               L'utilisateur peut modfifier ces formes et il dipsose de calques.
+
+               Il est possible d'exporter, enregistrer, et ouvir un logo.
+
+ Fichier     : Logo.cs
+ 
+ */
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace WF_LogoGo
 {
+    [Serializable()]
     public class Logo
     {
         #region Variables d'instance
@@ -36,6 +50,9 @@ namespace WF_LogoGo
         /// </summary>
         private string NomFichier { get => _nomFichier; set => _nomFichier = value; }
 
+        /// <summary>
+        /// Sprite sur lequel l'utilisateur a cliqué pour la dernière fois
+        /// </summary>
         [XmlIgnore]
         public Sprite SpriteChoisi { get => _spriteChoisi; set => _spriteChoisi = value; }
 
@@ -44,6 +61,9 @@ namespace WF_LogoGo
         /// </summary>
         public SpritesSerializables SpritesSerializables { get => _spritesSerializables; set => _spritesSerializables = value; }
 
+        /// <summary>
+        /// Liste qui contient tous les sprites créés par l'utilisateur
+        /// </summary>
         [XmlIgnore]
         public Sprites Sprites { get => _sprites; private set => _sprites = value; }
         #endregion
@@ -55,7 +75,6 @@ namespace WF_LogoGo
             this._parent = parent;
             NomFichier = NOM_PAR_DEFAUT;
         }
-
 
         public Logo()
         {

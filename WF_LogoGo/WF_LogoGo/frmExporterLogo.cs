@@ -1,11 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿/*
+ 
+ Auteur      : JAUCH Walter
+
+ Date        : 09.06.2020
+ 
+ Version     : 1.0
+
+ Description : LogoGo est une application permettant de créer des logos
+               à partir de certaines formes (carré, rond, texte, etc.).
+               L'utilisateur peut modfifier ces formes et il dipsose de calques.
+
+               Il est possible d'exporter, enregistrer, et ouvir un logo.
+
+ Fichier     : frmExporterLogo.cs
+ 
+ */
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WF_LogoGo
@@ -102,7 +113,15 @@ namespace WF_LogoGo
         }
 
         //Trouvé sur : https://stackoverflow.com/questions/13217156/cropping-picture-getting-rectangle-from-x-y
-        //Rogne une image donnée en une zone qu'on doit spécifier
+        /// <summary>
+        /// Rogne une image donnée en une zone qu'on doit spécifier.
+        /// </summary>
+        /// <param name="original_image">Image que l'on veut rogner</param>
+        /// <param name="x">Position X de là où on veut rogner l'image</param>
+        /// <param name="y">Position Y de là où on veut rogner l'image</param>
+        /// <param name="width">Largeur voulue</param>
+        /// <param name="height">Hauteur voulue</param>
+        /// <returns></returns>
         public Bitmap RedimensionnerLogo(Bitmap original_image, int x, int y, int width, int height)
         {
             Rectangle crop = new Rectangle(x - BORDURE_OFFSET, y - BORDURE_OFFSET, width + 2 * BORDURE_OFFSET, height + 2 * BORDURE_OFFSET);

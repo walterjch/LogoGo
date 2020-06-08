@@ -1,8 +1,22 @@
-﻿using System;
+﻿/*
+ 
+ Auteur      : JAUCH Walter
+
+ Date        : 09.06.2020
+ 
+ Version     : 1.0
+
+ Description : LogoGo est une application permettant de créer des logos
+               à partir de certaines formes (carré, rond, texte, etc.).
+               L'utilisateur peut modfifier ces formes et il dipsose de calques.
+
+               Il est possible d'exporter, enregistrer, et ouvir un logo.
+
+ Fichier     : Sprites.cs
+ 
+ */
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WF_LogoGo
 {
