@@ -24,9 +24,25 @@ namespace WF_LogoGo
     {
         #region Variables d'instance
         private static int _nombrePolygones = 0;
+
+        /// <summary>
+        /// Coin de la pictureBox se situant en haut à gauche.
+        /// </summary>
         private PointF CoinSuperieurGauche;
+
+        /// <summary>
+        /// Coin de la pictureBox se situant en haut à droite.
+        /// </summary>
         private PointF CoinSuperieurDroit;
+
+        /// <summary>
+        /// Coin de la pictureBox se situant en bas à droite.
+        /// </summary>
         private PointF CoinInferieurDroit;
+
+        /// <summary>
+        /// Coin de la pictureBox se situant en bas à gauche.
+        /// </summary>
         private PointF CoinInferieurGauche;
         #endregion
 

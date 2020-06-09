@@ -121,7 +121,7 @@ namespace WF_LogoGo
         /// <param name="y">Position Y de là où on veut rogner l'image</param>
         /// <param name="width">Largeur voulue</param>
         /// <param name="height">Hauteur voulue</param>
-        /// <returns></returns>
+        /// <returns>Retourne l'image finale</returns>
         public Bitmap RedimensionnerLogo(Bitmap original_image, int x, int y, int width, int height)
         {
             Rectangle crop = new Rectangle(x - BORDURE_OFFSET, y - BORDURE_OFFSET, width + 2 * BORDURE_OFFSET, height + 2 * BORDURE_OFFSET);
@@ -133,6 +133,5 @@ namespace WF_LogoGo
             }
             return bmp;
         }
-
     }
 }

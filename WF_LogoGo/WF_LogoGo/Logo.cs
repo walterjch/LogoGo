@@ -48,7 +48,7 @@ namespace WF_LogoGo
         /// <summary>
         /// Nom auquel le fichier ets enregistré
         /// </summary>
-        private string NomFichier { get => _nomFichier; set => _nomFichier = value; }
+        public string NomFichier { get => _nomFichier; set => _nomFichier = value; }
 
         /// <summary>
         /// Sprite sur lequel l'utilisateur a cliqué pour la dernière fois
@@ -65,7 +65,7 @@ namespace WF_LogoGo
         /// Liste qui contient tous les sprites créés par l'utilisateur
         /// </summary>
         [XmlIgnore]
-        public Sprites Sprites { get => _sprites; private set => _sprites = value; }
+        public Sprites Sprites { get => _sprites; set => _sprites = value; }
         #endregion
 
         #region Constructeurs
@@ -134,7 +134,7 @@ namespace WF_LogoGo
             stream.Close();
 
             this.Sprites = new Sprites();
-            Sprites = obj.SpritesSerializables.EnSprites(_parent);
+            Sprites = obj._spritesSerializables.EnSprites(_parent);
             NomFichier = obj.NomFichier;
         }
 

@@ -12,7 +12,7 @@
 
                Il est possible d'exporter, enregistrer, et ouvir un logo.
 
- Fichier     : frmCreer.cs
+ Fichier     : frmCreerPolygone.cs
  
  */
 using System;

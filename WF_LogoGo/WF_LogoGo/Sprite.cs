@@ -63,7 +63,6 @@ namespace WF_LogoGo
         /// </summary>
         public bool Remplir { get => _remplir; set => _remplir = value; }
 
-
         /// <summary>
         /// Profondeur qui définit l'ordre d'apparition des sprites dans un même calque
         /// </summary>

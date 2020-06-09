@@ -112,9 +112,11 @@ namespace WF_LogoGo
         #endregion
 
         #region Constructeurs
+
         public SpriteSerializable()
         {
-
+            //La copie se fait dans le méthode AttribuerValeursProprietes
+            //qui est appellée de l'extérieur.
         }
         #endregion
 

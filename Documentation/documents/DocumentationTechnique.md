@@ -941,7 +941,7 @@ Dans ce chapitre, j'ai répertorié le résultat des tests de j'ai réalisé en 
 |      | 04.06.2020 |  OUI   |                     Exportation du logo.                     |         Nom par défaut "Logo.bmp". Tout est correct.         |
 |  10  | 04.06.2020 |  OUI   |                   Vérification de l'image.                   | L'image se créer parfaitement avec les formes correctes. Bonne taille. |
 |  11  | 04.06.2020 |  OUI   |                 Fermeture de l'application.                  |            La MessageBox s'affiche correctement.             |
-|  12  | 04.06.2020 |  NON   |                Appui sur OK de la MessageBox.                | Fonctionne à moitié. La MessageBox s'affiche une deuxième fois. Après cela, l'application se ferme comme prévu. |
+|  12  | 04.06.2020 |  OUI   |                Appui sur OK de la MessageBox.                | L'application se ferme comme prévu après l'appui du bouton OK. |
 
 # Fonctionnalités à ajouter
 

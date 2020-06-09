@@ -54,7 +54,6 @@ namespace WF_LogoGo
         public void Ajouter(Sprite unSprite)
         {
             ListeDeSprite.Add(unSprite);
-
         }
 
         /// <summary>
@@ -80,12 +79,12 @@ namespace WF_LogoGo
         /// <returns>Une liste de SpriteSerializable</returns>
         public SpritesSerializables EnListeSerializable()
         {
-            SpritesSerializables ListeSerializable = new SpritesSerializables();
+            SpritesSerializables listeSerializable = new SpritesSerializables();
             foreach (Sprite unSprite in ListeDeSprite)
             {
-                ListeSerializable.Ajouter(unSprite.EnSpriteSerializable());
+                listeSerializable.Ajouter(unSprite.EnSpriteSerializable());
             }
-            return ListeSerializable;
+            return listeSerializable;
         }
         #endregion
     }

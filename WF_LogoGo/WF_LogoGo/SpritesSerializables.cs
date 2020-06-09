@@ -46,7 +46,7 @@ namespace WF_LogoGo
         /// <summary>
         /// Ajoute à la liste le SpriteSerializable spécifié
         /// /// </summary>
-        /// <param name="unSprite">le SpriteSerializable à ajouter</param>
+        /// <param name="s">le SpriteSerializable à ajouter</param>
         public void Ajouter(SpriteSerializable s)
         {
             ListeDeSpriteSerializable.Add(s);

@@ -1,7 +1,7 @@
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\bin\Debug\WF_LogoGo.exe.config
+C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\bin\Debug\WF_LogoGo.xml
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\bin\Debug\WF_LogoGo.exe
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\bin\Debug\WF_LogoGo.pdb
-C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.csprojAssemblyReference.cache
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.frmExporterLogo.resources
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.frmCreerPolygone.resources
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.frmLogoGo.resources
@@ -10,4 +10,4 @@ C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.cspro
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.csproj.CoreCompileInputs.cache
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.exe
 C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.pdb
-C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\bin\Debug\WF_LogoGo.xml
+C:\Users\wal41\source\repos\LogoGo\WF_LogoGo\WF_LogoGo\obj\Debug\WF_LogoGo.csprojAssemblyReference.cache
