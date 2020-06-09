@@ -462,7 +462,7 @@ namespace WF_LogoGo
         /// <param name="e"></param>
         private void aideToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/walterjch/LogoGo/tree/master/Documentation");
+            System.Diagnostics.Process.Start("https://github.com/walterjch/LogoGo/tree/master/Documentation/pdf");
         }
 
         /// <summary>
